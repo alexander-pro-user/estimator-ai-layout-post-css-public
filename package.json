@@ -1,0 +1,25 @@
+{
+  "name": "estimator-ai-layout-post-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.6",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.88.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "postcss src/css/tailwind.css -o dist/tailwind.css",
+    "sass": "sass src/scss/custom.scss dist/custom.css",
+    "build": "npm run tailwind && npm run sass && cat dist/tailwind.css dist/custom.css > dist/styles.css",
+    "watch": "npm run build && npm run tailwind -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
