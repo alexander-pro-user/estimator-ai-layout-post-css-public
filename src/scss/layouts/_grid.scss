@@ -1,0 +1,13 @@
+@use "../utils/variables" as *;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.site-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+

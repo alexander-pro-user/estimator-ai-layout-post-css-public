@@ -1,0 +1,47 @@
+@use "../../utils/variables" as *;
+
+.text-block {
+  display: flex;
+
+
+  &__container {
+
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #666666;
+  }
+}
+
+.label-block {
+  display: flex;
+  align-items: center;
+  height: 43px;
+  padding: 12px 22px;
+  border: 1px solid #E5E5FF;
+  border-radius: 33px;
+  box-shadow: 0px 2px 6px 0px #3ACEC521;
+  background:
+          radial-gradient(67.49% 103.22% at 85.9% -17.47%, rgba(211, 211, 255, 0.35) 0%, rgba(255, 226, 233, 0.35) 60.9%, rgba(255, 255, 255, 0.175) 100%),
+          radial-gradient(38.57% 154.5% at 0.45% 98.81%, rgba(198, 214, 255, 0.35) 0%, rgba(234, 247, 255, 0.35) 60.9%, rgba(255, 255, 255, 0) 100%),
+          radial-gradient(35.52% 95.99% at 97.92% 144.66%, rgba(204, 203, 255, 0.35) 0%, rgba(255, 214, 224, 0.35) 60.9%, rgba(255, 255, 255, 0) 100%);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: #63428D;
+  }
+}

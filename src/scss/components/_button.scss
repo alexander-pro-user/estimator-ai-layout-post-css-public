@@ -1,0 +1,26 @@
+@use "../utils/variables" as *;
+
+.btn {
+  padding-top: 9px;
+  padding-right: 26px;
+  padding-bottom: 9px;
+  padding-left: 26px;
+  gap: 4px;
+  border-radius: 10px;
+
+
+  &__primary {
+    background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
+    color: #FFFFFF;
+    border: 1px solid #63428D;
+
+  }
+
+  &__secondary {
+    background: #F8F3FF;
+    background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid #63428D;
+  }
+}

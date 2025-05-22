@@ -1,0 +1,8 @@
+@use "../utils/variables" as *;
+
+.spn {
+
+  &__purple {
+    color: $purple-text-color;
+  }
+}

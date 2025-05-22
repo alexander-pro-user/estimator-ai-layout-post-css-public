@@ -1,0 +1,20 @@
+@use "../utils/variables" as *;
+
+.site-main {
+  padding: 40px 0;
+  min-height: calc(100vh - 72px - 160px);
+  box-sizing: border-box;
+
+  &__content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &--landing {
+      background-color: #fff;
+    }
+
+    &--page {
+    }
+  }
+}

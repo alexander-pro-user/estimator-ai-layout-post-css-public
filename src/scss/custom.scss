@@ -1,7 +1,14 @@
-$primary-color: #00ff35;
-
-.btn {
-  background-color: $primary-color;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-}
+@use "utils/variables" as *;
+@use "layouts/grid" as *;
+@use "layouts/header" as *;
+@use "layouts/footer" as *;
+@use "layouts/main" as *;
+@use "components/button" as *;
+@use "components/span" as *;
+@use "pages/landing/landing" as *;
+@use "pages/landing/professional-ai-estimation-generator" as *;
+@use "pages/landing/how-it-works" as *;
+@use "pages/landing/pricing" as *;
+@use "pages/landing/process-in-action" as *;
+@use "pages/landing/take-closer-look" as *;
+@use "pages/landing/testimonials" as *;
