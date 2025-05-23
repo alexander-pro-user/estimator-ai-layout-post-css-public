@@ -1,5 +1,154 @@
 @use "../../utils/variables" as *;
 
 .pricing {
-  background: #7D55BE;
+  background: #F9FAFD;
+  gap: 40px;
+  padding: 80px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px;
+    gap: 30px;
+    border-radius: 16px;
+    border-width: 1px;
+    border: 1px solid #F5EDFF;
+    background: #FFFFFF;
+  }
+
+  &__items-item {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 48px;
+
+      &-title {
+        font-weight: 600;
+        font-size: 40px;
+        color: #333333;
+
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: 16px;
+        color: #666666;
+      }
+    }
+
+    &-price {
+      margin-bottom: 48px;
+      &-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &-value {
+          font-weight: 600;
+          font-size: 32px;
+          color: #333333;
+          margin-right: 5px;
+        }
+
+        &-per-text {
+          font-weight: 500;
+          font-size: 14px;
+          color: #666666;
+        }
+      }
+
+      &-description {
+        font-weight: 500;
+        font-size: 16px;
+        color: #63428D;
+
+        span {
+          font-weight: 800;
+
+        }
+      }
+
+    }
+
+    &-pricing__items-item {
+      display: flex;
+    }
+
+  }
+
+  &__items-colored-item {
+    width: 560px;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 12px;
+    border-bottom-width: 1px;
+    background: linear-gradient(10.08deg, rgba(229, 167, 255, 0.7) -2.98%, rgba(229, 167, 255, 0) 85.76%),
+    radial-gradient(97.69% 97.69% at -14.86% 0%, rgba(245, 237, 255, 0) 0%, rgba(245, 237, 255, 0.4) 100%),
+    linear-gradient(180.14deg, rgba(255, 255, 255, 0) 53.84%, rgba(255, 255, 255, 0.5) 99.88%);
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      &-title {
+        font-weight: 700;
+        font-size: 20px;
+        color: #63428D;
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: 16px;
+        color: #333333;
+      }
+    }
+
+    &-ul-block {
+      display: flex;
+      flex-direction: column;
+      width: 496px;
+      gap: 20px;
+      border-radius: 8px;
+      border-width: 1px;
+      padding-top: 40px;
+      padding-right: 24px;
+      padding-bottom: 40px;
+      padding-left: 24px;
+      border: 1px solid #D2DFDB80;
+      background: #FFFFFF;
+      box-shadow: 0px 16px 28.8px -12px #0DB29D1A;
+
+      &-li {
+        display: flex;
+
+        &-img {
+          display: flex;
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          margin-top: 3px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }

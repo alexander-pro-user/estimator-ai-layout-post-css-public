@@ -1,5 +1,87 @@
 @use "../../utils/variables" as *;
 
 .take-closer-look {
-  background: #7D55BE;
+  gap: 48px;
+  padding-top: 100px;
+  padding-right: 80px;
+  padding-bottom: 100px;
+  padding-left: 80px;
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__items-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 416px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 12px;
+    border-width: 1px;
+    margin-bottom: 80px;
+    border: 1px solid #D2DFDB80;
+
+    &-text {
+      padding-top: 20px;
+      padding-bottom: 24px;
+
+      &-title {
+        display: flex;
+        padding: 0 24px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #58397F;
+        margin-bottom: 8px;
+        text-align: left;
+
+        img {
+          margin: auto 0;
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+
+      &-description {
+        padding: 0 24px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #333333;
+        text-align: left;
+        justify-self: left;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 1268px;
+    max-height: 760px;
+    margin-bottom: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 14px;
+  }
+
 }

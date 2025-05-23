@@ -13,9 +13,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "postcss src/css/tailwind.css -o dist/tailwind.css",
-    "sass": "sass src/scss/custom.scss dist/custom.css",
-    "build": "npm run tailwind && npm run sass && cat dist/tailwind.css dist/custom.css > dist/styles.css",
+    "tailwind": "postcss src/css/tailwind.css -o public/dist/tailwind.css",
+    "sass": "sass src/scss/custom.scss public/dist/custom.css",
+    "build": "npm run tailwind && npm run sass && cat public/dist/tailwind.css public/dist/custom.css > public/dist/styles.css",
     "watch": "npm run build && npm run tailwind -- --watch"
   },
   "keywords": [],

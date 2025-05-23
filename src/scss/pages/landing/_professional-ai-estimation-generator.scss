@@ -6,6 +6,18 @@
   padding-right: 220px;
   padding-bottom: 140px;
   padding-left: 220px;
+  background-image:
+          linear-gradient(to bottom,
+                  rgba(255, 255, 255, 0.2) 0%,
+                  rgba(255, 255, 255, 0.6) 30%,
+                  rgba(255, 255, 255, 0.9) 90%,
+                  rgba(255, 255, 255, 1) 100%
+          ),
+          url('/images/landing/professional-ai-estimation-generator.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 
   &__container {
     display: flex;
@@ -35,5 +47,6 @@
   &__buttons {
     display: flex;
     gap: 14px;
+    font-size: 14px;
   }
 }
