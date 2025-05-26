@@ -2,10 +2,17 @@
 
 .testimonials {
   gap: 48px;
-  padding-top: 100px;
-  padding-right: 80px;
-  padding-bottom: 100px;
-  padding-left: 80px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+
+  @media (min-width: 1024px) {
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+  }
 
 
   &__container {
@@ -27,23 +34,31 @@
   &__items-item {
     display: flex;
     flex-direction: column;
-
-    width: 408px;
+    width: 320px;
     padding: 22px;
     border-radius: 14px;
     border-width: 1px;
     border: 1px solid #D2DFDB80;
+
+    @media (min-width: 1024px) {
+      width: 408px;
+    }
+
 
     &-text {
       margin-bottom: 12px;
 
       &-description {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         color: #666666;
         text-align: left;
         justify-self: left;
         margin-bottom: 18px;
+
+        @media (min-width: 1024px) {
+          font-size: 16px;
+        }
       }
 
 
@@ -70,18 +85,26 @@
 
           &-name {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 150%;
             letter-spacing: 0px;
             color: #4C4C4C;
+
+            @media (min-width: 1024px) {
+              font-size: 16px;
+            }
           }
 
           &-company {
             font-weight: 500;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 150%;
             letter-spacing: 0px;
             color: #58397F;
+
+            @media (min-width: 1024px) {
+              font-size: 16px;
+            }
           }
         }
       }

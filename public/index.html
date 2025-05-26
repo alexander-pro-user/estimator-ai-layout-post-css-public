@@ -21,8 +21,11 @@
                 </ul>
             </nav>
             <div class="site-header__auth-wrapper">
-                <button class="btn btn__secondary">Login</button>
+                <button class="btn btn__secondary hidden lg:flex">Login</button>
                 <button class="btn btn__primary">Get Estimate</button>
+                <button id="mobile-hamburger-button" class="btn mobile-hamburger-button flex lg:hidden">
+                    <img src="images/icons/mobile-hamburger-icon.png" alt="Mobile Hamburger Icon">
+                </button>
             </div>
         </div>
     </header>
@@ -134,7 +137,7 @@
                     </div>
 
 
-                    <div class="process-in-actions__title mb-12">
+                    <div class="process-in-actions__title mb-10 lg:mb-12">
                         Watch how to create an estimation in under 15 minutes
                     </div>
 
@@ -225,7 +228,7 @@
             <section class="pricing">
 
                 <div class="pricing__container">
-                    <div class="label-block mb-4">
+                    <div class="label-block mb-6 lg:mb-4">
                         <div class="label-block__container justify-start">
                             <div class="label-block__text">Pricing</div>
                         </div>
@@ -257,7 +260,6 @@
                             </div>
 
                             <div class="pricing__items-item-price">
-
                                 <div class="pricing__items-item-price-block">
                                     <div class="pricing__items-item-price-block-value">$7.99</div>
                                     <div class="pricing__items-item-price-block-per-text">/ Per Estimatio</div>

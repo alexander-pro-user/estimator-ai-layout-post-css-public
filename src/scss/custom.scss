@@ -4,6 +4,7 @@
 @use "layouts/footer" as *;
 @use "layouts/main" as *;
 @use "components/button" as *;
+@use "components/mobile-hamburger" as *;
 @use "components/span" as *;
 @use "pages/landing/landing" as *;
 @use "pages/landing/professional-ai-estimation-generator" as *;
@@ -12,3 +13,9 @@
 @use "pages/landing/process-in-action" as *;
 @use "pages/landing/take-closer-look" as *;
 @use "pages/landing/testimonials" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
