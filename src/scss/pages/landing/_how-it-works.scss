@@ -29,14 +29,26 @@
 
   &__images {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: scroll;
     gap: 20px;
-    justify-content: center;
+    max-width: 89vw;
+
+    @media (min-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
   }
 
   &__image-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0px;
+    }
 
     &-image {
       width: 302px;
@@ -75,6 +87,37 @@
         color: #333333;
         text-align: left;
         justify-self: left;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    border-top: 1px solid #F5EDFF;
+    width: 100%;
+    justify-content: end;
+    padding-top: 19px;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &-elements {
+        display: flex;
+        gap: 7px;
+
+        &-prev {
+
+        }
+
+        &-next {
+
+        }
       }
     }
   }
