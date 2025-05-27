@@ -9,25 +9,40 @@
 <body>
 <div class="site-wrapper">
     <header class="site-header">
-        <div class="site-header__inner">
-            <div class="site-header__logo-wrapper">Estimator.AI</div>
-            <nav class="site-header__nav main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__item"><a href="#" class="main-nav__link">Main</a></li>
-                    <li class="main-nav__item"><a href="#" class="main-nav__link">How it works</a></li>
-                    <li class="main-nav__item"><a href="#" class="main-nav__link">Pricing</a></li>
-                    <li class="main-nav__item"><a href="#" class="main-nav__link">Testimonials</a></li>
-                    <li class="main-nav__item"><a href="#" class="main-nav__link">Blog</a></li>
-                </ul>
-            </nav>
-            <div class="site-header__auth-wrapper">
-                <button class="btn btn__secondary hidden lg:flex">Login</button>
-                <button class="btn btn__primary">Get Estimate</button>
-                <button id="mobile-hamburger-button" class="btn mobile-hamburger-button flex lg:hidden">
-                    <img src="images/icons/mobile-hamburger-icon.png" alt="Mobile Hamburger Icon">
-                </button>
+        <div class="site-header__row">
+            <div class="site-header__inner">
+                <div class="site-header__logo-wrapper">Estimator.AI</div>
+                <nav class="site-header__nav main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Main</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">How it works</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Pricing</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Testimonials</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Blog</a></li>
+                    </ul>
+                </nav>
+                <div class="site-header__auth-wrapper">
+                    <button class="btn btn__secondary hidden lg:flex">Login</button>
+                    <button class="btn btn__primary">Get Estimate</button>
+                    <button id="id-mobile-hamburger-button" class="btn mobile-hamburger-button flex lg:hidden">
+                        <img src="images/icons/mobile-hamburger-icon.png" alt="Mobile Hamburger Icon">
+                    </button>
+                </div>
             </div>
         </div>
+        <nav id="id-mobile-menu" class="mobile-menu hidden">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__list-item mobile-menu__list-item__active-link"><a href="#">Main</a></li>
+                <li class="mobile-menu__list-item"><a href="#">How it works</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Pricing</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Testimonials</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Blog</a></li>
+                <li class="mobile-menu__list-item-button">
+                    <button class="btn btn__secondary">Login</button>
+                    <button class="btn btn__primary">Get Estimate</button>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main class="site-main">
@@ -144,7 +159,6 @@
                 </div>
             </section>
 
-
             <section class="process-in-actions">
                 <div class="process-in-actions__container">
                     <div class="label-block mb-4">
@@ -153,11 +167,9 @@
                         </div>
                     </div>
 
-
                     <div class="process-in-actions__title mb-10 lg:mb-12">
                         Watch how to create an estimation in under 15 minutes
                     </div>
-
 
                     <div class="process-in-actions__video-item">
                         <div class="process-in-actions__video-item-video">
@@ -172,7 +184,6 @@
                 </div>
             </section>
 
-
             <section class="take-closer-look">
                 <div class="take-closer-look__container">
                     <div class="label-block mb-4">
@@ -180,7 +191,6 @@
                             <div class="label-block__text">Take a closer look</div>
                         </div>
                     </div>
-
 
                     <div class="text-block mb-10">
                         <div class="text-block__container">
@@ -562,6 +572,14 @@
         </div>
     </footer>
 </div>
-
 </body>
 </html>
+
+<script>
+    const menuBtn = document.getElementById('id-mobile-hamburger-button');
+    const mobileMenu = document.getElementById('id-mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

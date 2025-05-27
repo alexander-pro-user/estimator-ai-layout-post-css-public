@@ -1,11 +1,8 @@
 @use "../utils/variables" as *;
 
 .site-header {
-  display: flex;
-  align-items: center;
   padding-right: 20px;
   padding-left: 20px;
-  justify-content: space-between;
   box-sizing: border-box;
   height: 72px;
   border-bottom-width: 1px;
@@ -15,6 +12,14 @@
   @media (min-width: 1024px) {
     padding-right: 80px;
     padding-left: 80px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 
   &__inner {
@@ -78,6 +83,54 @@
 
     &:hover {
       color: $primary-color;
+    }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 99999;
+  flex-direction: column;
+  left: 20px;
+  right: 20px;
+  top: 84px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: #0C0C0D0C 0 1px 4px 0;
+  background: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #727A90;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-item {
+      padding-top: 8px;
+      padding-right: 16px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      border-radius: 8px;
+
+      &__active-link {
+        background: #F1E7F8;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #6409A7;
+      }
+
+      &-button {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+          min-width: 132px;
+        }
+      }
     }
   }
 }
