@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+
+    <main class="site-main">
+        <div class="site-main__content site-main__content--landing">
+        </div>
+    </main>
+
+    <footer class="site-footer" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            initHeader();
+        });
+
+    fetch('/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
