@@ -1,0 +1,26 @@
+.status-block {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+
+  padding-top: 2px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  border-radius: 100px;
+
+  &-grey {
+    background: #F1F2F4;
+    border: 1px solid #D3D6DD;
+    color: #727A90;
+  }
+}
+
+.green-price {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #009499;
+}

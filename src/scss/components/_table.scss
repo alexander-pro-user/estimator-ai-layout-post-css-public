@@ -1,0 +1,58 @@
+@use "../utils/variables" as *;
+
+.dashboard-table {
+  border-collapse: separate;
+  border: 1px solid #E9EAEA;
+  border-radius: 5px;
+
+  thead {
+    tr {
+      th {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #727A90;
+        border-bottom: 1px solid #E9EAEA;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333;
+      border-bottom: 1px solid #E9EAEA;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  td, th {
+    text-align: left;
+    padding-top: 18px;
+    padding-right: 22px;
+    padding-bottom: 18px;
+    padding-left: 22px;
+  }
+
+  &__td-title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+
+  &__td-description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #727A90;
+  }
+}

@@ -5,13 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div class="site-wrapper">
     <header id="header-placeholder" class="site-header"></header>
 
     <main class="site-main">
-        <div class="site-main__content site-main__content--landing">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <ul class="flex flex-col gap-3">
+                            <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                <img src="images/icons/folders-icon.png"><a href="estimations.html">Estimations</a>
+                            </li>
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                <img src="images/icons/clients-icon.png"><a href="clients.html">Clients</a>
+                            </li>
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                <img src="images/icons/files-icon.png"><a href="projects.html">Projects</a>
+                            </li>
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                <img src="images/icons/templates-icon.png"><a href="templates.html">Templates</a>
+                            </li>
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                <img src="images/icons/ai-settings-icon.png"><a href="ai-settings.html">AI Settings</a>
+                            </li>
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                <img src="images/icons/audio-icon.png"><a href="ai-settings.html">AI Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                <img src="images/icons/settings-icon.png"><a href="estimations.html">Settings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dashboard__content">
+                    <table class="dashboard-table w-full">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Total Amount</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 

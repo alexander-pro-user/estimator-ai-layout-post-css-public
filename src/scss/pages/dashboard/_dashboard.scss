@@ -1,0 +1,51 @@
+@use "../../utils/variables" as *;
+
+.dashboard {
+  background: #F0F0FF24;
+
+  &__sidebar {
+    background: linear-gradient(180.02deg, #F1F4FA 57.05%, #FAF6FC 99.98%);
+    min-height: calc(100vh - 72px - 160px);
+
+    ul {
+
+    }
+
+    li {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #5E6166;
+
+      img {
+        margin-right: 2px;
+      }
+
+    }
+
+    &-active {
+      background: #FFFFFF;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #63428D !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    padding: 24px;
+    background: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: #0C0C0D0D 0 1px 4px 0;
+
+    margin-left: 50px;
+    margin-right: 80px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
