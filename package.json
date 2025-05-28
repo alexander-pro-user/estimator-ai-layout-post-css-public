@@ -9,14 +9,18 @@
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "sass": "^1.88.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "nodemon": "^3.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "postcss src/css/tailwind.css -o public/dist/tailwind.css",
     "sass": "sass src/scss/custom.scss public/dist/custom.css",
     "build": "npm run tailwind && npm run sass && cat public/dist/tailwind.css public/dist/custom.css > public/dist/styles.css",
-    "watch": "npm run build && npm run tailwind -- --watch"
+    "watch:tailwind": "postcss src/css/tailwind.css -o public/dist/tailwind.css --watch",
+    "watch:sass": "sass --watch src/scss/custom.scss public/dist/custom.css",
+    "watch:combine": "nodemon --watch public/dist/tailwind.css --watch public/dist/custom.css --exec \"cat public/dist/tailwind.css public/dist/custom.css > public/dist/styles.css\"",
+    "dev": "concurrently \"npm run watch:tailwind\" \"npm run watch:sass\" \"npm run watch:combine\""
   },
   "keywords": [],
   "author": "",
