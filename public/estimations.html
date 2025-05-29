@@ -48,6 +48,26 @@
                     </div>
                 </div>
                 <div class="dashboard__content">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                        <h1 class="text-2xl font-semibold text-gray-900 mb-4 md:mb-0">Estimations</h1>
+                        <div class="flex flex-col sm:flex-row w-full md:w-auto space-y-4 sm:space-y-0 sm:space-x-4">
+                            <div class="relative flex-grow md:max-w-md">
+                                <input type="text" placeholder="Search" class="w-full search-input">
+                                <button class="absolute left-3 top-[11px] text-gray-400 hover:text-gray-600">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="btn btn__filter">
+                                <img src="images/icons/filter-icon.png">
+                            </button>
+                            <button class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">Create
+                                New
+                            </button>
+                        </div>
+                    </div>
                     <table class="dashboard-table w-full">
                         <thead>
                         <tr>
