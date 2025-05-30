@@ -48,10 +48,16 @@
                     </div>
                 </div>
                 <div class="dashboard__content">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-                        <h1 class="text-2xl font-semibold text-gray-900 mb-4 md:mb-0">Estimations</h1>
-                        <div class="flex flex-col sm:flex-row w-full md:w-auto space-y-4 sm:space-y-0 sm:space-x-4">
-                            <div class="relative flex-grow md:max-w-md">
+                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
+                        <div class="flex w-full justify-between items-center mb-4 lg:mb-0">
+                            <h1 class="text-2xl font-semibold text-gray-900">Estimations</h1>
+                            <button class="btn btn__primary lg:hidden">
+                                Create New
+                            </button>
+                        </div>
+
+                        <div class="flex items-center lg:flex-row w-full lg:w-auto space-y-4 space-y-0 space-x-4">
+                            <div class="relative flex-grow lg:max-w-md">
                                 <input type="text" placeholder="Search" class="w-full search-input">
                                 <button class="absolute left-3 top-[11px] text-gray-400 hover:text-gray-600">
                                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,8 +69,9 @@
                             <button class="btn btn__filter">
                                 <img src="images/icons/filter-icon.png">
                             </button>
-                            <button class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">Create
-                                New
+
+                            <button class="btn btn__primary hidden lg:inline-flex text-nowrap">
+                                Create New
                             </button>
                         </div>
                     </div>
@@ -162,8 +169,222 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">{Estimation name}
+                                    </div>
+                                    <div class="dashboard-table__td-description mb-1">Short description</div>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="green-price">$19,200</td>
+                            <td>
+                                <div class="flex gap-[10px]">
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/eye-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/copy-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[20px] h-[20px]">
+                                        <img class="object-cover  w-full h-full" src="images/icons/edit-icon.png">
+                                    </div>
+                                    <div class="flex self-center w-[24px]">
+                                        <img class="object-cover w-full h-full" src="images/icons/more-icon.png">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
+                    <div class="mt-6 pagination-table">
+                        <div class="pagination-table-text text-sm text-gray-700">
+                            Showing 1-12 from 100
+                        </div>
+                        <div class="pagination-table-pages space-x-2">
+                            <button class="hover:bg-gray-50">
+                                <img src="images/icons/prev-icon.png">
+                            </button>
+                            <button class="pagination-table__btn-selected">1</button>
+                            <button class="hover:bg-gray-50">2</button>
+                            <button class="hover:bg-gray-50">3</button>
+                            <button class="hover:bg-gray-50">3</button>
+                            <button class="hover:bg-gray-50">4</button>
+                            <button class="hover:bg-gray-50">5</button>
+                            <button class="hover:bg-gray-50">...</button>
+                            <button class="hover:bg-gray-50">
+                                <img src="images/icons/next-icon.png">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

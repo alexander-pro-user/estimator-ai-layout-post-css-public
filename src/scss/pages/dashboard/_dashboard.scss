@@ -4,6 +4,7 @@
   background: #F0F0FF24;
 
   &__sidebar {
+    display: none;
     background: linear-gradient(180.02deg, #F1F4FA 57.05%, #FAF6FC 99.98%);
     min-height: calc(100vh - 72px - 160px);
 
@@ -34,6 +35,11 @@
     a {
       text-decoration: none;
     }
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+
   }
 
   &__content {
