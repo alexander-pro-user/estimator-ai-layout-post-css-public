@@ -39,19 +39,24 @@
     @media (min-width: 1024px) {
       display: block;
     }
-
   }
 
   &__content {
-    padding: 24px;
-    background: #ffffff;
+    padding-top: 24px;
+    padding-bottom: 24px;
     width: 100%;
     border-radius: 12px;
-    box-shadow: #0C0C0D0D 0 1px 4px 0;
+    margin-right: 20px;
+    margin-left: 20px;
 
-    margin-left: 50px;
-    margin-right: 80px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @media (min-width: 1024px) {
+      padding: 24px;
+      background: #ffffff;
+      box-shadow: #0C0C0D0D 0 1px 4px 0;
+      margin-left: 50px;
+      margin-right: 80px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
 }
