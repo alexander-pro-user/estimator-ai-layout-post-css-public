@@ -578,6 +578,7 @@
                 </div>
             </div>
         </div>
+        <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
     </main>
 
     <footer class="site-footer" id="footer-placeholder"></footer>
@@ -604,4 +605,12 @@
             document.getElementById('id-popup-menu').innerHTML = html;
             initHeader();
         });
+
+    fetch('/components/bottom-navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('id-bottom-navbar-menu').innerHTML = html;
+            initHeader();
+        });
+
 </script>
