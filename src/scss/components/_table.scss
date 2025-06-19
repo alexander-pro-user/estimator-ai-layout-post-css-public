@@ -18,6 +18,11 @@
         line-height: 20px;
         color: #727A90;
         border-bottom: 1px solid #E9EAEA;
+
+        .th-container {
+          display: flex;
+          justify-content: space-between;
+        }
       }
     }
   }
