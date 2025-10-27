@@ -8,6 +8,16 @@
     background: linear-gradient(180.02deg, #F1F4FA 57.05%, #FAF6FC 99.98%);
     min-height: calc(100vh - 72px - 160px);
 
+    > div {
+      position: sticky;
+      top: 95px;
+      height: 100%;
+      max-height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     &-image {
       width: 24px;
       height: 24px;
