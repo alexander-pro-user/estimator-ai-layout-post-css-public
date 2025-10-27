@@ -7,14 +7,20 @@
   padding-right: 20px;
   padding-bottom: 124px;
 
-  background-image:
-          linear-gradient(to bottom,
-                  rgba(255, 255, 255, 0.2) 0%,
-                  rgba(255, 255, 255, 0.6) 30%,
-                  rgba(255, 255, 255, 0.9) 90%,
-                  rgba(255, 255, 255, 1) 100%
-          ),
-          url('/images/landing/professional-ai-estimation-generator.png');
+  /*background-image: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.6) 30%,
+          rgba(255, 255, 255, 0.9) 90%,
+          rgba(255, 255, 255, 1) 100%
+  ),
+  url('/images/landing/professional-ai-estimation-generator.png');
+  */
+
+  background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+  linear-gradient(180deg, rgba(255, 255, 255, 0) 83.01%, #FFF 100%),
+  radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),
+  url('/images/landing/professional-ai-estimation-generator.png') 50% / cover no-repeat,
+  lightgray;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
