@@ -23,12 +23,21 @@
     background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
     color: #FFFFFF;
     border: 1px solid #63428D;
+    font-family: Inter;
+
+    @media (min-width: 1024px) {
+      line-height: 19px
+    }
   }
 
   &__secondary {
     background: #F8F3FF;
     color: #7D55BE;
     border: 1px solid #63428D;
+
+    @media (min-width: 1024px) {
+      line-height: 19px
+    }
   }
 
   &__tertiary {

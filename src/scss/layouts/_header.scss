@@ -59,6 +59,13 @@
     gap: 8px;
     align-items: center;
   }
+
+  &__user-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .main-nav {
