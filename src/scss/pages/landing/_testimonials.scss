@@ -25,16 +25,25 @@
 
   &__items {
     display: flex;
-    flex-wrap: wrap;
-    gap: 26px;
+    flex-wrap: nowrap;
+    gap: 15px;
     margin-bottom: 34px;
-    justify-content: center;
+    justify-content: left;
+    overflow: scroll;
+    max-width: 89vw;
+
+    @media (min-width: 1024px) {
+      gap: 26px;
+      overflow: auto;
+      justify-content: center;
+    }
   }
 
   &__items-item {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    flex-shrink: 0;
+    width: 330px;
     padding: 22px;
     border-radius: 14px;
     border-width: 1px;
