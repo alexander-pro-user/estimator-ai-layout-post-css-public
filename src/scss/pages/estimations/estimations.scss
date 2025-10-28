@@ -1,0 +1,131 @@
+.estimations {
+
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      gap: 15px;
+    }
+
+  }
+
+  &__items-item {
+    border-radius: 8px;
+    border: 1px solid #E9EAEA;
+    background: #FFF;
+    width: 146px;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @media (min-width: 1024px) {
+      width: 230px;
+    }
+
+    &-green-bg {
+      border-radius: 8px;
+      border: 1px solid #1B9A8B;
+      background: #F7FFFC;
+      height: 100%;
+      /*  width: 100%; */
+    }
+
+    img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 70px;
+    }
+
+    &-name {
+      color: #24282E;
+      text-align: center;
+      font-family: "Public Sans";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.065px;
+
+      @media (min-width: 1024px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.07px;
+      }
+
+    }
+
+    &-company {
+      color: #727A90;
+      text-align: center;
+      font-family: "Public Sans";
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.055px;
+
+      @media (min-width: 1024px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.07px;
+      }
+
+    }
+
+    &-divider {
+      height: 1px;
+      align-self: stretch;
+      border-bottom: 1px solid #E9EAEA;
+    }
+
+    &-label {
+      color: #727A90;
+      font-family: "Public Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.06px;
+
+      @media (min-width: 1024px) {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.06px;
+      }
+    }
+
+    &-text {
+      overflow: hidden;
+      color: #58397F;
+      text-overflow: ellipsis;
+      font-family: "Public Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.06px;
+
+      @media (min-width: 1024px) {
+        white-space: nowrap;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.06px;
+      }
+    }
+  }
+}

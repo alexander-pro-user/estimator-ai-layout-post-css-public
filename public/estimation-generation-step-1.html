@@ -17,54 +17,56 @@
             <div class="dashboard flex">
                 <div class="dashboard__sidebar flex flex-col justify-between p-6">
                     <div>
-                        <ul class="flex flex-col gap-3">
-                            <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/folders-icon.svg">
-                                </div>
-                                <a href="estimations.html">Estimations</a>
-                            </li>
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/clients-icon.svg">
-                                </div>
-                                <a href="clients.html">Clients</a>
-                            </li>
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/files-icon.svg">
-                                </div>
-                                <a href="projects.html">Projects</a>
-                            </li>
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/templates-icon.svg">
-                                </div>
-                                <a href="templates.html">Templates</a>
-                            </li>
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/ai-settings-icon.svg">
-                                </div>
-                                <a href="ai-settings.html">AI Settings</a>
-                            </li>
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/audio-icon.svg">
-                                </div>
-                                <a href="ai-settings.html">AI Settings</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="flex flex-col gap-3">
-                            <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
-                                <div class="dashboard__sidebar-image">
-                                    <img src="images/icons/settings-icon.svg">
-                                </div>
-                                <a href="estimations.html">Settings</a>
-                            </li>
-                        </ul>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="dashboard__content">
@@ -93,10 +95,14 @@
                         </div>
                     </div>
 
-                    <div>stepper</div>
+                    <div>
+
+                        <div id="id-form-stepper"></div>
+
+                    </div>
 
                     <div class="pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
-                        <div class="flex justify-between">
+                        <div class="flex justify-between mb-4">
                             <div>
                                 <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">Client
                                     Information
@@ -109,8 +115,180 @@
                                 <button class="btn btn__green-add">+ New client</button>
                             </div>
                         </div>
-                        <div>
+                        <div class="estimations__items mb-8">
+                            <div class="hidden lg:flex">
+                                <div class="estimations__items-item estimations__items-item-green-bg">
+                                    <button class="btn btn__black-green-add m-auto">+ New client</button>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="estimations__items-item">
+                                <div>
+                                    <div class="mb-2 lg:mb-4">
+                                        <img src="images/icons/client-icon.svg" alt="user icon"/>
+                                    </div>
+                                    <div>
+                                        <div class="estimations__items-item-name mb-1">Lisa Greg</div>
+                                        <div class="estimations__items-item-company mb-1">Google</div>
+                                    </div>
+                                </div>
+                                <div class="estimations__items-item-divider"></div>
+                                <div class="flex flex-col w-full gap-[10px]">
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Email</div>
+                                        <div class="estimations__items-item-text">lisa_g@mail.com</div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row lg:justify-between gap-1">
+                                        <div class="estimations__items-item-label">Phone</div>
+                                        <div class="estimations__items-item-text">050 414 8778</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="form-navigation mb-4">
+                            <button class="btn btn__cancel-main">Cancel</button>
+                            <button class="btn btn__next-main">Next Step</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -146,6 +324,13 @@
         .then(response => response.text())
         .then(html => {
             document.getElementById('id-bottom-navbar-menu').innerHTML = html;
+            initHeader();
+        });
+
+    fetch('/components/form-stepper/step-1.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('id-form-stepper').innerHTML = html;
             initHeader();
         });
 

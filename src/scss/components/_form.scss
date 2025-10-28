@@ -3,7 +3,7 @@
 .search-input {
   border: $grey-color-light 1px solid;
   border-radius: 12px;
-  padding:  10px 10px 10px 36px;
+  padding: 10px 10px 10px 36px;
   max-height: 40px;
 
   font-family: "Inter", sans-serif;
@@ -14,4 +14,9 @@
   @media (min-width: 1024px) {
     width: 303px;
   }
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
 }
