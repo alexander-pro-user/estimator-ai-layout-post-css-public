@@ -230,4 +230,43 @@
     font-weight: 600;
     line-height: 150%;
   }
+
+  &__purple {
+    display: flex;
+    padding: 4px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 8px;
+    border: 1px solid #7D55BE;
+    background: #F8F3FF;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      padding: 6px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    span {
+      background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }

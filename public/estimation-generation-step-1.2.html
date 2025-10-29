@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+    <main class="site-main">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__content">
+                    <div class="flex pt-[16px] ps-[21px] pe-[21px] pb-[16px] lg:pt[17px] lg:ps-[32px] lg:pe-[32px] lg:pb-[17px] dashboard__colored-background mb-8">
+                        <div class="flex w-full justify-between items-center mb-4 lg:mb-0">
+                            <div class="flex items-center">
+                                <h1 class="text-[18px] lg:text-2xl font-bold text-[#7D55BE]">Estimate</h1>
+                                <div class="text-[12px] bg-[#7D55BE] rounded-[24px] ps-3 pe-3 pt-1 pb-1 text-white flex justify-center items-center ml-2">
+                                    1/5
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn__cancel mr-2 lg:mr-4">
+                                    <div class="hidden lg:block">Cancel</div>
+                                    <div class="block lg:hidden">
+                                        <img src="images/icons/arrow-left-long.svg" alt="arrow left">
+                                    </div>
+                                </button>
+                                <button class="btn btn__next-step">
+                                    <div class="hidden lg:block">Next Step</div>
+                                    <div class="block lg:hidden">
+                                        <img src="images/icons/arrow-right-long.svg" alt="arrow left">
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="id-form-stepper"></div>
+                    </div>
+
+                    <form class="custom-form">
+                        <div class="custom-form-container pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
+                            <div class="custom-form-block">
+                                <div class="custom-form-block-header flex justify-between mb-4">
+                                    <div>
+                                        <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">Client
+                                            Information
+                                        </div>
+                                        <div class="text-[13px] font-normal lg:text-[16px] text-[#676C76]">Select
+                                            existing
+                                            client
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn__purple">
+                                            <span>Existing client</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="custom-form-block-inputs">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
+                                        <div class="flex flex-col">
+                                            <label for="first_name" class="custom-label">
+                                                First Name
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="first_name"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                            <label for="last_name" class="custom-label">
+                                                Last Name
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="last_name"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                            <label for="email" class="custom-label">
+                                                Email
+                                            </label>
+                                            <input
+                                                    type="email"
+                                                    id="email"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <label for="phone" class="custom-label">
+                                                Contact Number
+                                            </label>
+
+                                            <div class="relative">
+                                                <div
+                                                        class="absolute inset-y-0 left-0 flex items-center gap-[6px] pl-3 pr-2 rounded-l-[8px] border border-[#CBD5E1] cursor-pointer bg-[#F8FAFC] z-10"
+                                                >
+                                                    <img src="/images/icons/countries/grand-britain-flag-icon.svg"
+                                                         class="w-[20px] h-[20px] rounded-sm"/>
+                                                    <img src="/images/icons/arrow-down-icon.svg" class="w-4 h-4"/>
+                                                </div>
+
+                                                <input
+                                                        type="tel"
+                                                        id="phone"
+                                                        placeholder="+44 (000) 000-0000"
+                                                        class="custom-input-phone w-full rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:col-span-2">
+                                            <label for="company-name" class="custom-label">
+                                                Company Name
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="company-name"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="custom-form-block">
+                                <div class="custom-form-block-header flex justify-between mb-4">
+                                    <div>
+                                        <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">
+                                            Company
+                                            Address
+                                        </div>
+                                        <div class="text-[13px] font-normal lg:text-[16px] text-[#676C76]">Enter company
+                                            address
+                                        </div>
+                                    </div>
+                                    <div class="self-end label-optional">
+                                        Optional
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-block-inputs estimations__wrap-form">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
+                                        <div class="flex flex-col">
+                                            <label for="street_address" class="custom-label">
+                                                Street Address
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="street_address"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                            <label for="city" class="custom-label">
+                                                City
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="city"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                            <label for="state" class="custom-label">
+                                                State/Province
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="state"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                            <label for="zip" class="custom-label">
+                                                ZIP/Postal Code
+                                            </label>
+                                            <input
+                                                    type="number"
+                                                    id="zip"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                        <div class="flex flex-col md:col-span-2">
+                                            <label for="country" class="custom-label">
+                                                Country
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="country"
+                                                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-navigation mb-4">
+                                <button class="btn btn__cancel-main">Cancel</button>
+                                <button class="btn btn__next-main">Next Step</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
+    </main>
+    <footer class="site-footer" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+            initHeader();
+        });
+
+    fetch('/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+    fetch('/components/popup-menu.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('id-popup-menu').innerHTML = html;
+            initHeader();
+        });
+
+    fetch('/components/bottom-navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('id-bottom-navbar-menu').innerHTML = html;
+            initHeader();
+        });
+
+    fetch('/components/form-stepper/step-1.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('id-form-stepper').innerHTML = html;
+            initHeader();
+        });
+</script>
