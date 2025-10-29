@@ -157,14 +157,15 @@
                                             </label>
 
                                             <div class="relative">
-                                                <div
+                                                <button
+                                                        type="button"
+                                                        id="country-toggle"
                                                         class="absolute inset-y-0 left-0 flex items-center gap-[6px] pl-3 pr-2 rounded-l-[8px] border border-[#CBD5E1] cursor-pointer bg-[#F8FAFC] z-10"
                                                 >
                                                     <img src="/images/icons/countries/grand-britain-flag-icon.svg"
                                                          class="w-[20px] h-[20px] rounded-sm"/>
                                                     <img src="/images/icons/arrow-down-icon.svg" class="w-4 h-4"/>
-                                                </div>
-
+                                                </button>
                                                 <input
                                                         type="tel"
                                                         id="phone"
@@ -172,6 +173,41 @@
                                                         class="custom-input-phone w-full rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                                                 />
+                                                <div
+                                                        id="country-dropdown"
+                                                        class="hidden absolute left-0 top-full mt-2 w-[220px] bg-white border border-gray-200 rounded-lg shadow-lg z-20"
+                                                >
+                                                    <ul class="max-h-56 overflow-y-auto">
+                                                        <li class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                                            data-code="+44"
+                                                            data-flag="/images/icons/countries/grand-britain-flag-icon.svg">
+                                                            <img src="/images/icons/countries/grand-britain-flag-icon.svg"
+                                                                 class="w-5 h-4 rounded-sm"/>
+                                                            <span>United Kingdom (+44)</span>
+                                                        </li>
+                                                        <li class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                                            data-code="+1"
+                                                            data-flag="/images/icons/countries/usa-flag-icon.svg">
+                                                            <img src="/images/icons/countries/usa-flag-icon.svg"
+                                                                 class="w-5 h-4 rounded-sm"/>
+                                                            <span>United States (+1)</span>
+                                                        </li>
+                                                        <li class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                                            data-code="+61"
+                                                            data-flag="/images/icons/countries/australia-flag-icon.svg">
+                                                            <img src="/images/icons/countries/australia-flag-icon.svg"
+                                                                 class="w-5 h-4 rounded-sm"/>
+                                                            <span>Australia (+61)</span>
+                                                        </li>
+                                                        <li class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                                            data-code="+49"
+                                                            data-flag="/images/icons/countries/germany-flag-icon.svg">
+                                                            <img src="/images/icons/countries/germany-flag-icon.svg"
+                                                                 class="w-5 h-4 rounded-sm"/>
+                                                            <span>Germany (+49)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="flex flex-col md:col-span-2">
@@ -315,4 +351,6 @@
             document.getElementById('id-form-stepper').innerHTML = html;
             initHeader();
         });
+
+    initSelectForCountries();
 </script>

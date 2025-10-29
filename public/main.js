@@ -31,3 +31,34 @@ function initHeader() {
         })
     }
 }
+
+function initSelectForCountries() {
+    const toggleBtn = document.getElementById('country-toggle');
+    const dropdown = document.getElementById('country-dropdown');
+    const phoneInput = document.getElementById('phone');
+
+
+    toggleBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+
+
+    dropdown.querySelectorAll('li').forEach((item) => {
+        item.addEventListener('click', () => {
+            const flag = item.getAttribute('data-flag');
+            const code = item.getAttribute('data-code');
+
+            toggleBtn.querySelector('img').src = flag;
+
+            phoneInput.placeholder = `${code} (000) 000-0000`;
+
+            dropdown.classList.add('hidden');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+}
