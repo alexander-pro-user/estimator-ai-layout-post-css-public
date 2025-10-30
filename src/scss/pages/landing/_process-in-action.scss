@@ -53,9 +53,16 @@
       }
 
       video {
+        height: 240px;
+        background: black;
         width: 100%;
         border-radius: 16px;
         border-bottom-width: 1px;
+
+        @media (min-width: 1024px) {
+          height: 693px;
+        }
+
       }
     }
 

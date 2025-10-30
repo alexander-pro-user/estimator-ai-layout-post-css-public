@@ -307,36 +307,55 @@
 <script src="main.js"></script>
 
 <script>
-    fetch('/header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header-placeholder').innerHTML = html;
-            initHeader();
-        });
+    document.addEventListener('DOMContentLoaded', () => {
 
-    fetch('/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder) {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    headerPlaceholder.innerHTML = html;
+                    initHeader();
+                });
+        }
 
-    fetch('/components/popup-menu.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('id-popup-menu').innerHTML = html;
-            initHeader();
-        });
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                });
+        }
 
-    fetch('/components/bottom-navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('id-bottom-navbar-menu').innerHTML = html;
-            initHeader();
-        });
+        const popupMenuEl = document.getElementById('id-popup-menu');
+        if (popupMenuEl) {
+            fetch('/components/popup-menu.html')
+                .then(response => response.text())
+                .then(html => {
+                    popupMenuEl.innerHTML = html;
+                    initHeader();
+                });
+        }
 
-    fetch('/components/form-stepper/step-1.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('id-form-stepper').innerHTML = html;
-            initHeader();
-        });
+        const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
+        if (bottomNavEl) {
+            fetch('/components/bottom-navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    bottomNavEl.innerHTML = html;
+                    initHeader();
+                });
+        }
 
+        const stepperEl = document.getElementById('id-form-stepper');
+        if (stepperEl) {
+            fetch('/components/form-stepper/step-1.html')
+                .then(response => response.text())
+                .then(html => {
+                    stepperEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+    });
 </script>

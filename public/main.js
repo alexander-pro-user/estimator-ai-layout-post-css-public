@@ -1,4 +1,8 @@
-//header
+document.addEventListener('DOMContentLoaded', () => {
+    initHeader();
+    initSelectForCountries();
+});
+
 function initHeader() {
     const menuBtn = document.getElementById('id-mobile-hamburger-button');
     const mobileMenu = document.getElementById('id-mobile-menu');
@@ -7,14 +11,16 @@ function initHeader() {
     const logoBtn = document.getElementById('id-logo-button');
     const popupMenuButton = document.getElementById('id-popup-menu-button');
     const popupMenu = document.getElementById('id-popup-menu');
-    const menuIcon = menuBtn.querySelector('img');
+    
+    if (menuBtn) {
+        const menuIcon = menuBtn.querySelector('img');
 
-    if (menuBtn && mobileMenu && menuIcon) {
         menuBtn.addEventListener('click', () => {
+            if (!mobileMenu || !menuIcon) return;
+
             mobileMenu.classList.toggle('hidden');
 
             const isOpen = !mobileMenu.classList.contains('hidden');
-
             menuIcon.src = isOpen
                 ? 'images/icons/close-mobile-hamburger-icon.svg'
                 : 'images/icons/mobile-hamburger-icon.svg';
@@ -24,25 +30,25 @@ function initHeader() {
     if (loginBtn) {
         loginBtn.addEventListener('click', () => {
             window.location.href = '/estimations.html';
-        })
+        });
     }
 
     if (loginMobileBtn) {
         loginMobileBtn.addEventListener('click', () => {
             window.location.href = '/estimations.html';
-        })
+        });
     }
 
     if (logoBtn) {
         logoBtn.addEventListener('click', () => {
             window.location.href = '/';
-        })
+        });
     }
 
     if (popupMenuButton && popupMenu) {
         popupMenuButton.addEventListener('click', () => {
             popupMenu.classList.remove('hidden');
-        })
+        });
     }
 }
 
@@ -51,21 +57,23 @@ function initSelectForCountries() {
     const dropdown = document.getElementById('country-dropdown');
     const phoneInput = document.getElementById('phone');
 
+    if (!toggleBtn || !dropdown || !phoneInput) {
+        console.warn('initSelectForCountries: some elements not found in DOM');
+        return;
+    }
 
     toggleBtn.addEventListener('click', () => {
         dropdown.classList.toggle('hidden');
     });
 
-
     dropdown.querySelectorAll('li').forEach((item) => {
         item.addEventListener('click', () => {
             const flag = item.getAttribute('data-flag');
             const code = item.getAttribute('data-code');
+            const img = toggleBtn.querySelector('img');
 
-            toggleBtn.querySelector('img').src = flag;
-
+            if (img) img.src = flag;
             phoneInput.placeholder = `${code} (000) 000-0000`;
-
             dropdown.classList.add('hidden');
         });
     });
