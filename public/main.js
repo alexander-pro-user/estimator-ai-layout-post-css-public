@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initHeader();
-    initSelectForCountries();
-});
-
 function initHeader() {
     const menuBtn = document.getElementById('id-mobile-hamburger-button');
     const mobileMenu = document.getElementById('id-mobile-menu');
