@@ -16,16 +16,18 @@
   url('/images/landing/professional-ai-estimation-generator.png');
   */
 
-  background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-  linear-gradient(180deg, rgba(255, 255, 255, 0) 83.01%, #FFF 100%),
-  radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),
-  url('/images/landing/professional-ai-estimation-generator.png') 50% / cover no-repeat,
-  lightgray;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 83.01%, #FFF 100%), radial-gradient(186.97% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%), url('/images/landing/professional-ai-estimation-generator.png') lightgray -104.893px 0px / 346.434% 100% no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-width: 1024px) {
+    background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 83.01%, #FFF 100%),
+    radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),
+    url('/images/landing/professional-ai-estimation-generator.png') 50% / cover no-repeat,
+    lightgray;
+
     padding-top: 140px;
     padding-bottom: 140px;
     padding-left: 220px;
@@ -63,9 +65,15 @@
 
   &__buttons {
     display: flex;
-    gap: 14px;
+    gap: 28px;
     font-size: 14px;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      gap: 14px;
+      flex-direction: row;
+    }
   }
 }

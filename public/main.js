@@ -6,10 +6,17 @@ function initHeader() {
     const logoBtn = document.getElementById('id-logo-button');
     const popupMenuButton = document.getElementById('id-popup-menu-button');
     const popupMenu = document.getElementById('id-popup-menu');
+    const menuIcon = menuBtn.querySelector('img');
 
-    if (menuBtn && mobileMenu) {
+    if (menuBtn && mobileMenu && menuIcon) {
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+
+            const isOpen = !mobileMenu.classList.contains('hidden');
+
+            menuIcon.src = isOpen
+                ? 'images/icons/close-mobile-hamburger-icon.svg'
+                : 'images/icons/mobile-hamburger-icon.svg';
         });
     }
 
