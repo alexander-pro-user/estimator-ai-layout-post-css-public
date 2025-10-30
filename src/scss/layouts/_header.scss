@@ -86,6 +86,7 @@
   }
 
   &__link {
+    font-family: Inter;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
@@ -94,6 +95,11 @@
 
     &:hover {
       color: $primary-color;
+    }
+
+    &-active {
+      color: #63428D;
+      font-weight: 700;
     }
   }
 }
