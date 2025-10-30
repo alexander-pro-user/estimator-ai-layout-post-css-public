@@ -6,7 +6,8 @@ function initHeader() {
     const logoBtn = document.getElementById('id-logo-button');
     const popupMenuButton = document.getElementById('id-popup-menu-button');
     const popupMenu = document.getElementById('id-popup-menu');
-    
+    const popupMenuCancelButton = document.getElementById('id-cancel-popup-button');
+
     if (menuBtn) {
         const menuIcon = menuBtn.querySelector('img');
 
@@ -40,9 +41,21 @@ function initHeader() {
         });
     }
 
-    if (popupMenuButton && popupMenu) {
-        popupMenuButton.addEventListener('click', () => {
-            popupMenu.classList.remove('hidden');
+    if (popupMenuButton && popupMenu && popupMenuCancelButton) {
+        popupMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            popupMenu.classList.toggle('hidden');
+        });
+
+        popupMenuCancelButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            popupMenu.classList.add('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!popupMenu.contains(e.target) && !popupMenuButton.contains(e.target)) {
+                popupMenu.classList.add('hidden');
+            }
         });
     }
 }
