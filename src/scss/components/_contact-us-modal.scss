@@ -1,0 +1,196 @@
+@use "../utils/variables" as *;
+
+.contactUsModal {
+  width: 100%;
+  height: 100%;
+  padding: 64px 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  position: fixed;
+
+  &__container {
+    max-height: 100%;
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex: 1 0 0;
+    position: relative;
+    overflow-y: auto;
+
+    border-radius: 16px;
+    background: var(--Background-color-primary, #FFF);
+
+    @media (min-width: 640px) {
+      margin: auto;
+      padding: 40px 64px;
+      max-width: 584px;
+      height: auto;
+    }
+
+    &__title {
+      color: #333;
+      text-align: center;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+
+      @media (min-width: 1024px) {
+        font-size: 32px;
+      }
+    }
+
+    &__description {
+      color: var(--Text-text-light-secondary, #5C5069);
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+
+      @media (min-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__label {
+      color: #1E293B;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: -0.084px;
+    }
+
+    &__input {
+      display: flex;
+      padding: 9px 12px;
+      align-items: center;
+      gap: 12px;
+      align-self: stretch;
+
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background: #FFF;
+
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        min-height: 48px;
+        padding: 12px;
+      }
+    }
+
+    &__textarea {
+      display: flex;
+      min-height: 132px;
+      padding: 12px;
+      align-items: flex-start;
+      gap: 12px;
+      flex: 1 0 0;
+      align-self: stretch;
+
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background: #FFF;
+
+      @media (min-width: 1024px) {
+        height: 160px;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+        align-self: stretch;
+      }
+
+      &::placeholder {
+        color: #5C5069;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.098px;
+        opacity: 0.5;
+
+        @media (min-width: 1024px) {
+          font-size: 16px;
+          letter-spacing: -0.112px;
+        }
+      }
+    }
+
+    &__checkbox-label {
+      color: #391952;
+
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+
+      &-link {
+        color: #7D55BE;
+
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+
+      }
+    }
+
+    &__checkbox {
+      width: 18px;
+      height: 18px;
+
+      border-radius: 4px;
+      border: 1px solid #7D55BE;
+      background: var(--Color-Neutral-white, #FFF);
+    }
+  }
+
+  &__submit-button {
+    display: flex;
+    padding: 12px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+
+    border-radius: 10px;
+    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+
+    color: var(--card-white, #FFF);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+  }
+}

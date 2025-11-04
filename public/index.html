@@ -208,7 +208,7 @@
 
                     <div class="take-closer-look__buttons">
                         <button class="btn btn__primary"><a href="estimations.html">Get Estimate</a></button>
-                        <button class="btn btn__tertiary">Contact Us</button>
+                        <button onclick="openModal(true)" class="btn btn__tertiary">Contact Us</button>
                         </button>
                     </div>
 
@@ -264,7 +264,7 @@
 
                             <div class="pricing__items-item__buttons">
                                 <button class="btn btn__primary">Get Your Billing Plan</button>
-                                <button class="btn btn__tertiary">Contact Us</button>
+                                <button onclick="openModal(true)" class="btn btn__tertiary">Contact Us</button>
                             </div>
                         </div>
                         <div class="pricing__items-colored-item">
@@ -487,14 +487,45 @@
 <script src="main.js"></script>
 
 <script>
-    fetch('/header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header-placeholder').innerHTML = html;
-            initHeader();
-        });
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+                initHeader();
+            });
 
-    fetch('/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        fetch('/components/contact-us-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+                const modal = document.getElementById('contactUsModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false);
+                });
+
+                const container = modal.querySelector('.contactUsModal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+    });
+
+    function openModal(show) {
+        console.log('sss')
+        const modal = document.getElementById('contactUsModal');
+
+        console.log(modal)
+        if (show) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        } else {
+            modal.classList.add('hidden');
+            modal.classList.add('flex');
+        }
+    }
 </script>
