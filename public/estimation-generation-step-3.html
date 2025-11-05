@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+    <main class="site-main">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__content">
+                    <div class="flex pt-[16px] ps-[21px] pe-[21px] pb-[16px] lg:pt[17px] lg:ps-[32px] lg:pe-[32px] lg:pb-[17px] dashboard__colored-background">
+                        <div class="flex w-full justify-between items-center mb-4 lg:mb-0">
+                            <div class="flex items-center">
+                                <h1 class="text-[18px] lg:text-2xl font-bold text-[#7D55BE]">Estimate</h1>
+                                <div class="text-[12px] bg-[#7D55BE] rounded-[24px] ps-3 pe-3 pt-1 pb-1 text-white flex justify-center items-center ml-2">
+                                    3/5
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn__cancel mr-2 lg:mr-4">
+                                    <div class="hidden lg:block">Cancel</div>
+                                    <div class="block lg:hidden">
+                                        <img src="images/icons/arrow-left-long.svg" alt="arrow left">
+                                    </div>
+                                </button>
+                                <button class="btn btn__next-step">
+                                    <div class="hidden lg:block">Next Step</div>
+                                    <div class="block lg:hidden">
+                                        <img src="images/icons/arrow-right-long.svg" alt="arrow left">
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="id-form-stepper"></div>
+                        <div class="custom-divider"></div>
+                    </div>
+
+                    <form class="custom-form">
+                        <div class="custom-form-container pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
+                            <div class="custom-form-block">
+                                <div class="custom-form-block-header flex justify-between mb-4">
+                                    <div>
+                                        <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">
+                                            Estimation Settings
+                                        </div>
+                                        <div class="text-[13px] font-normal lg:text-[16px] text-[#676C76]">
+                                            You can choose an instruction template for AI or write it from scratch
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-form-block-inputs">
+                                    <div class="grid grid-cols-1 gap-[10px]">
+                                        <div class="flex flex-col">
+                                            <label for="Title" class="custom-label">
+                                                Title
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="Title"
+                                                    class="focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <label for="subscribeTitle" class="custom-label">
+                                                Subscribe title
+                                            </label>
+                                            <input
+                                                    type="text"
+                                                    id="subscribeTitle"
+                                                    class="focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-block-subheader flex justify-between mt-[32px] lg:mt-[10px] mb-4">
+                                    <div>
+                                        <div class="text-[16px] font-semibold lg:text-[14px] lg:font-[700] text-[#333333] mb-2">
+                                            Instruction for AI
+                                        </div>
+                                        <div class="text-[13px] font-normal text-[#676C76]">
+                                            The choice of template will determine the styling of the estimate
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-form-block-special-button flex flex-col lg:flex-row gap-[10px] mb-4">
+                                    <button
+                                            class="flex w-full justify-center
+                                            px-[16px] py-[18px] rounded-[6px] border border-[#1B9A8B] bg-[#F7FFFC] text-[#009499] text-center font-[Inter] text-[14px] font-bold leading-[140%]
+                                            lg:h-[76px] lg:px-[16px] lg:py-[9px] lg:flex-col lg:justify-center lg:items-center lg:gap-[4px] lg:flex-[1_0_0]">
+                                        Blank AI Instruction
+                                    </button>
+                                    <button
+                                            class="flex w-full justify-center
+                                            px-[16px] py-[18px] rounded-[6px] border border-[#1B9A8B] bg-[#F7FFFC] text-[#009499] text-center font-[Inter] text-[14px] font-bold leading-[140%]
+                                            lg:h-[76px] lg:px-[16px] lg:py-[9px] lg:flex-col lg:justify-center lg:items-center lg:gap-[4px] lg:flex-[1_0_0]">
+                                        Add new template
+                                    </button>
+                                </div>
+
+                                <div class="templates flex-col lg:flex-row mb-8">
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                    <div class="templates__template">
+                                        <div class="templates__template__title">Template name</div>
+                                        <div class="templates__template__description">{Description}</div>
+                                    </div>
+                                </div>
+                                <div class="custom-form-block-subheader flex justify-between mt-[32px] lg:mt-[10px] mb-4">
+                                    <div>
+                                        <div class="text-[16px] font-semibold lg:text-[14px] lg:font-[700] text-[#333333] mb-2">
+                                            Sections
+                                        </div>
+                                        <div class="text-[13px] font-normal text-[#676C76]">
+                                            Select the sections to be displayed in the estimate
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-block-checkboxes">
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">All</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Case</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Estimation</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Technologies</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Development stages</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Questions</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Project plan</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                    <div class="custom-form-block-checkboxes-checkbox">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <div class="checkbox-label">Section name</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-navigation mb-4">
+                                <button class="btn btn__cancel-main">Cancel</button>
+                                <button class="btn btn__next-main">Next Step</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
+    </main>
+    <footer class="site-footer" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder) {
+            fetch('/header-authorized.html')
+                .then(response => response.text())
+                .then(html => {
+                    headerPlaceholder.innerHTML = html;
+                    initHeader();
+                });
+        }
+
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                });
+        }
+
+        const popupMenuEl = document.getElementById('id-popup-menu');
+        if (popupMenuEl) {
+            fetch('/components/popup-menu.html')
+                .then(response => response.text())
+                .then(html => {
+                    popupMenuEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+
+        const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
+        if (bottomNavEl) {
+            fetch('/components/bottom-navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    bottomNavEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+
+        const stepperEl = document.getElementById('id-form-stepper');
+        if (stepperEl) {
+            fetch('/components/form-stepper/step-3.html')
+                .then(response => response.text())
+                .then(html => {
+                    stepperEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+
+        initSelectForCountries();
+    });
+</script>
