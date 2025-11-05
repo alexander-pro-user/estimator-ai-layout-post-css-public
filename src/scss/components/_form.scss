@@ -53,6 +53,27 @@
         }
       }
 
+      textarea {
+        display: flex;
+        min-height: 184px;
+        padding: 12px;
+        align-items: center;
+        gap: 12px;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        font-size: 14px;
+        line-height: 22px;
+
+        border-radius: 8px;
+        border: 1px solid #CBD5E1;
+        background: #FFF;
+
+        @media (min-width: 1024px) {
+          min-height: 327px;
+        }
+      }
+
       .custom-input-phone {
         padding-left: 75px;
       }

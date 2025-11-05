@@ -145,6 +145,29 @@
         flex: 0 1 71px;
       }
     }
+
+    &-filled {
+      height: 4px;
+      flex: 0 1 20px;
+      border-radius: 100px;
+      background: #58397F;
+
+      @media (min-width: 640px) {
+        flex: 0 1 80px;
+      }
+
+      @media (min-width: 768px) {
+        flex: 0 1 100px;
+      }
+
+      @media (min-width: 1024px) {
+        flex: 0 1 100px;
+      }
+
+      @media (min-width: 1280px) {
+        flex: 0 1 142px;
+      }
+    }
   }
 }
 
