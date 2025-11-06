@@ -86,7 +86,8 @@
                                     </div>
                                 </button>
                                 <button class="btn btn__next-step">
-                                    <div class="hidden lg:block">Next Step</div>
+                                    <div class="hidden lg:block"><a href="/estimation-generation-step-4.html">Next
+                                        Step</a></div>
                                     <div class="block lg:hidden">
                                         <img src="images/icons/arrow-right-long.svg" alt="arrow left">
                                     </div>
@@ -265,12 +266,12 @@
                                         <div class="checkbox-label">Section name</div>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div class="form-navigation mb-4">
                                 <button class="btn btn__cancel-main"><a href="/estimations">Cancel</a></button>
-                                <button class="btn btn__next-main">Next Step</button>
+                                <button class="btn btn__next-main"><a href="/estimation-generation-step-4.html">Next
+                                    Step</a></button>
                             </div>
                         </div>
                     </form>
@@ -337,5 +338,22 @@
         }
 
         initSelectForCountries();
+
+        const templates = document.querySelectorAll('.templates__template');
+        const gradients = [
+            'radial-gradient(193.92% 102.63% at 0% 19.62%, #E5ECFF 0%, #F2FAFF 60.9%, #FFF 100%), #FFF',
+            'radial-gradient(128.34% 117.29% at 52.81% 104.81%, #F9EFFF 0%, #F0F5FF 60.9%, #FFF 100%), #FFF',
+            'radial-gradient(102.35% 66.81% at 97.92% 144.66%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(224.52% 109.61% at 0.45% 98.81%, rgba(229, 236, 255, 0.50) 0%, rgba(242, 250, 255, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(124.99% 78.65% at 83.84% 0%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.50) 100%), #FFF',
+            'radial-gradient(102.35% 66.81% at 97.92% 144.66%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(224.52% 109.61% at 0.45% 98.81%, rgba(229, 236, 255, 0.50) 0%, rgba(242, 250, 255, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(124.99% 78.65% at 83.84% 0%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.50) 100%), #FFF',
+            'radial-gradient(193.92% 102.63% at 0% 19.62%, #E5ECFF 0%, #F2FAFF 60.9%, #FFF 100%), #FFF',
+            'radial-gradient(128.34% 117.29% at 52.81% 104.81%, #F9EFFF 0%, #F0F5FF 60.9%, #FFF 100%), #FFF',
+            'radial-gradient(102.35% 66.81% at 97.92% 144.66%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(224.52% 109.61% at 0.45% 98.81%, rgba(229, 236, 255, 0.50) 0%, rgba(242, 250, 255, 0.50) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(124.99% 78.65% at 83.84% 0%, rgba(229, 229, 255, 0.50) 0%, rgba(255, 242, 245, 0.50) 60.9%, rgba(255, 255, 255, 0.50) 100%), #FFF',
+            'radial-gradient(193.92% 102.63% at 0% 19.62%, #E5ECFF 0%, #F2FAFF 60.9%, #FFF 100%), #FFF',
+            'radial-gradient(128.34% 117.29% at 52.81% 104.81%, #F9EFFF 0%, #F0F5FF 60.9%, #FFF 100%), #FFF'
+        ];
+
+        templates.forEach((template, index) => {
+            template.style.background = gradients[index % gradients.length];
+        });
     });
 </script>

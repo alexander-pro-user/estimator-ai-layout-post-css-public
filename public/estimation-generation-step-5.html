@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,18 +75,18 @@
                             <div class="flex items-center">
                                 <h1 class="text-[18px] lg:text-2xl font-bold text-[#7D55BE]">Estimate</h1>
                                 <div class="text-[12px] bg-[#7D55BE] rounded-[24px] ps-3 pe-3 pt-1 pb-1 text-white flex justify-center items-center ml-2">
-                                    4/5
+                                    5/5
                                 </div>
                             </div>
                             <div>
                                 <button class="btn btn__cancel mr-2 lg:mr-4">
-                                    <div class="hidden lg:block"><a href="/estimations">Cancel</a></div>
+                                    <div class="hidden lg:block"><a href="/estimations">Back</a></div>
                                     <div class="block lg:hidden">
                                         <img src="images/icons/arrow-left-long.svg" alt="arrow left">
                                     </div>
                                 </button>
                                 <button class="btn btn__next-step">
-                                    <div class="hidden lg:block"><a href="/estimation-generation-step-5.html">Next Step</a></div>
+                                    <div class="hidden lg:block">Save</div>
                                     <div class="block lg:hidden">
                                         <img src="images/icons/arrow-right-long.svg" alt="arrow left">
                                     </div>
@@ -102,138 +102,133 @@
                     <form class="custom-form">
                         <div class="custom-form-container-short pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
                             <div class="custom-form-block">
-                                <div class="custom-form-block-header flex justify-between mb-4">
+                                <div class="custom-form-block-header flex justify-between">
                                     <div>
                                         <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">
-                                            Estimation Details
+                                            Finalize & Export
                                         </div>
                                         <div class="text-[13px] font-normal lg:text-[16px] text-[#676C76]">
-                                            Enter estimation details
+                                            Select template
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn__purple">
+                                            <span>
+                                                <a href="#">Template Settings</a></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wrap-custom-form-template flex flex-col sm:flex-row gap-[10px] flex-wrap justify-center mb-4">
+                                <div class="custom-form-template">
+                                    <div class="custom-form-template-image">
+                                        <img src="images/admin/template-image-1.png">
+                                    </div>
+                                    <div class="custom-form-template-header">
+                                        <div class="custom-form-template-header-title">
+                                            Lilac
+                                        </div>
+                                        <div class="custom-form-template-header-text">
+                                            Pastel color scheme
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-form-template">
+                                    <div class="custom-form-template-image">
+                                        <img src="images/admin/template-image-2.png">
+                                    </div>
+                                    <div class="custom-form-template-header">
+                                        <div class="custom-form-template-header-title">
+                                            Turquoise
+                                        </div>
+                                        <div class="custom-form-template-header-text">
+                                            Pastel color scheme
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-form-template">
+                                    <div class="custom-form-template-image">
+                                        <img src="images/admin/template-image-3.png">
+                                    </div>
+                                    <div class="custom-form-template-header">
+                                        <div class="custom-form-template-header-title">
+                                            Green
+                                        </div>
+                                        <div class="custom-form-template-header-text">
+                                            Pastel color scheme
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="wrap-custom-form-collapse flex flex-col gap-[10px] mb-4">
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Case
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
+                            <div class="wrap-custom-form-switcher flex flex-col gap-[10px] flex-wrap justify-center lg:justify-start">
+                                <div class="custom-form-switcher-title">Public Access</div>
+                                <div class="custom-form-switcher-body">
+                                    <div class="custom-form-switcher-body-input">
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer">
+                                            <div class="w-[40px] h-[24px] bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[16px] after:w-[16px] after:transition-all peer-checked:bg-[#7D55BE]"></div>
+                                        </label>
                                     </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="case"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-short focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Estimation
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
-                                    </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="estimation"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Technologies
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
-                                    </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="technologies"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Development stages
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
-                                    </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="development-stages"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Questions
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
-                                    </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="questions"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="custom-form-collapse">
-                                    <div class="custom-form-collapse-header">
-                                        <div class="custom-form-collapse-header-title">
-                                            Project plan
-                                        </div>
-                                        <div class="custom-form-collapse-header-image">
-                                            <img src="images/icons/collapse-plus-icon.svg">
-                                            <img src="images/icons/collapse-minus-icon.svg">
-                                        </div>
-                                    </div>
-                                    <div class="custom-form-collapse-body">
-                                    <textarea
-                                            id="project-plan"
-                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            rows="4"
-                                    ></textarea>
+                                    <div class="custom-form-switcher-body-label">
+                                        Showing the estimate publicly?
                                     </div>
                                 </div>
                             </div>
 
+                            <div>
+                                <div class="custom-form-block">
+                                    <div class="custom-form-block-header flex justify-between mb-2">
+                                        <div>
+                                            <div class="text-[16px] font-semibold lg:text-[18px] text-[#333333] mb-2">
+                                                Export Estimate
+                                            </div>
+                                            <div class="text-[13px] font-normal lg:text-[16px] text-[#676C76]">
+                                                Select template
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="wrap-custom-form-export flex flex-col sm:flex-row gap-[10px] flex-wrap justify-center lg:justify-start mb-4">
+                                    <div class="custom-form-export custom-form-export-active">
+                                        <div class="custom-form-export-body">
+                                            <div class="custom-form-export-body-image">
+                                                <img src="images/admin/website-icon.svg">
+                                            </div>
+                                            <div class="custom-form-export-body-title custom-form-export-body-title-active">
+                                                Public Web Page
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-export">
+                                        <div class="custom-form-export-body">
+                                            <div class="custom-form-export-body-image">
+                                                <img src="images/admin/pdf-icon.svg">
+                                            </div>
+                                            <div class="custom-form-export-body-title">
+                                                Export PDF
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-export">
+                                        <div class="custom-form-export-body">
+                                            <div class="custom-form-export-body-image">
+                                                <img src="images/admin/google-drive-icon.svg">
+                                            </div>
+                                            <div class="custom-form-export-body-title">
+                                                Upload to Google Drive
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="form-navigation mb-4">
-                                <button class="btn btn__cancel-main"><a href="/estimations">Cancel</a></button>
-                                <button class="btn btn__next-main"><a href="/estimation-generation-step-5.html">Next Step</a></button>
+                                <button class="btn btn__cancel-main"><a href="/estimations">Back</a></button>
+                                <button class="btn btn__next-main">Save</button>
                             </div>
                         </div>
                     </form>
@@ -291,7 +286,7 @@
 
         const stepperEl = document.getElementById('id-form-stepper');
         if (stepperEl) {
-            fetch('/components/form-stepper/step-4.html')
+            fetch('/components/form-stepper/step-5.html')
                 .then(response => response.text())
                 .then(html => {
                     stepperEl.innerHTML = html;
