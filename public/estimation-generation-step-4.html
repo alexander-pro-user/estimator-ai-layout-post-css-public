@@ -100,7 +100,7 @@
                     </div>
 
                     <form class="custom-form">
-                        <div class="custom-form-container pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
+                        <div class="custom-form-container-short pt-4 ps-4 pe-4 lg:pt-8 lg:ps-8 lg:pe-8">
                             <div class="custom-form-block">
                                 <div class="custom-form-block-header flex justify-between mb-4">
                                     <div>
@@ -114,9 +114,9 @@
                                 </div>
                             </div>
 
-                            <div class="custom-form-collapse">
-                                <div class="custom-form-collapse-header">
-                                    <div>
+                            <div class="wrap-custom-form-collapse flex flex-col gap-[10px] mb-4">
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
                                         <div class="custom-form-collapse-header-title">
                                             Case
                                         </div>
@@ -125,19 +125,17 @@
                                             <img src="images/icons/collapse-minus-icon.svg">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="custom-form-collapse-body">
+                                    <div class="custom-form-collapse-body">
                                     <textarea
                                             id="case"
                                             class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-short focus:outline-none focus:ring-2 focus:ring-blue-500"
                                             rows="4"
                                     ></textarea>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="custom-form-collapse">
-                                <div class="custom-form-collapse-header">
-                                    <div>
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
                                         <div class="custom-form-collapse-header-title">
                                             Estimation
                                         </div>
@@ -146,13 +144,89 @@
                                             <img src="images/icons/collapse-minus-icon.svg">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="custom-form-collapse-body">
+                                    <div class="custom-form-collapse-body">
                                     <textarea
                                             id="estimation"
                                             class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
                                             rows="4"
                                     ></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
+                                        <div class="custom-form-collapse-header-title">
+                                            Technologies
+                                        </div>
+                                        <div class="custom-form-collapse-header-image">
+                                            <img src="images/icons/collapse-plus-icon.svg">
+                                            <img src="images/icons/collapse-minus-icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-collapse-body">
+                                    <textarea
+                                            id="technologies"
+                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            rows="4"
+                                    ></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
+                                        <div class="custom-form-collapse-header-title">
+                                            Development stages
+                                        </div>
+                                        <div class="custom-form-collapse-header-image">
+                                            <img src="images/icons/collapse-plus-icon.svg">
+                                            <img src="images/icons/collapse-minus-icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-collapse-body">
+                                    <textarea
+                                            id="development-stages"
+                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            rows="4"
+                                    ></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
+                                        <div class="custom-form-collapse-header-title">
+                                            Questions
+                                        </div>
+                                        <div class="custom-form-collapse-header-image">
+                                            <img src="images/icons/collapse-plus-icon.svg">
+                                            <img src="images/icons/collapse-minus-icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-collapse-body">
+                                    <textarea
+                                            id="questions"
+                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            rows="4"
+                                    ></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="custom-form-collapse">
+                                    <div class="custom-form-collapse-header">
+                                        <div class="custom-form-collapse-header-title">
+                                            Project plan
+                                        </div>
+                                        <div class="custom-form-collapse-header-image">
+                                            <img src="images/icons/collapse-plus-icon.svg">
+                                            <img src="images/icons/collapse-minus-icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="custom-form-collapse-body">
+                                    <textarea
+                                            id="project-plan"
+                                            class="custom-form-collapse-body-textarea custom-form-collapse-body-textarea-long focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            rows="4"
+                                    ></textarea>
+                                    </div>
                                 </div>
                             </div>
 
@@ -217,7 +291,7 @@
 
         const stepperEl = document.getElementById('id-form-stepper');
         if (stepperEl) {
-            fetch('/components/form-stepper/step-3.html')
+            fetch('/components/form-stepper/step-4.html')
                 .then(response => response.text())
                 .then(html => {
                     stepperEl.innerHTML = html;
@@ -226,24 +300,6 @@
         }
 
         initSelectForCountries();
-
-
-        const templates = document.querySelectorAll('.templates__template');
-        const gradients = [
-            'linear-gradient(135deg, #667eea, #764ba2)',
-            'linear-gradient(135deg, #f093fb, #f5576c)',
-            'linear-gradient(135deg, #4facfe, #00f2fe)',
-            'linear-gradient(135deg, #43e97b, #38f9d7)',
-            'linear-gradient(135deg, #fa709a, #fee140)',
-            'linear-gradient(135deg, #a8edea, #fed6e3)',
-            'linear-gradient(135deg, #ff9a9e, #fad0c4)',
-            'linear-gradient(135deg, #a1c4fd, #c2e9fb)',
-            'linear-gradient(135deg, #d4fc79, #96e6a1)'
-        ];
-
-        templates.forEach((template, index) => {
-            template.style.background = gradients[index % gradients.length];
-        });
+        initCollapseBlocks();
     });
-
 </script>

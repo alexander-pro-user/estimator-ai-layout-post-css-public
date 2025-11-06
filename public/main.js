@@ -92,3 +92,47 @@ function initSelectForCountries() {
         }
     });
 }
+
+function initCollapseBlocks(){
+    // Get all headers of collapsible blocks
+    const collapseHeaders = document.querySelectorAll('.custom-form-collapse-header');
+
+    collapseHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            // Find the parent element of the block
+            const collapseBlock = this.closest('.custom-form-collapse');
+
+            // Find the block body
+            const collapseBody = collapseBlock.querySelector('.custom-form-collapse-body');
+
+            // Checking current display status
+            if (collapseBody.style.display === 'none') {
+                // Разворачиваем блок
+                collapseBody.style.display = 'block';
+                collapseBlock.querySelector('.custom-form-collapse-header-image img:first-child').style.display = 'none';
+                collapseBlock.querySelector('.custom-form-collapse-header-image img:last-child').style.display = 'inline';
+            } else {
+                // Collapse block
+                collapseBody.style.display = 'none';
+                collapseBlock.querySelector('.custom-form-collapse-header-image img:first-child').style.display = 'inline';
+                collapseBlock.querySelector('.custom-form-collapse-header-image img:last-child').style.display = 'none';
+            }
+        });
+    });
+
+    // Initially hide block bodies
+    const collapseBodies = document.querySelectorAll('.custom-form-collapse-body');
+    collapseBodies.forEach(body => {
+        body.style.display = 'none';
+    });
+
+    // Initially, we show the advantages and hide the disadvantages.
+    const headerImages = document.querySelectorAll('.custom-form-collapse-header-image img');
+    headerImages.forEach((img, index) => {
+        if (index % 2 === 0) {
+            img.style.display = 'inline';
+        } else {
+            img.style.display = 'none';
+        }
+    });
+}
