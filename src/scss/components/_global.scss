@@ -59,3 +59,23 @@
   line-height: 20px;
   color: #009499 !important;
 }
+
+.title-page {
+  color: #333;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.09px;
+
+  @media (min-width: 1024px) {
+    color: #333;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.12px;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../utils/variables" as *;
+
+.custom-breadcrumb {
+}
+
+.custom-breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+  content: "/";
+
+  color: #BEC2CC;
+
+  font-family: "Public Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.07px;
+}
+
+.custom-breadcrumb li {
+  color: #727A90;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.07px;
+}
+
+.custom-breadcrumb li:first-child {
+  color: #7D55BE;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.07px;
+}
