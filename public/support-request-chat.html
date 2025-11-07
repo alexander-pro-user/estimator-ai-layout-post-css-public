@@ -47,7 +47,7 @@
                                     <div class="dashboard__sidebar-image">
                                         <img src="images/icons/ai-settings-icon.svg">
                                     </div>
-                                    <a href="ai-settings.html">AI Settings</a>
+                                    <a href="support-requests.html">AI Settings</a>
                                 </li>
                                 <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
                                     <div class="dashboard__sidebar-image">
@@ -232,7 +232,7 @@
 
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
         if (bottomNavEl) {
-            fetch('/components/bottom-navbar.html')
+            fetch('/components/mobile-bottom-navbar/bottom-navbar-support-request.html')
                 .then(response => response.text())
                 .then(html => {
                     console.log(html);

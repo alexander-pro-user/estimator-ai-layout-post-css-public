@@ -48,7 +48,7 @@
                                     <div class="dashboard__sidebar-image">
                                         <img src="images/icons/ai-settings-icon.svg">
                                     </div>
-                                    <a href="ai-settings.html">AI Settings</a>
+                                    <a href="support-requests.html">AI Settings</a>
                                 </li>
                                 <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
                                     <div class="dashboard__sidebar-image">
@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>Title</td>
+                            <td><a href="support-request-chat.html">Title</a></td>
                             <td>3 days ago</td>
                             <td>3 days ago</td>
                             <td>
@@ -336,7 +336,8 @@
                         <div class="block-list__item">
                             <div class="block-list__item-row-1 flex justify-between">
                                 <div class="flex flex-col">
-                                    <div class="block-list__title mb-3">Title</div>
+                                    <div class="block-list__title mb-3"><a href="support-request-chat.html">Title</a>
+                                    </div>
                                     <div class="block-list__description mb-1">
                                         <span class="status-block status-block-red mr-3">Top</span>
                                         <span class="status-block status-block-grey">Draft</span>
@@ -720,7 +721,7 @@
 
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
         if (bottomNavEl) {
-            fetch('/components/bottom-navbar.html')
+            fetch('/components/mobile-bottom-navbar/bottom-navbar-support-request.html')
                 .then(response => response.text())
                 .then(html => {
                     bottomNavEl.innerHTML = html;
