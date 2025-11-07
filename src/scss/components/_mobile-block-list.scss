@@ -14,6 +14,16 @@
     border: 1px solid #E9EAEA;
     border-radius: 8px;
 
+    overflow: hidden;
+    color: #333;
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
+
     &-row-1 {
       padding: 12px;
       border-bottom: 1px solid #E9EAEA

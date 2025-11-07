@@ -1,0 +1,731 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+
+    <main class="site-main">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-active-icon.svg">
+                                    </div>
+                                    <a href="support-requests.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__table-content">
+                    <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-[24px] xl:mb-[20px] space-y-4 xl:space-y-0">
+                        <div class="flex w-full justify-between items-center">
+                            <h1 class="text-[18px] lg:text-[24px] font-semibold text-[#333] text-nowrap">Support
+                                requests</h1>
+                            <button class="btn btn__primary xl:hidden">
+                                <a class="text-nowrap" href="/estimation-generation-step-1.html">New Request</a>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-row w-full xl:w-auto items-stretch sm:items-center gap-4">
+                            <div class="relative flex-grow sm:max-w-md">
+                                <input type="text" placeholder="Search" class="w-full search-input">
+                                <button class="absolute left-3 top-[11px] text-gray-400 hover:text-gray-600">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <select class="custom-select">
+                                <option value="Any" selected>Any</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                            <button class="btn btn__primary hidden xl:inline-flex text-nowrap">
+                                <a href="/estimation-generation-step-1.html">New Request</a>
+                            </button>
+                        </div>
+                    </div>
+                    <table class="dashboard-table w-full">
+                        <thead>
+                        <tr>
+                            <th class="w-[80px]">
+                                <div class="th-container">
+                                    Id <img src="images/icons/caret-down-icon.svg">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th-container">
+                                    Title
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th-container">
+                                    Created
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th-container">
+                                    Last activity <img src="images/icons/caret-down-icon.svg">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th-container">
+                                    Priority
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th-container">
+                                    Status
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        10
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-red">Top</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-grey">Draft</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        9
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-green">Low</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-grey">Draft</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        8
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-orange">Medium</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-grey">Draft</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        7
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-green">Low</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-grey">Draft</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        6
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-red">Top</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-blue">Await</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        5
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-green">Medium</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-blue">Await</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        4
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-orange">Medium</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-blue">Await</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        3
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-orange">Medium</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-green">Solved</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        2
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-red">Top</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-green">Solved</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="flex flex-col">
+                                    <div class="dashboard-table__td-title">
+                                        1
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Title</td>
+                            <td>3 days ago</td>
+                            <td>3 days ago</td>
+                            <td>
+                                <span class="status-block status-block-orange">Medium</span>
+                            </td>
+                            <td>
+                                <span class="status-block status-block-green">Solved</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="block-list flex lg:hidden">
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Title</div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img id="id-popup-menu-button" class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div id="id-popup-menu" class="popup-menu hidden"></div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>10</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>9</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>8</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>7</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>6</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>5</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>4</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>3</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>2</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title mb-3">Long title Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing
+                                    </div>
+                                    <div class="block-list__description mb-1">
+                                        <span class="status-block status-block-red mr-3">Top</span>
+                                        <span class="status-block status-block-grey">Draft</span>
+                                    </div>
+                                </div>
+                                <div class="flex self-start w-[24px]">
+                                    <img class="object-cover w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                </div>
+                            </div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-2/5">
+                                    <div class="block-list__description-2 mb-1">ID</div>
+                                    <div>1</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Created</div>
+                                    <div>3 days ago</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2 mb-1">Last activity</div>
+                                    <div>3 days ago</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-6 pagination-table">
+                        <div class="pagination-table-text text-sm text-gray-700">
+                            Showing 1-12 from 100
+                        </div>
+                        <div class="pagination-table-pages space-x-2">
+                            <button class="hover:bg-gray-50">
+                                <img src="images/icons/prev-icon.svg">
+                            </button>
+                            <button class="pagination-table__btn-selected">1</button>
+                            <button class="hover:bg-gray-50">2</button>
+                            <button class="hover:bg-gray-50">3</button>
+                            <button class="hover:bg-gray-50">3</button>
+                            <button class="hover:bg-gray-50">4</button>
+                            <button class="hover:bg-gray-50">5</button>
+                            <button class="hover:bg-gray-50">...</button>
+                            <button class="hover:bg-gray-50">
+                                <img src="images/icons/next-icon.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
+    </main>
+
+    <footer class="site-footer" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder) {
+            fetch('/header-authorized.html')
+                .then(response => response.text())
+                .then(html => {
+                    headerPlaceholder.innerHTML = html;
+                    initHeader();
+                })
+                .catch(err => console.warn('Ошибка загрузки header:', err));
+        }
+
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                })
+                .catch(err => console.warn('Ошибка загрузки footer:', err));
+        }
+
+        const popupMenuEl = document.getElementById('id-popup-menu');
+        if (popupMenuEl) {
+            fetch('/components/popup-menu.html')
+                .then(response => response.text())
+                .then(html => {
+                    popupMenuEl.innerHTML = html;
+                    initHeader();
+                })
+        }
+
+        const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
+        if (bottomNavEl) {
+            fetch('/components/bottom-navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    bottomNavEl.innerHTML = html;
+                    initHeader();
+                })
+        }
+    });
+</script>

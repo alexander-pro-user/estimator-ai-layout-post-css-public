@@ -16,6 +16,40 @@
   }
 }
 
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: url('/images/icons/arrow-dark-down-icon.svg') no-repeat right 12px center / 20px auto;
+
+  display: flex;
+  width: 120px;
+  padding: 9px 10px 9px 12px;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 12px;
+  border: 1px solid #E9EAEA;
+
+  color: #727A90;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 157.143% */
+  letter-spacing: -0.098px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    width: 160px;
+    padding: 9px 10px 9px 12px;
+    align-items: center;
+    gap: 4px;
+  }
+
+}
+
 .form-navigation {
   display: flex;
   justify-content: space-between;

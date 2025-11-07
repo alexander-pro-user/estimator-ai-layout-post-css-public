@@ -15,6 +15,41 @@
     border: 1px solid #D3D6DD;
     color: #727A90;
   }
+
+  &-red {
+    border-radius: 100px;
+    border: 1px solid var(--Red-red-100, #F7B8B8);
+    background: var(--Red-red-50, #FCE8E8);
+
+    color: var(--Red-red-500, #E51B1B);
+    text-align: center;
+  }
+
+  &-green {
+    border-radius: 100px;
+    border: 1px solid var(--Green-green-100, #B0DEDF);
+    background: var(--Green-green-50, #E6F4F5);
+
+    color: var(--Green-green-500, #009499);
+    text-align: center;
+  }
+
+  &-blue {
+    border-radius: 100px;
+    border: 1px solid var(--Cyan-cyan-100, #B0E0FC);
+    background: var(--Cyan-cyan-50, #E6F5FE);
+
+    color: var(--Cyan-cyan-500, #019BF4);
+    text-align: center;
+  }
+
+  &-orange {
+    border-radius: 100px;
+    border: 1px solid var(--Orange-orange-100, #FACDC3);
+    background: var(--Orange-orange-50, #FEEFEC);
+
+    color: var(--Orange-orange-500, #F05D3D);
+  }
 }
 
 .green-price {
