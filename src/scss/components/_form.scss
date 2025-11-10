@@ -531,6 +531,7 @@
   }
 
   label {
+    display: flex;
     color: #333;
     font-family: Inter;
     font-size: 14px;
@@ -538,6 +539,7 @@
     font-weight: 500;
     line-height: 20px; /* 142.857% */
     letter-spacing: -0.084px;
+    margin-bottom: 8px;
   }
 
   input {
