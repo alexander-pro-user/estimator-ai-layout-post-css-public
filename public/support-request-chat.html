@@ -236,7 +236,6 @@
             fetch('/components/mobile-bottom-navbar/bottom-navbar-support-request.html')
                 .then(response => response.text())
                 .then(html => {
-                    console.log(html);
                     bottomNavEl.innerHTML = html;
                     initHeader();
                 });

@@ -616,7 +616,7 @@
         <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
     </main>
 
-   <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
+    <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
 </div>
 </body>
 </html>
@@ -632,7 +632,6 @@
                     headerPlaceholder.innerHTML = html;
                     initHeader();
                 })
-                .catch(err => console.warn('Ошибка загрузки header:', err));
         }
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
@@ -642,7 +641,6 @@
                 .then(html => {
                     footerPlaceholder.innerHTML = html;
                 })
-                .catch(err => console.warn('Ошибка загрузки footer:', err));
         }
 
         const popupMenuEl = document.getElementById('id-popup-menu');

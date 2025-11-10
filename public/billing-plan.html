@@ -86,7 +86,12 @@
                             $xxx
                         </div>
                         <div class="custom-block__billing-buttons">
-                            <div class="custom-block__billing-buttons__add-button">+ Add to credit balance</div>
+                        <div class="custom-block__billing-buttons__add-button">
+                                <div class="custom-block__billing-buttons__add-button__image">
+                                    <img src="images/icons/purple-plus-icon.svg"/>
+                                </div>
+                                Add to credit balance
+                            </div>
                             <div class="custom-block__billing-buttons__cancel-button">Cancel plan</div>
                         </div>
                     </div>
@@ -155,7 +160,6 @@
                     headerPlaceholder.innerHTML = html;
                     initHeader();
                 })
-                .catch(err => console.warn('Ошибка загрузки header:', err));
         }
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
@@ -165,7 +169,6 @@
                 .then(html => {
                     footerPlaceholder.innerHTML = html;
                 })
-                .catch(err => console.warn('Ошибка загрузки footer:', err));
         }
 
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
