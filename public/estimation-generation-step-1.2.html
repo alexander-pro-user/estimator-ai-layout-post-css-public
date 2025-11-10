@@ -322,20 +322,19 @@
 <script src="main.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
         const headerPlaceholder = document.getElementById('header-placeholder');
         if (headerPlaceholder) {
-            fetch('/header-authorized.html')
+            await fetch('/header-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     headerPlaceholder.innerHTML = html;
-                    initHeader();
                 });
         }
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            fetch('/footer.html')
+            await fetch('/footer.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;
@@ -344,27 +343,25 @@
 
         const popupMenuEl = document.getElementById('id-popup-menu');
         if (popupMenuEl) {
-            fetch('/components/popup-menu.html')
+            await fetch('/components/popup-menu.html')
                 .then(response => response.text())
                 .then(html => {
                     popupMenuEl.innerHTML = html;
-                    initHeader();
                 });
         }
 
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
         if (bottomNavEl) {
-            fetch('/components/mobile-bottom-navbar/bottom-navbar-estimation.html')
+            await fetch('/components/mobile-bottom-navbar/bottom-navbar-estimation.html')
                 .then(response => response.text())
                 .then(html => {
                     bottomNavEl.innerHTML = html;
-                    initHeader();
                 });
         }
 
         const stepperEl = document.getElementById('id-form-stepper');
         if (stepperEl) {
-            fetch('/components/form-stepper/step-1.html')
+            await fetch('/components/form-stepper/step-1.html')
                 .then(response => response.text())
                 .then(html => {
                     stepperEl.innerHTML = html;
