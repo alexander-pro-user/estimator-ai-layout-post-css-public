@@ -1,7 +1,6 @@
 @use "../utils/variables" as *;
 
 .site-footer {
-  display: flex;
   flex-direction: column;
   align-items: start;
   padding-top: 40px;
@@ -12,6 +11,7 @@
   background: #1F1228;
 
   @media (min-width: 1024px) {
+    display: flex;
     gap: 80px;
     padding-top: 80px;
     padding-right: 64px;

@@ -512,3 +512,78 @@
     }
   }
 }
+
+.billing_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  margin-top: 12px;
+
+  @media (min-width: 1024px) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: end;
+  }
+
+  label {
+    color: #333;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.084px;
+  }
+
+  input {
+    display: flex;
+    padding: 9px 12px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    background: #FFF;
+
+    color: #727A90;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.098px;
+    line-height: 22px;
+  }
+
+  &__save-button {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding: 9px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+
+    border-radius: 10px;
+    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+
+    @media (min-width: 1024px) {
+      width: 85px;
+    }
+  }
+
+}

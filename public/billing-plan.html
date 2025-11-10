@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+
+    <main class="site-main">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="support-requests.html">AI Settings</a>
+                                </li>
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-active-icon.svg">
+                                    </div>
+                                    <a href="support-requests.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl w-[229px]">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__block-content h-fit">
+                    <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-[24px] xl:mb-7 space-y-4 xl:space-y-0">
+                        <div class="flex w-full justify-between items-center">
+                            <h1 class="text-[18px] lg:text-[24px] font-semibold text-[#333] text-nowrap">Pay as you
+                                go</h1>
+                        </div>
+                    </div>
+
+                    <div class="custom-block mb-6 lg:mb-4">
+                        <div class="custom-block__title">
+                            Credit balance
+                        </div>
+                        <div class="custom-block__balance">
+                            $xxx
+                        </div>
+                        <div class="custom-block__billing-buttons">
+                            <div class="custom-block__billing-buttons__add-button">+ Add to credit balance</div>
+                            <div class="custom-block__billing-buttons__cancel-button">Cancel plan</div>
+                        </div>
+                    </div>
+
+
+                    <div id="id_recharge_block" class="recharge_block lg:mb-6">
+                        <div class="recharge_block__block-title-switcher">
+                            <div id="id_recharge_block_title" class="recharge_block__block-title-switcher__title">Auto
+                                recharge is off
+                            </div>
+                            <div class="recharge_block__block-title-switcher__switcher">
+                                <div class="custom-form-switcher-body-input">
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input onclick="toRecharge()" type="checkbox" class="sr-only peer">
+                                        <div class="w-[40px] h-[24px] bg-[#CBD5E1] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[16px] after:w-[16px] after:transition-all peer-checked:bg-[#7D55BE]"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="id_recharge_block__description" class="recharge_block__description">Set the minimum
+                            balance for recharge and the amount of
+                            auto-recharge.
+                        </div>
+                        <div id="id_billing_form" class="hidden w-full">
+                            <div class="billing_form">
+                                <div class="w-full">
+                                    <div>
+                                        <label>Minimum balance</label>
+                                    </div>
+                                    <div>
+                                        <input placeholder="0" name="min">
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <div>
+                                        <label>Recharge amount</label>
+                                    </div>
+                                    <div>
+                                        <input placeholder="10" name="max">
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="billing_form__save-button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
+    </main>
+    <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder) {
+            fetch('/header-authorized.html')
+                .then(response => response.text())
+                .then(html => {
+                    headerPlaceholder.innerHTML = html;
+                    initHeader();
+                })
+                .catch(err => console.warn('Ошибка загрузки header:', err));
+        }
+
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                })
+                .catch(err => console.warn('Ошибка загрузки footer:', err));
+        }
+
+        const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
+        if (bottomNavEl) {
+            fetch('/components/mobile-bottom-navbar/bottom-navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    bottomNavEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+    });
+
+    function toRecharge() {
+        const idRechargeBlock = document.getElementById('id_recharge_block');
+        const idRechargeBlockTitle = document.getElementById('id_recharge_block_title');
+        const idRechargeBlockDescription = document.getElementById('id_recharge_block__description');
+        const idBillingForm = document.getElementById('id_billing_form');
+
+        if (idRechargeBlock.classList.contains('recharge_block--active')) {
+            idRechargeBlock.classList.remove('recharge_block--active');
+            idRechargeBlockDescription.innerText = 'Set the minimum balance for recharge and the amount of auto-recharge.'
+            idRechargeBlockTitle.innerText = 'Auto recharge is off'
+            idBillingForm.classList.add('hidden');
+            idBillingForm.classList.remove('flex');
+        } else {
+            idRechargeBlock.classList.add('recharge_block--active');
+            idRechargeBlockDescription.innerText = 'When your credit balance reaches $0.00, your payment method will be charged to bring the balance up to $10.00'
+            idRechargeBlockTitle.innerText = 'Auto recharge is on'
+            idBillingForm.classList.remove('hidden');
+            idBillingForm.classList.add('flex');
+        }
+    }
+</script>
