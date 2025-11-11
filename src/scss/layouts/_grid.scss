@@ -1,7 +1,15 @@
 @use "../utils/variables" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+}
+
+section, div[id] {
+  scroll-margin-top: 80px;
 }
 
 .site-wrapper {

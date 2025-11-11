@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div class="site-wrapper">
@@ -40,18 +41,20 @@
                         <button class="btn btn__primary">
                             <a href="estimations.html">Get Estimate</a>
                         </button>
-                        <div class="flex items-center gap-2">
-                            <button class="btn btn__play">
-                                <img src="images/icons/play-icon.svg">
-                            </button>
-                            See how it works
+                        <div class="flex">
+                            <a class="flex items-center gap-2" href="#see_how_it_works">
+                                <button class="btn btn__play">
+                                    <img src="images/icons/play-icon.svg">
+                                </button>
+                                See how it works
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="how-it-works">
-                <div class="how-it-works__container">
+                <div id="how_it_works" class="how-it-works__container">
                     <div class="label-block mb-4">
                         <div class="label-block__container">
                             <div class="label-block__text">How it Works</div>
@@ -108,28 +111,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="how-it-works__pagination">
-                        <div class="how-it-works__pagination-buttons">
-                            <div class="how-it-works__pagination-buttons-elements">
-                                <div class="how-it-works__pagination-buttons-elements-prev">
-                                    <button class="btn btn__prev">
-                                        <img src="/images/icons/left-icon.svg" alt="left icon">
-                                    </button>
-                                </div>
-                                <div class="how-it-works__pagination-buttons-elements-next">
-                                    <button class="btn btn__next">
-                                        <img src="/images/icons/right-icon.svg" alt="right icon">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
             <section class="process-in-actions">
-                <div class="process-in-actions__container">
+                <div id="see_how_it_works" class="process-in-actions__container">
                     <div class="label-block mb-4">
                         <div class="label-block__container justify-start">
                             <div class="label-block__text">The process in action</div>
@@ -142,7 +128,8 @@
 
                     <div class="process-in-actions__video-item">
                         <div class="process-in-actions__video-item-video">
-                            <video controls poster="/images/landing/process-in-action/video-preview.jpg" preload="none">
+                            <video controls poster="/images/landing/process-in-action/video-preview.jpg"
+                                   preload="none">
                                 <source src="video/video.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -153,7 +140,7 @@
             </section>
 
             <section class="take-closer-look">
-                <div class="take-closer-look__container">
+                <div id="interface" class="take-closer-look__container">
                     <div class="label-block mb-4">
                         <div class="label-block__container justify-start">
                             <div class="label-block__text">Take a closer look</div>
@@ -214,21 +201,16 @@
                         <button onclick="openModal(true)" class="btn btn__tertiary">Contact Us</button>
                         </button>
                     </div>
-
-
                 </div>
             </section>
 
-
             <section class="pricing">
-
-                <div class="pricing__container">
+                <div id="pricing" class="pricing__container">
                     <div class="label-block mb-6 lg:mb-4">
                         <div class="label-block__container justify-start">
                             <div class="label-block__text">Pricing</div>
                         </div>
                     </div>
-
 
                     <div class="text-block mb-10">
                         <div class="text-block__container">
@@ -302,7 +284,7 @@
             </section>
 
             <section class="testimonials">
-                <div class="testimonials__container">
+                <div id="testimonials" class="testimonials__container">
                     <div class="label-block mb-4">
                         <div class="label-block__container justify-start">
                             <div class="label-block__text">Testimonials</div>
@@ -361,9 +343,63 @@
                                         <img src="/images/icons/star-icon.png" alt="star icon">
                                     </div>
                                 </div>
-                                <div class="testimonials__items-item-rating-button">
-                                    <button class="btn btn__read-more">Read More</button>
+                                <button
+                                        data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                        class="btn btn__read-more">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                        <div class="testimonials__items-item">
+                            <div class="testimonials__items-item-text">
+                                <div class="testimonials__items-item-text-description">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna...
                                 </div>
+
+                                <div class="testimonials__items-item-text-main">
+                                    <div class="testimonials__items-item-text-main-avatar">
+                                        <img src="/images/landing/testimonials/avatar.png" alt="user avatar">
+                                    </div>
+                                    <div class="testimonials__items-item-text-main-title-block">
+                                        <div class="testimonials__items-item-text-main-title-block-name">
+                                            Name Here
+                                        </div>
+                                        <div class="testimonials__items-item-text-main-title-block-company">
+                                            Company Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials__items-item-rating">
+                                <div class="testimonials__items-item-rating-marks">
+                                    <div class="testimonials__items-item-rating-marks-star">
+                                        <img src="/images/icons/star-icon.png" alt="star icon">
+                                    </div>
+                                    <div class="testimonials__items-item-rating-marks-star">
+                                        <img src="/images/icons/star-icon.png" alt="star icon">
+                                    </div>
+                                    <div class="testimonials__items-item-rating-marks-star">
+                                        <img src="/images/icons/star-icon.png" alt="star icon">
+                                    </div>
+                                    <div class="testimonials__items-item-rating-marks-star">
+                                        <img src="/images/icons/star-icon.png" alt="star icon">
+                                    </div>
+                                    <div class="testimonials__items-item-rating-marks-star">
+                                        <img src="/images/icons/star-icon.png" alt="star icon">
+                                    </div>
+                                </div>
+                                <button
+                                        data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                        class="btn btn__read-more">
+                                    Read More
+                                </button>
                             </div>
                         </div>
                         <div class="testimonials__items-item">
@@ -406,51 +442,14 @@
                                     </div>
                                 </div>
                                 <div class="testimonials__items-item-rating-button">
-                                    <button class="btn btn__read-more">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonials__items-item">
-                            <div class="testimonials__items-item-text">
-                                <div class="testimonials__items-item-text-description">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna...
-                                </div>
-
-                                <div class="testimonials__items-item-text-main">
-                                    <div class="testimonials__items-item-text-main-avatar">
-                                        <img src="/images/landing/testimonials/avatar.png" alt="user avatar">
-                                    </div>
-                                    <div class="testimonials__items-item-text-main-title-block">
-                                        <div class="testimonials__items-item-text-main-title-block-name">
-                                            Name Here
-                                        </div>
-                                        <div class="testimonials__items-item-text-main-title-block-company">
-                                            Company Name
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonials__items-item-rating">
-                                <div class="testimonials__items-item-rating-marks">
-                                    <div class="testimonials__items-item-rating-marks-star">
-                                        <img src="/images/icons/star-icon.png" alt="star icon">
-                                    </div>
-                                    <div class="testimonials__items-item-rating-marks-star">
-                                        <img src="/images/icons/star-icon.png" alt="star icon">
-                                    </div>
-                                    <div class="testimonials__items-item-rating-marks-star">
-                                        <img src="/images/icons/star-icon.png" alt="star icon">
-                                    </div>
-                                    <div class="testimonials__items-item-rating-marks-star">
-                                        <img src="/images/icons/star-icon.png" alt="star icon">
-                                    </div>
-                                    <div class="testimonials__items-item-rating-marks-star">
-                                        <img src="/images/icons/star-icon.png" alt="star icon">
-                                    </div>
-                                </div>
-                                <div class="testimonials__items-item-rating-button">
-                                    <button class="btn btn__read-more">Read More</button>
+                                    <button
+                                            data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                            class="btn btn__read-more">
+                                        Read More
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -482,6 +481,15 @@
             </section>
         </div>
     </main>
+
+    <div id="testimonialModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-[9999999]">
+        <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-6 relative">
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;
+            </button>
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Testimonial</h2>
+            <p id="modalContent" class="text-gray-600 leading-relaxed"></p>
+        </div>
+    </div>
 
     <footer class="site-footer" id="footer-placeholder"></footer>
 </div>
@@ -516,6 +524,12 @@
                 const container = modal.querySelector('.contactUsModal__container');
                 if (container) container.addEventListener('click', (e) => e.stopPropagation());
             });
+
+        // Init Testimonial Carousel
+        initTestimonialCarousel();
+        // Init Testimonial Modal
+        initTestimonialModal();
+
     });
 
     function openModal(show) {
@@ -528,5 +542,96 @@
             modal.classList.add('hidden');
             modal.classList.add('flex');
         }
+    }
+
+    function initTestimonialCarousel() {
+        const container = document.querySelector('.testimonials__items');
+        const btnPrev = document.querySelector('.btn__prev');
+        const btnNext = document.querySelector('.btn__next');
+        const pageNumberEl = document.querySelector('.testimonials__pagination-buttons-number');
+
+        if (!container || !btnPrev || !btnNext || !pageNumberEl) return;
+
+        const items = container.querySelectorAll('.testimonials__items-item');
+        const gap = parseInt(getComputedStyle(container).gap) || 0;
+
+        // calculate the width of one step
+        const getScrollStep = () => {
+            const itemWidth = items[0].offsetWidth;
+            return itemWidth + gap;
+        };
+
+        // calculate the total number of pages
+        const getTotalPages = () => {
+            const itemWidth = items[0].offsetWidth;
+            const itemsPerView = Math.floor(container.offsetWidth / itemWidth) || 1;
+            return Math.ceil(items.length / itemsPerView);
+        };
+
+        // calculate the current page
+        const updatePageNumber = () => {
+            const scrollStep = getScrollStep();
+            const totalPages = getTotalPages();
+            const currentPage = Math.round(container.scrollLeft / scrollStep) + 1;
+
+            const safePage = Math.min(Math.max(currentPage, 1), totalPages);
+            pageNumberEl.textContent = `${safePage}/${totalPages}`;
+        };
+
+        // next
+        btnNext.addEventListener('click', () => {
+            container.scrollBy({left: getScrollStep(), behavior: 'smooth'});
+            setTimeout(updatePageNumber, 400);
+        });
+
+        // prev
+        btnPrev.addEventListener('click', () => {
+            container.scrollBy({left: -getScrollStep(), behavior: 'smooth'});
+            setTimeout(updatePageNumber, 400);
+        });
+
+        // update number when scrolling manually
+        let scrollTimeout;
+        container.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updatePageNumber, 150);
+        });
+
+        window.addEventListener('resize', () => {
+            updatePageNumber();
+        });
+
+        // initialization page number
+        updatePageNumber();
+    }
+
+    function initTestimonialModal() {
+        const modal = document.getElementById("testimonialModal");
+        const modalContent = document.getElementById("modalContent");
+        const closeModal = document.getElementById("closeModal");
+
+        // Modal opening
+        document.querySelectorAll(".btn__read-more").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const text = btn.getAttribute("data-modal-text");
+                modalContent.textContent = text;
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+            });
+        });
+
+        // Closing
+        closeModal.addEventListener("click", () => {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        });
+
+        // Click outside modal
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            }
+        });
     }
 </script>

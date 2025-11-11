@@ -22,24 +22,28 @@
     justify-content: center;
   }
 
-
   &__items {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
     margin-bottom: 34px;
     justify-content: left;
-    overflow: scroll;
-    max-width: 89vw;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    max-width: 340px;
+
+    @media (min-width: 700px) {
+      max-width: 680px;
+    }
+
 
     @media (min-width: 1024px) {
-      max-width: 820px;
+      max-width: 850px;
       gap: 26px;
-      overflow: auto;
     }
 
     @media (min-width: 1280px) {
-      max-width: 100%;
+      max-width: 1280px;
       justify-content: center;
     }
   }
@@ -57,7 +61,6 @@
     @media (min-width: 1024px) {
       width: 408px;
     }
-
 
     &-text {
       margin-bottom: 12px;
