@@ -128,6 +128,7 @@
 
                     <div class="process-in-actions__video-item">
                         <div class="process-in-actions__video-item-video">
+                            <img class="video-play-btn" src="images/icons/play-large-icon.svg" alt="Play"/>
                             <video controls poster="/images/landing/process-in-action/video-preview.jpg"
                                    preload="none">
                                 <source src="video/video.mp4" type="video/mp4">
@@ -529,7 +530,8 @@
         initTestimonialCarousel();
         // Init Testimonial Modal
         initTestimonialModal();
-
+        // Init Video Play
+        initVideoPlay();
     });
 
     function openModal(show) {
@@ -631,6 +633,26 @@
             if (e.target === modal) {
                 modal.classList.add("hidden");
                 modal.classList.remove("flex");
+            }
+        });
+    }
+
+    function initVideoPlay() {
+        const videoContainers = document.querySelectorAll('.process-in-actions__video-item-video');
+
+        videoContainers.forEach(container => {
+            const playButton = container.querySelector('.video-play-btn');
+            const video = container.querySelector('video');
+
+            if (playButton && video) {
+                playButton.addEventListener('click', () => {
+                    playButton.classList.add('hidden');
+                    video.play();
+                });
+
+                video.addEventListener('ended', () => {
+                    playButton.classList.remove('hidden');
+                });
             }
         });
     }
