@@ -3,22 +3,30 @@
 .process-in-actions {
   gap: 48px;
   padding-top: 80px;
-  padding-right: clamp(20px, 5vw, 200px);
   padding-bottom: 80px;
-  padding-left: clamp(20px, 5vw, 200px);
   background: #F9FAFD;
 
   @media (min-width: 1024px) {
     padding-bottom: 100px;
-    padding-right: 200px;
-    padding-left: 200px;
   }
 
   &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    padding-right: clamp(20px, 5vw, 200px);
+    padding-left: clamp(20px, 5vw, 200px);
+
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+
+    @media (min-width: 1024px) {
+      padding-right: 200px;
+      padding-left: 200px;
+    }
   }
 
   &__title {

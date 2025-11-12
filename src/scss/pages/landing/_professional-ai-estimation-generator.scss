@@ -3,8 +3,6 @@
 .professional-ai-estimation-generator {
   display: flex;
   padding-top: 124px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 124px;
 
   /*background-image: linear-gradient(to bottom,
@@ -30,15 +28,25 @@
 
     padding-top: 140px;
     padding-bottom: 140px;
-    padding-left: 220px;
-    padding-right: 220px;
   }
 
   &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 1024px) {
+      padding-left: 220px;
+      padding-right: 220px;
+    }
 
     & > * {
       margin-bottom: 50px;
