@@ -14,7 +14,6 @@
     padding-left: 200px;
   }
 
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -62,7 +61,6 @@
         @media (min-width: 1024px) {
           height: 693px;
         }
-
       }
 
       .video-play-btn {
@@ -107,5 +105,4 @@
       }
     }
   }
-
 }
