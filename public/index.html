@@ -793,7 +793,19 @@
         <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-6 relative">
             <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;
             </button>
-            <h2 class="text-xl font-bold mb-4 text-gray-800">Testimonial</h2>
+
+            <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img id="modalAvatar" src="" alt="user avatar" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <div id="modalName" class="font-semibold text-gray-800">Name Here</div>
+                    <div id="modalCompany" class="text-gray-500 text-sm">Company Name</div>
+                </div>
+            </div>
+
+            <div class="flex items-center mb-4" id="modalRating"></div>
+
             <p id="modalContent" class="text-gray-600 leading-relaxed"></p>
         </div>
     </div>
@@ -973,11 +985,34 @@
         const modalContent = document.getElementById("modalContent");
         const closeModal = document.getElementById("closeModal");
 
+        const modalAvatar = document.getElementById("modalAvatar");
+        const modalName = document.getElementById("modalName");
+        const modalCompany = document.getElementById("modalCompany");
+        const modalRating = document.getElementById("modalRating");
+
         // Modal opening
         document.querySelectorAll(".btn__read-more").forEach((btn) => {
             btn.addEventListener("click", () => {
+                const item = btn.closest(".testimonials__items-item");
+                const avatar = item.querySelector(".testimonials__items-item-text-main-avatar img").src;
+                const name = item.querySelector(".testimonials__items-item-text-main-title-block-name").textContent;
+                const company = item.querySelector(".testimonials__items-item-text-main-title-block-company").textContent;
                 const text = btn.getAttribute("data-modal-text");
+
+                const stars = item.querySelectorAll(".testimonials__items-item-rating-marks-star img");
+                modalRating.innerHTML = "";
+                stars.forEach(star => {
+                    const clone = star.cloneNode(true);
+                    clone.classList.add("w-4", "h-4", "mr-1");
+                    modalRating.appendChild(clone);
+                });
+
+                // Filling the modal
+                modalAvatar.src = avatar;
+                modalName.textContent = name;
+                modalCompany.textContent = company;
                 modalContent.textContent = text;
+
                 modal.classList.remove("hidden");
                 modal.classList.add("flex");
             });
