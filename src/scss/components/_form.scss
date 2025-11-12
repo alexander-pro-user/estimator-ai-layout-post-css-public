@@ -216,7 +216,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     align-self: stretch;
 
     border-radius: 12px;
@@ -258,8 +257,12 @@
 
     &-body {
       width: 100%;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease;
 
       &-textarea {
+        margin-top: 16px;
         display: flex;
         width: 100%;
         padding: 12px;
