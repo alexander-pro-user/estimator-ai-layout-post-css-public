@@ -907,7 +907,6 @@
         const goToPage = (pageIndex) => {
             const fullWidth = getItemFullWidth();
             const perView = getItemsPerView();
-            const totalPages = getTotalPages();
 
             const targetScroll = fullWidth * perView * (pageIndex - 1);
 
@@ -916,10 +915,11 @@
                 behavior: 'smooth',
             });
 
+            // Update UI after scrolling animation
             setTimeout(updatePageNumber, 400);
         };
 
-        // UI Update
+        // UI Update and forced Reflow
         const updatePageNumber = () => {
             const currentPage = getCurrentPage();
             const totalPages = getTotalPages();
@@ -928,6 +928,12 @@
             // block the buttons at the ends
             btnPrev.disabled = currentPage === 1;
             btnNext.disabled = currentPage === totalPages;
+
+            const originalJustify = container.style.justifyContent;
+            container.style.justifyContent = 'space-between'; // A temporary change
+            // Accessing offsetHeight forces a synchronous layout calculation (reflow)
+            container.offsetHeight;
+            container.style.justifyContent = originalJustify || 'left'; // Revert to original or 'left'
         };
 
         // Navigation
@@ -950,7 +956,12 @@
 
         // When resizing the screen
         window.addEventListener('resize', () => {
-            setTimeout(updatePageNumber, 300);
+            setTimeout(() => {
+                updatePageNumber();
+                // Scroll to the start of the current page after resize to prevent awkward partial views
+                const currentPage = getCurrentPage();
+                goToPage(currentPage);
+            }, 300);
         });
 
         // Initialization
