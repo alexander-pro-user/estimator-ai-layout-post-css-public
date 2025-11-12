@@ -95,10 +95,12 @@
 
     &:hover {
       color: $primary-color;
+      //color: $purple-light-text-color;
     }
 
     &-active {
       color: #63428D;
+      //color: $primary-color;
       font-weight: 700;
     }
   }

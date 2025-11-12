@@ -187,15 +187,15 @@
 
   a,
   a:link,
-  a:visited {;
+  a:visited {
     transition: color 0.2s ease;
   }
 
   a:hover {
-    color: $purple-text-color;
+    color: $purple-light-text-color;
   }
 
   a:active {
-    color: $purple-light-text-color
+    color: $primary-color;
   }
 }
