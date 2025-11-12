@@ -33,10 +33,11 @@
     margin-bottom: 40px;
 
     @media (min-width: 640px) {
-      align-items: center;
+      gap: 20px;
+      justify-self: center;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 830px) {
       flex-direction: row;
       align-items: center;
     }
@@ -85,6 +86,7 @@
         font-size: 14px;
         line-height: 150%;
         color: #FFFFFF;
+        white-space: nowrap;
 
         &:hover {
           color: $primary-color;
@@ -102,6 +104,15 @@
       margin: auto;
       gap: 12px;
 
+      @media (min-width: 640px) {
+        margin: 0px;
+        align-self: end;
+      }
+
+      @media (min-width: 830px) {
+        margin: 0px;
+        align-self: center;
+      }
 
       @media (min-width: 1024px) {
         margin: 0px;
