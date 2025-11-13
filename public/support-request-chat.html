@@ -223,7 +223,7 @@
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            await fetch('/footer.html')
+            await fetch('/footer-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;

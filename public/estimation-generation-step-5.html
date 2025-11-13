@@ -126,38 +126,28 @@
                                         <img src="images/admin/template-image-1.png">
                                     </div>
                                     <div class="custom-form-template-header">
-                                        <div class="custom-form-template-header-title">
-                                            Lilac
-                                        </div>
-                                        <div class="custom-form-template-header-text">
-                                            Pastel color scheme
-                                        </div>
+                                        <div class="custom-form-template-header-title">Lilac</div>
+                                        <div class="custom-form-template-header-text">Pastel color scheme</div>
                                     </div>
                                 </div>
+
                                 <div class="custom-form-template">
                                     <div class="custom-form-template-image">
                                         <img src="images/admin/template-image-2.png">
                                     </div>
                                     <div class="custom-form-template-header">
-                                        <div class="custom-form-template-header-title">
-                                            Turquoise
-                                        </div>
-                                        <div class="custom-form-template-header-text">
-                                            Pastel color scheme
-                                        </div>
+                                        <div class="custom-form-template-header-title">Turquoise</div>
+                                        <div class="custom-form-template-header-text">Pastel color scheme</div>
                                     </div>
                                 </div>
+
                                 <div class="custom-form-template">
                                     <div class="custom-form-template-image">
                                         <img src="images/admin/template-image-3.png">
                                     </div>
                                     <div class="custom-form-template-header">
-                                        <div class="custom-form-template-header-title">
-                                            Green
-                                        </div>
-                                        <div class="custom-form-template-header-text">
-                                            Pastel color scheme
-                                        </div>
+                                        <div class="custom-form-template-header-title">Green</div>
+                                        <div class="custom-form-template-header-text">Pastel color scheme</div>
                                     </div>
                                 </div>
                             </div>
@@ -193,12 +183,12 @@
 
 
                                 <div class="wrap-custom-form-export flex flex-col sm:flex-row gap-[10px] flex-wrap justify-center lg:justify-start mb-4">
-                                    <div class="custom-form-export custom-form-export-active">
+                                    <div class="custom-form-export custom-form-export">
                                         <div class="custom-form-export-body">
                                             <div class="custom-form-export-body-image">
                                                 <img src="images/admin/website-icon.svg">
                                             </div>
-                                            <div class="custom-form-export-body-title custom-form-export-body-title-active">
+                                            <div class="custom-form-export-body-title custom-form-export-body-title">
                                                 Public Web Page
                                             </div>
                                         </div>
@@ -237,7 +227,7 @@
         </div>
         <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
     </main>
-   <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
+    <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
 </div>
 </body>
 </html>
@@ -256,7 +246,7 @@
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            await fetch('/footer.html')
+            await fetch('/footer-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;
@@ -290,6 +280,14 @@
                     initHeader();
                 });
         }
+
+        document.querySelectorAll('.custom-form-template').forEach(template => {
+            template.addEventListener('click', () => {
+                document.querySelectorAll('.custom-form-template').forEach(el => el.classList.remove('active'));
+
+                template.classList.add('active');
+            });
+        });
 
         initSelectForCountries();
         initCollapseBlocks();

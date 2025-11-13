@@ -86,7 +86,7 @@
                             $xxx
                         </div>
                         <div class="custom-block__billing-buttons">
-                        <div class="custom-block__billing-buttons__add-button">
+                            <div class="custom-block__billing-buttons__add-button">
                                 <div class="custom-block__billing-buttons__add-button__image">
                                     <img src="images/icons/purple-plus-icon.svg"/>
                                 </div>
@@ -163,7 +163,7 @@
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            await fetch('/footer.html')
+            await fetch('/footer-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;

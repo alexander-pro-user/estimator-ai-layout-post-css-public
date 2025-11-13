@@ -332,7 +332,7 @@
                     </table>
 
 
-                    <div class="block-list flex lg:hidden">
+                    <div class="block-list flex md:hidden">
                         <div class="block-list__item">
                             <div class="block-list__item-row-1 flex justify-between">
                                 <div class="flex flex-col">
@@ -699,7 +699,7 @@
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            await fetch('/footer.html')
+            await fetch('/footer-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;

@@ -291,7 +291,8 @@
 
                         <div class="form-navigation mb-4">
                             <button class="btn btn__cancel-main"><a href="/estimations">Cancel</a></button>
-                            <button class="btn btn__next-main"><a href="/estimation-generation-step-2.html">Next Step</a></button>
+                            <button class="btn btn__next-main"><a href="/estimation-generation-step-2.html">Next
+                                Step</a></button>
                         </div>
 
                     </div>
@@ -300,7 +301,7 @@
         </div>
         <div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
     </main>
-   <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
+    <footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
 </div>
 </body>
 </html>
@@ -319,7 +320,7 @@
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            await fetch('/footer.html')
+            await fetch('/footer-authorized.html')
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;

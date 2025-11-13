@@ -39,7 +39,10 @@
       padding-right: 80px;
       padding-left: 80px;
     }
+  }
 
+  &__inner--stretch {
+    max-width: 100%;
   }
 
   &__logo-wrapper {
