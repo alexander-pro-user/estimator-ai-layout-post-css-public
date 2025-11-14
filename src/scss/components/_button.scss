@@ -1,6 +1,7 @@
 @use "../utils/variables" as *;
 
 .btn {
+  cursor: pointer;
   padding-top: 8px;
   padding-right: 26px;
   padding-bottom: 8px;
@@ -132,7 +133,7 @@
     padding: 8px;
     border-radius: 8px;
     background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
-    border: 1px solid #63428D;
+    border: none;
 
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -146,6 +147,8 @@
       padding-right: 16px;
       padding-bottom: 6px;
       padding-left: 16px;
+
+      border: 1px solid #63428D;
     }
   }
 
