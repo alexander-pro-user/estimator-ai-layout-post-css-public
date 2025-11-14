@@ -128,12 +128,13 @@
       flex-wrap: wrap;
       padding: 16px 0;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 640px) {
         flex-direction: row;
         gap: 24px;
       }
 
       &-checkbox {
+        cursor: pointer;
         display: flex;
         gap: 8px;
 
