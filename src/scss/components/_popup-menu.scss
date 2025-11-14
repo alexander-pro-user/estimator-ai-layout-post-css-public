@@ -1,12 +1,13 @@
 @use "../utils/variables" as *;
 
 .popup-menu {
+  z-index: 99999999;
   position: absolute;
   background: #ffffff;
   min-width: 165px;
   border-radius: 12px;
   padding: 20px;
-  right: 5%;
+  right: 10px;
   /*top: 50px;*/
   font-family: 'Inter', sans-serif;
   font-weight: 500;
