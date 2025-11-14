@@ -74,7 +74,8 @@
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
                         <div class="flex w-full justify-between items-center mb-4 lg:mb-0">
                             <h1 class="text-[18px] lg:text-[24px] font-semibold text-[#333]">Estimations</h1>
-                            <a href="/estimation-generation-step-1.html" class="btn inline-block btn__primary lg:hidden">
+                            <a href="/estimation-generation-step-1.html"
+                               class="btn inline-block btn__primary lg:hidden">
                                 Create New</a>
                         </div>
 
@@ -145,8 +146,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -177,8 +179,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -209,8 +212,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -240,8 +244,9 @@
                                         <img class="object-cover w-full h-full" src="images/icons/edit-icon.svg">
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -272,8 +277,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -304,8 +310,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -336,8 +343,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -367,8 +375,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -399,8 +408,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -430,8 +440,9 @@
                                                         src="images/icons/edit-icon.svg"></a>
                                     </div>
                                     <div class="flex self-center w-[24px]">
-                                        <img class="object-cover cursor-pointer w-full h-full"
+                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                              src="images/icons/more-icon.svg">
+                                        <div class="popup-menu hidden"></div>
                                     </div>
                                 </div>
                             </td>
@@ -448,12 +459,38 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img id="id-popup-menu-button" class="object-cover cursor-pointer w-full h-full"
+                                    <img id="id-popup-menu-button"
+                                         class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
 
-                            <div id="id-popup-menu" class="popup-menu hidden"></div>
+                            <div class="block-list__item-row-2 flex justify-between">
+                                <div class="w-full">
+                                    <div class="block-list__description-2">Time</div>
+                                    <div>100</div>
+                                </div>
+                                <div class="w-full">
+                                    <div class="block-list__description-2">Total Amount</div>
+                                    <div class="green-price">$19,200</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-list__item">
+                            <div class="block-list__item-row-1 flex justify-between">
+                                <div class="flex flex-col">
+                                    <div class="block-list__title">{Estimation name}
+                                        <span class="ms-3 status-block status-block-grey">Draft</span>
+                                    </div>
+                                    <div class="block-list__description mb-1">Short description</div>
+                                </div>
+                                <div class="flex self-center w-[24px]">
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                         src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
+                                </div>
+                            </div>
 
                             <div class="block-list__item-row-2 flex justify-between">
                                 <div class="w-full">
@@ -475,8 +512,9 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -499,8 +537,9 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -523,8 +562,9 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -547,8 +587,9 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -571,8 +612,9 @@
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
                                 <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -594,33 +636,10 @@
                                     </div>
                                     <div class="block-list__description mb-1">Short description</div>
                                 </div>
-                                <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
+                                <div class="flex relative z-[9999] self-center w-[24px]">
+                                    <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
                                          src="images/icons/more-icon.svg">
-                                </div>
-                            </div>
-                            <div class="block-list__item-row-2 flex justify-between">
-                                <div class="w-full">
-                                    <div class="block-list__description-2">Time</div>
-                                    <div>100</div>
-                                </div>
-                                <div class="w-full">
-                                    <div class="block-list__description-2">Total Amount</div>
-                                    <div class="green-price">$19,200</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-list__item">
-                            <div class="block-list__item-row-1 flex justify-between">
-                                <div class="flex flex-col">
-                                    <div class="block-list__title">{Estimation name}
-                                        <span class="ms-3 status-block status-block-grey">Draft</span>
-                                    </div>
-                                    <div class="block-list__description mb-1">Short description</div>
-                                </div>
-                                <div class="flex self-center w-[24px]">
-                                    <img class="object-cover cursor-pointer w-full h-full"
-                                         src="images/icons/more-icon.svg">
+                                    <div class="popup-menu hidden"></div>
                                 </div>
                             </div>
                             <div class="block-list__item-row-2 flex justify-between">
@@ -687,15 +706,6 @@
                 })
         }
 
-        const popupMenuEl = document.getElementById('id-popup-menu');
-        if (popupMenuEl) {
-            await fetch('/components/popup-menu.html')
-                .then(response => response.text())
-                .then(html => {
-                    popupMenuEl.innerHTML = html;
-                })
-        }
-
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
         if (bottomNavEl) {
             await fetch('/components/mobile-bottom-navbar/bottom-navbar-estimation.html')
@@ -706,5 +716,6 @@
         }
 
         initHeader();
+        await initShowMorePopup();
     });
 </script>

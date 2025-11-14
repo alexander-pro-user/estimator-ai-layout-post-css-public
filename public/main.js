@@ -4,9 +4,6 @@ function initHeader() {
     const loginBtn = document.getElementById('id-login-button');
     const loginMobileBtn = document.getElementById('id-login-button-mobile');
     const logoBtn = document.getElementById('id-logo-button');
-    const popupMenuButton = document.getElementById('id-popup-menu-button');
-    const popupMenu = document.getElementById('id-popup-menu');
-    const popupMenuCancelButton = document.getElementById('id-cancel-popup-button');
 
     if (menuBtn) {
         const menuIcon = menuBtn.querySelector('img');
@@ -38,24 +35,6 @@ function initHeader() {
     if (logoBtn) {
         logoBtn.addEventListener('click', () => {
             window.location.href = '/';
-        });
-    }
-
-    if (popupMenuButton && popupMenu && popupMenuCancelButton) {
-        popupMenuButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            popupMenu.classList.toggle('hidden');
-        });
-
-        popupMenuCancelButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            popupMenu.classList.add('hidden');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!popupMenu.contains(e.target) && !popupMenuButton.contains(e.target)) {
-                popupMenu.classList.add('hidden');
-            }
         });
     }
 }
@@ -155,4 +134,45 @@ function initCheckboxes() {
             });
         }
     }
+}
+
+async function initShowMorePopup() {
+    const popupHtml = await fetch('/components/popup-menu.html')
+        .then(r => r.text());
+
+    const popupMenus = document.querySelectorAll('.popup-menu');
+
+    popupMenus.forEach(el => {
+        el.innerHTML = popupHtml;
+
+        const cancelButton = el.querySelector('.cancel-popup-button');
+        cancelButton.addEventListener('click', () => {
+            el.classList.add('hidden');
+        });
+    });
+
+    const buttons = document.querySelectorAll('.popup-menu-button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', e => {
+            const popup = btn.nextElementSibling;
+
+            popupMenus.forEach(p => {
+                if (p !== popup) {
+                    p.classList.add('hidden');
+                }
+            });
+
+            popup.classList.toggle('hidden');
+        });
+    });
+
+    document.addEventListener('click', e => {
+        if (e.target.closest('.popup-menu-button')) return;
+
+        popupMenus.forEach(popup => {
+            if (!popup.contains(e.target)) {
+                popup.classList.add('hidden');
+            }
+        });
+    });
 }
