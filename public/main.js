@@ -118,24 +118,6 @@ function initCollapseBlocks() {
     });
 }
 
-function initCheckboxes() {
-    const checkboxBlocks = document.getElementsByClassName('custom-form-block-checkboxes-checkbox');
-
-    if (checkboxBlocks.length === 0) return;
-
-    if (checkboxBlocks) {
-        for (let checkbox of checkboxBlocks) {
-            const input = checkbox.querySelector("input[type='checkbox']");
-            input.addEventListener('click', e => e.stopPropagation());
-
-            checkbox.addEventListener('click', e => {
-                let input = e.currentTarget.querySelector("input[type='checkbox']");
-                input.checked = !input.checked;
-            });
-        }
-    }
-}
-
 async function initShowMorePopup() {
     const popupHtml = await fetch('/components/popup-menu.html')
         .then(r => r.text());
