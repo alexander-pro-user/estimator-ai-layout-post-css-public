@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<div class="auth">
+    <header class="auth__header">
+        <div class="auth__logo">Estimator.AI</div>
+    </header>
+
+    <main class="auth__main">
+        <section class="auth-text">
+            <h1 class="auth-text__title">Sign In</h1>
+            <p class="auth-text__subtitle">Welcome back! Please enter your details</p>
+        </section>
+        <div class="auth__card">
+            <form class="auth-form">
+                <div class="auth-form__group">
+                    <label class="auth-form__label" for="email">Email</label>
+                    <input type="email" id="email" class="auth-form__input">
+                </div>
+
+                <div class="auth-form__group">
+                    <label class="auth-form__label" for="password">Password</label>
+
+                    <div class="auth-form__password-wrapper">
+                        <input type="password" id="password" class="auth-form__input auth-form__input--password">
+                        <img
+                                src="images/icons/eye-password-icon.svg"
+                                class="auth-form__icon"
+                                id="togglePassword"
+                                data-eye-open="images/icons/eye-password-icon.svg"
+                                data-eye-closed="images/icons/eye-password-icon.svg"
+                        >
+                    </div>
+                </div>
+
+                <div class="auth-form__actions-row">
+                    <a href="#" class="auth-form__link">Forgot Password</a>
+                </div>
+
+                <button type="submit" class="auth-form__button auth-form__button--primary">
+                    Log In
+                </button>
+
+                <div class="auth-form__signup-text">
+                    <span>Don't have an account?</span>
+                    <a href="#" class="auth-form__link">Create Account</a>
+                </div>
+
+                <div class="auth-divider">or</div>
+
+                <button class="auth-form__button auth-form__button--google">
+                    <div><img src="images/icons/google-icon.svg" alt="google"></div>
+                    <div>
+                        Register with Google
+                    </div>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="auth__footer">
+        <div class="auth-footer__inner">
+            <div>© 2024 Estimator.AI. All rights reserved.</div>
+            <div>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="main.js"></script>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+
+        passwordInput.type = isPassword ? "text" : "password";
+
+        togglePassword.src = isPassword
+            ? togglePassword.dataset.eyeClosed
+            : togglePassword.dataset.eyeOpen;
+    });
+</script>
+
+</body>
+</html>

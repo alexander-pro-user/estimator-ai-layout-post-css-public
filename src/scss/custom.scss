@@ -3,6 +3,7 @@
 @use "layouts/header" as *;
 @use "layouts/footer" as *;
 @use "layouts/main" as *;
+@use "layouts/auth" as *;
 @use "pages/dashboard/dashboard" as *;
 @use "pages/estimations/estimations" as *;
 @use "components/button" as *;
