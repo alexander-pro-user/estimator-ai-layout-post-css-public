@@ -18,6 +18,14 @@ function initHeader() {
                 ? 'images/icons/close-mobile-hamburger-icon.svg'
                 : 'images/icons/mobile-hamburger-icon.svg';
         });
+
+        // Close the menu if you click outside the menu block
+        document.addEventListener('click', e => {
+            if (e.target.closest('#id-mobile-hamburger-button')) return;
+            if (!mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
     }
 
     if (loginBtn) {
