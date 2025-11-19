@@ -24,6 +24,11 @@ function initHeader() {
             if (e.target.closest('#id-mobile-hamburger-button')) return;
             if (!mobileMenu.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
+
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                menuIcon.src = isOpen
+                    ? 'images/icons/close-mobile-hamburger-icon.svg'
+                    : 'images/icons/mobile-hamburger-icon.svg';
             }
         });
     }
