@@ -47,6 +47,12 @@
         object-fit: cover;
         margin-right: 2px;
       }
+
+      a {
+        display: flex;
+        flex: 1;
+        width: 100%;
+      }
     }
 
     &-active {
