@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/styles.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
@@ -20,18 +19,22 @@
 
     <main class="auth__main">
         <section class="auth-text">
-            <h1 class="auth-text__title">Sign In</h1>
-            <p class="auth-text__subtitle">Welcome back! Please enter your details</p>
+            <h1 class="auth-text__title">Create Account</h1>
+            <p class="auth-text__subtitle">Register now and start estimating your project.</p>
         </section>
         <div class="auth__card">
             <form class="auth-form">
                 <div class="auth-form__group">
+                    <label class="auth-form__label" for="full_name">Full name</label>
+                    <input type="text" id="full_name" class="auth-form__input" placeholder="Enter full name" required>
+                </div>
+                <div class="auth-form__group">
                     <label class="auth-form__label" for="email">Email</label>
-                    <input type="email" id="email" class="auth-form__input">
+                    <input type="email" id="email" class="auth-form__input" placeholder="Enter email">
                 </div>
 
                 <div class="auth-form__group">
-                    <label class="auth-form__label" for="password">Password</label>
+                    <label class="auth-form__label" for="password" placeholder="Enter password">Password</label>
 
                     <div class="auth-form__password-wrapper">
                         <input type="password" id="password" class="auth-form__input auth-form__input--password">
@@ -46,16 +49,21 @@
                 </div>
 
                 <div class="auth-form__actions-row">
-                    <a href="#" class="auth-form__link">Forgot Password</a>
+                    <div class="flex flex-row flex-nowrap gap-2">
+                        <input type="checkbox" id="agree" class="auth-form__checkbox accent-purple-600"/>
+                        <label for="agree" class="auth-form__checkbox__label cursor-pointer">
+                            I agree to the <a href="#" class="auth-form__link--thin">Terms & Privacy</a>
+                        </label>
+                    </div>
                 </div>
 
                 <button type="submit" class="auth-form__button auth-form__button--primary">
-                    Log In
+                    Create Account
                 </button>
 
                 <div class="auth-form__signup-text">
-                    <span>Don't have an account?</span>
-                    <a href="/register.html" class="auth-form__link">Create Account</a>
+                    <span class="me-2">Already have an account?</span>
+                    <a href="login.html" class="auth-form__link">Login</a>
                 </div>
 
                 <div class="auth-divider">or</div>
@@ -63,7 +71,7 @@
                 <button class="auth-form__button auth-form__button--google">
                     <div><img src="images/icons/google-icon.svg" alt="google"></div>
                     <div>
-                        Register with Google
+                        Login with Google
                     </div>
                 </button>
             </form>

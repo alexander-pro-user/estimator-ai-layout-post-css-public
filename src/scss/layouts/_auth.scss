@@ -28,7 +28,7 @@
     text-align: left;
 
     @media (min-width: 640px) {
-      padding: 80px 48px 80px 48px;
+      padding: 80px 48px 40px 48px;
     }
   }
 
@@ -290,6 +290,78 @@
       border-color: #7D55BE;
       outline: none;
     }
+
+    &::placeholder {
+      color: #727A90;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.091px;
+
+      @media (min-width: 640px) {
+        color: #727A90;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.098px;
+      }
+    }
+  }
+
+  &__checkbox {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 4px;
+    background: var(--Color-Neutral-white, #FFF);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #7D55BE;
+    transition: all 0.2s ease;
+    position: relative;
+
+
+    &:checked {
+      background-color: var(--colors-background-bg-brand-solid, #6855E8);
+      border: 1px solid var(--colors-background-bg-brand-solid, #6855E8);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%) rotate(45deg);
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+      }
+    }
+
+    &__label {
+      color: #391952;
+      font-family: Roboto;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+
+      @media (min-width: 640px) {
+        color: #391952;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+      }
+    }
   }
 
   &__password-wrapper {
@@ -335,6 +407,34 @@
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__link--thin {
+    color: #7D55BE;
+    font-size: 13px;
+    font-family: Roboto;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 19.50px;
+
+    @media (min-width: 640px) {
+      color: #7D55BE;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-skip-ink: none;
@@ -494,7 +594,7 @@
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 153.846% */
+  line-height: 20px;
   letter-spacing: 0.065px;
   position: relative;
   margin-bottom: 16px;
