@@ -2,12 +2,24 @@
 
 .dashboard-table {
   display: none;
-  border-collapse: separate;
-  border: 1px solid #E9EAEA;
-  border-radius: 5px;
 
   @media (min-width: 768px) {
     display: table;
+  }
+
+  &__inner {
+    border-radius: 5px;
+    border-collapse: separate;
+    border: 1px solid #E9EAEA;
+  }
+
+  &__inner-radius-up-none {
+    border-radius: 0 0 5px 5px;
+    border-collapse: collapse;
+    border-top: 1px solid #E9EAEA;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
   }
 
   thead {

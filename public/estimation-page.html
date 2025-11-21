@@ -1,0 +1,910 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;600;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="site-wrapper">
+    <header id="header-placeholder" class="site-header"></header>
+    <main class="site-main">
+        <div class="site-main__content site-main__content--estimations">
+            <div class="dashboard flex w-full">
+                <div class="dashboard__sidebar flex flex-col justify-between p-6">
+                    <div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="dashboard__sidebar-active flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/folders-active-icon.svg">
+                                    </div>
+                                    <a href="estimations.html">Estimations</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/clients-icon.svg">
+                                    </div>
+                                    <a href="clients.html">Clients</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/files-icon.svg">
+                                    </div>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/templates-icon.svg">
+                                    </div>
+                                    <a href="templates.html">Templates</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/ai-settings-icon.svg">
+                                    </div>
+                                    <a href="ai-settings.html">AI Settings</a>
+                                </li>
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/audio-icon.svg">
+                                    </div>
+                                    <a href="support-requests.html">AI Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-center ps-2.5 pe-2.5 pt-2 pb-2 rounded-xl">
+                                    <div class="dashboard__sidebar-image">
+                                        <img src="images/icons/settings-icon.svg">
+                                    </div>
+                                    <a href="settings.html">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard__contents">
+                    <div class="dashboard__content-item dashboard__content-item--border dashboard__content-item--border-radius-up">
+
+                        <div class="support-item">
+                            <div class="support-item__inner">
+
+                                <!-- HEADER -->
+                                <div class="support-item__header flex flex-col">
+
+                                    <!-- TOP ROW: Breadcrumb + Status -->
+                                    <div class="support-item__breadcrumb-and-status flex flex-col sm:flex-row sm:justify-between">
+                                        <!-- BREADCRUMB -->
+                                        <nav class="breadcrumb mb-2 sm:mb-0">
+                                            <ul class="custom-breadcrumb flex flex-wrap list-none p-0 m-0">
+                                                <li class="text-purple-600 font-semibold"><a href="#">Estimations</a>
+                                                </li>
+                                                <li><a href="#">Estimation name</a></li>
+                                            </ul>
+                                        </nav>
+
+                                        <!-- STATUS -->
+                                        <div class="support-item__status text-gray-500 text-sm font-medium mt-2 sm:mt-0">
+                                            Unpublished
+                                        </div>
+                                    </div>
+
+                                    <!-- MIDDLE ROW: Title + Subtitle + Spec + Controls -->
+                                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3">
+
+                                        <!-- LEFT: Titles + Spec -->
+                                        <div class="support-item__left flex flex-col flex-1">
+                                            <h1 class="support-item__title">{Support title}</h1>
+                                            <p class="support-item__subtitle">{Subtitle}</p>
+                                            <div class="support-item__spec flex">
+                                                <a href="#" class="flex items-center">
+                                                    <span class="mr-2">{Specification link}</span>
+                                                    <img src="images/icons/arrow-up-right-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- RIGHT: Controls -->
+                                        <div class="support-item__controls flex flex-wrap items-center gap-3 mt-4 lg:mt-0 lg:justify-end">
+                                            <a href="#" class="control-btn control-btn--delete">
+                                                <img src="images/icons/trash-icon.svg" alt="">
+                                            </a>
+                                            <a href="#" class="control-btn control-btn--edit flex items-center gap-1">
+                                                <img src="images/icons/pencil-icon.svg" alt="">
+                                                <span>Edit</span>
+                                            </a>
+                                            <a href="#"
+                                               class="control-btn control-btn--export hidden sm:flex items-center gap-1">
+                                                <img src="images/icons/export-icon.svg" alt="">
+                                                <span>Export</span>
+                                            </a>
+                                            <a href="#"
+                                               class="control-btn control-btn--copy hidden sm:flex items-center gap-1">
+                                                <img src="images/icons/copy-button-icon.svg" alt="">
+                                                <span>Copy</span>
+                                            </a>
+                                            <a href="#"
+                                               class="control-btn control-btn--publish flex items-center gap-1">
+                                                <img src="images/icons/publish-icon.svg" alt="">
+                                                <span>Publish</span>
+                                            </a>
+                                            <a href="#" class="control-btn control-btn--more flex sm:hidden">
+                                                <img src="images/icons/more-icon.svg" alt="">
+                                            </a>
+                                        </div>
+
+                                    </div> <!-- /middle row -->
+
+                                </div> <!-- /header -->
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="dashboard__content-item dashboard__content-item--border-only-desktop dashboard__content-item__inner pt-4 sm:pt-[28px]">
+
+                        <!-- Tabs -->
+                        <div class="support-item__tabs w-full">
+                            <div class="tabs flex border-b">
+                                <button class="tabs__btn tabs__btn--active" data-tab="tab1">Estimation</button>
+                                <button class="tabs__btn" data-tab="tab2">Client Information</button>
+                                <button class="tabs__btn" data-tab="tab3">Project Overview</button>
+                                <button class="tabs__btn" data-tab="tab4">Settings</button>
+                            </div>
+
+                            <div id="tab1" data-tab-content="tab1" class="tabs__content mt-4">
+                                <div class="estimation">
+                                    <div class="estimation__prices">
+                                        <div class="estimation__price">
+                                            <div class="estimation__price-header">
+                                                <div class="estimation__price-title">Rate</div>
+                                                <div class="estimation__price-icon"><img
+                                                        src="images/icons/rate-icon.svg"/></div>
+                                            </div>
+                                            <div class="estimation__price-body">
+                                                <div class="estimation__price-value">$32</div>
+                                                <div class="estimation__price-time">/per hour</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="estimation__price">
+                                            <div class="estimation__price-header">
+                                                <div class="estimation__price-title">Total amount</div>
+                                                <div class="estimation__price-icon"><img
+                                                        src="images/icons/price-icon.svg"/></div>
+                                            </div>
+                                            <div class="estimation__price-body">
+                                                <div class="estimation__price-total">$19,200</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="estimations__table-wrap">
+                                        <div class="estimations__table-header">
+                                            <div class="estimations__table-header-info">
+                                                <div class="estimations__table-title">Estimation</div>
+                                                <div class="estimations__table-tag">AI Generated</div>
+                                            </div>
+
+                                            <div class="estimations__table-action">
+                                                <div class="sm:hidden">
+                                                    <a href="#" class="estimations__table-add">
+                                                        <img src="images/icons/purple-plus-icon.svg" alt="Add">Add
+                                                    </a>
+                                                </div>
+                                                <div class="hidden sm:flex">
+                                                    <a href="#" class="estimations__table-add">
+                                                        <img src="images/icons/purple-plus-icon.svg" alt="Add Service">Add
+                                                        Service
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <table class="dashboard-table dashboard-table__inner-radius-up-none w-full">
+                                            <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="th-container">
+                                                        Service <img src="images/icons/caret-down-icon.svg">
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="th-container">
+                                                        Time
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="th-container">
+                                                        Rate <img src="images/icons/caret-down-icon.svg">
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="th-container">
+                                                        Price <img src="images/icons/caret-down-icon.svg">
+                                                    </div>
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex flex-col">
+                                                        <div class="dashboard-table__td-title">{Service}
+                                                        </div>
+                                                        <div class="dashboard-table__td-description">Short
+                                                            description
+                                                            of service
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>$32.00</td>
+                                                <td class="green-price">$19,200</td>
+                                                <td>
+                                                    <div class="table-item-block flex justify-center gap-[10px]">
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover w-full h-full"
+                                                                            src="images/icons/copy-icon.svg"></a>
+                                                        </div>
+                                                        <div class="flex self-center w-[20px] h-[20px]">
+                                                            <a href=""><img class="object-cover  w-full h-full"
+                                                                            src="images/icons/edit-icon.svg"></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <div class="block-list w-full flex md:hidden">
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img id="id-popup-menu-button"
+                                                             class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block-list__item">
+                                                <div class="block-list__item-row-1 flex justify-between">
+                                                    <div class="flex flex-col">
+                                                        <div class="block-list__title">{Service}
+
+                                                        </div>
+                                                        <div class="block-list__description mb-1">Short description of
+                                                            service
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex relative z-[9999] self-center w-[24px]">
+                                                        <img class="popup-menu-button object-cover cursor-pointer w-full h-full"
+                                                             src="images/icons/more-icon.svg">
+                                                        <div class="popup-menu hidden"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-list__item-row-2 flex justify-between">
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Time</div>
+                                                        <div>100</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Rate</div>
+                                                        <div>$32.00</div>
+                                                    </div>
+                                                    <div class="w-full">
+                                                        <div class="block-list__description-2">Total Amount</div>
+                                                        <div class="green-price">$19,200</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="block-list">
+                                                <div class="block-list__item">
+                                                    <div class="block-list__form-item">
+
+                                                        <!-- Row 1 -->
+                                                        <div class="block-list__row block-list__row--inputs">
+
+                                                            <div class="block-list__field">
+                                                                <select class="block-list__select">
+                                                                    <option selected>Select specialist</option>
+                                                                    <option>Developer</option>
+                                                                    <option>QA</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="block-list__field">
+                                                                <div class="block-list__input-wrapper">
+                                                                    <img src="images/icons/time-icon.svg"
+                                                                         class="block-list__input-icon">
+                                                                    <input name="time" class="block-list__input">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="block-list__field">
+                                                                <div class="block-list__input-wrapper">
+                                                                    <img src="images/icons/dollar-icon.svg"
+                                                                         class="block-list__input-icon">
+                                                                    <input name="price" class="block-list__input">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <!-- Row 2 -->
+                                                        <div class="block-list__row block-list__row--footer">
+
+                                                            <div class="block-list__amount">
+                                                                <div class="block-list__amount-label">Total Amount</div>
+                                                                <div class="block-list__amount-value">$0.00</div>
+                                                            </div>
+
+                                                            <div class="block-list__actions">
+                                                                <a href="#" class="block-list__action">
+                                                                    <img src="images/icons/accept-icon.svg" alt="">
+                                                                </a>
+
+                                                                <a href="#" class="block-list__action">
+                                                                    <img src="images/icons/decline-icon.svg" alt="">
+                                                                </a>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="tab2" data-tab-content="tab2" class="tabs__content mt-4 hidden">Client
+                            Information
+                        </div>
+                        <div id="tab3" data-tab-content="tab3" class="tabs__content mt-4 hidden">Project Overview
+                        </div>
+                        <div id="tab4" data-tab-content="tab4" class="tabs__content mt-4 hidden">Settings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div id="id-bottom-navbar-menu" class="bottom-navbar block lg:hidden"></div>
+</main>
+<footer class="site-footer hidden lg:flex" id="footer-placeholder"></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        if (headerPlaceholder) {
+            await fetch('/header-authorized.html')
+                .then(response => response.text())
+                .then(html => {
+                    headerPlaceholder.innerHTML = html;
+                });
+        }
+
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+            await fetch('/footer-authorized.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                });
+        }
+
+        const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
+        if (bottomNavEl) {
+            await fetch('/components/mobile-bottom-navbar/bottom-navbar-support-request.html')
+                .then(response => response.text())
+                .then(html => {
+                    bottomNavEl.innerHTML = html;
+                    initHeader();
+                });
+        }
+
+
+        const tabButtons = document.querySelectorAll("[data-tab]");
+        const tabContents = document.querySelectorAll("[data-tab-content]");
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const target = btn.dataset.tab;
+
+                tabButtons.forEach(b => b.classList.remove("tabs__btn--active"));
+                btn.classList.add("tabs__btn--active");
+
+                tabContents.forEach(content => content.classList.add("hidden"));
+                document.querySelector(`[data-tab-content="${target}"]`)
+                    .classList.remove("hidden");
+            });
+        });
+
+    });
+</script>
