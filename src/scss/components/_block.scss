@@ -420,7 +420,7 @@
     align-self: stretch;
 
     border-bottom: 1px solid #E9EAEA;
-   /* background: #FFF; */
+    /* background: #FFF; */
   }
 
   &__row--footer {
@@ -464,7 +464,6 @@
     font-weight: 500;
     line-height: 22px;
     letter-spacing: -0.098px;
-
 
 
     &:focus {
@@ -582,11 +581,10 @@
         width: 20px;
         height: 20px;
       }
-
     }
 
     &:hover {
-     /* background: #f3f4f6; */
+      /* background: #f3f4f6; */
     }
   }
 }

@@ -171,3 +171,44 @@ async function initShowMorePopup() {
         });
     });
 }
+
+async function initShowMoreEstimationPagePopup() {
+    const popupHtml = await fetch('/components/popup-menu-estimation-page.html')
+        .then(r => r.text());
+
+    const popupMenus = document.querySelectorAll('.popup-menu-page');
+
+    popupMenus.forEach(el => {
+        el.innerHTML = popupHtml;
+
+        const cancelButton = el.querySelector('.cancel-popup-button');
+        cancelButton.addEventListener('click', () => {
+            el.classList.add('hidden');
+        });
+    });
+
+    const buttons = document.querySelectorAll('.popup-menu-button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', e => {
+            const popup = btn.nextElementSibling;
+
+            popupMenus.forEach(p => {
+                if (p !== popup) {
+                    p.classList.add('hidden');
+                }
+            });
+
+            popup.classList.toggle('hidden');
+        });
+    });
+
+    document.addEventListener('click', e => {
+        if (e.target.closest('.popup-menu-button')) return;
+
+        popupMenus.forEach(popup => {
+            if (!popup.contains(e.target)) {
+                popup.classList.add('hidden');
+            }
+        });
+    });
+}

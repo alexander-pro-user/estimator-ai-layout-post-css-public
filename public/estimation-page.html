@@ -135,9 +135,11 @@
                                                 <img src="images/icons/publish-icon.svg" alt="">
                                                 <span>Publish</span>
                                             </a>
-                                            <a href="#" class="control-btn control-btn--more flex sm:hidden">
+                                            <a href="#"
+                                               class="control-btn control-btn--more flex sm:hidden popup-menu-button">
                                                 <img src="images/icons/more-icon.svg" alt="">
                                             </a>
+                                            <div class="popup-menu-page hidden"></div>
                                         </div>
 
                                     </div> <!-- /middle row -->
@@ -1013,6 +1015,8 @@
                     .classList.remove("hidden");
             });
         });
+
+        await initShowMoreEstimationPagePopup();
 
     });
 </script>
