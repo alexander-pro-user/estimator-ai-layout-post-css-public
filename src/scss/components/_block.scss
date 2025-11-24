@@ -420,7 +420,7 @@
     align-self: stretch;
 
     border-bottom: 1px solid #E9EAEA;
-    background: #FFF;
+   /* background: #FFF; */
   }
 
   &__row--footer {
@@ -465,6 +465,8 @@
     line-height: 22px;
     letter-spacing: -0.098px;
 
+
+
     &:focus {
       outline: none;
       border-color: #6366f1;
@@ -484,11 +486,14 @@
     width: 16px;
     height: 16px;
     pointer-events: none;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
   }
 
   &__input {
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 12px 12px 12px 38px;
     font-size: 12px;
     line-height: 14px;
@@ -500,6 +505,10 @@
     border-radius: 8px;
     border: 1px solid #CBD5E1;
     background: #FFF;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:focus {
       outline: none;
@@ -534,12 +543,27 @@
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.065px;
+
+    @media (min-width: 640px) {
+      color: #727A90;
+      font-size: 14px;
+      font-family: Inter;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.07px;
+      word-wrap: break-word
+    }
   }
 
   &__actions {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @media (min-width: 640px) {
+      gap: 1px;
+    }
+
   }
 
   &__action {
@@ -553,6 +577,12 @@
     img {
       width: 18px;
       height: 18px;
+
+      @media (min-width: 640px) {
+        width: 20px;
+        height: 20px;
+      }
+
     }
 
     &:hover {
