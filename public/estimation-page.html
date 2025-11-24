@@ -989,7 +989,7 @@
 
         const bottomNavEl = document.getElementById('id-bottom-navbar-menu');
         if (bottomNavEl) {
-            await fetch('/components/mobile-bottom-navbar/bottom-navbar-support-request.html')
+            await fetch('/components/mobile-bottom-navbar/bottom-navbar-estimation.html')
                 .then(response => response.text())
                 .then(html => {
                     bottomNavEl.innerHTML = html;
