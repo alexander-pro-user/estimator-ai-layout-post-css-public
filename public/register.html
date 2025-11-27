@@ -53,7 +53,8 @@
                     <div class="flex flex-row flex-nowrap gap-2">
                         <input type="checkbox" id="agree" class="auth-form__checkbox accent-purple-600"/>
                         <label for="agree" class="auth-form__checkbox__label cursor-pointer">
-                            I agree to the <a href="#" class="auth-form__link--thin">Terms & Privacy</a>
+                            I agree to the <a onclick="openModal(true, event)" class="auth-form__link--thin">Terms &
+                            Privacy</a>
                         </label>
                     </div>
                 </div>
@@ -95,6 +96,37 @@
 <script src="main.js"></script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('/components/terms-and-privacy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndPrivacyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false);
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+    });
+
+    function openModal(show, event) {
+        if (event) event.preventDefault();
+
+        const modal = document.getElementById('termsAndPrivacyModal');
+        if (!modal) return;
+
+        if (show) {
+            modal.style.display = 'flex';
+        } else {
+            modal.style.display = 'none';
+        }
+    }
+
     const passwordInput = document.getElementById("password");
     const togglePassword = document.getElementById("togglePassword");
 
