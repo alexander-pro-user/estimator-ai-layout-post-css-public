@@ -1,5 +1,21 @@
 @use "../utils/variables" as *;
 
+.adaptive-table-wrapper {
+  display: flex;
+ // padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border: none;
+  border-radius: 12px;
+
+
+  @media (min-width: 768px) {
+    padding: 0px;
+    border: 1px solid #E9EAEA;
+  }
+}
+
 .adaptive-table {
   display: flex;
   flex-direction: column;
@@ -20,10 +36,18 @@
     border-radius: 0;
     border: none;
     border-collapse: collapse;
-    border-top: 1px solid #E9EAEA;
+    // border-top: 1px solid #E9EAEA;
   }
 
   &__header {
+    border-bottom: 1px solid #E9EAEA;
+
+    @media (min-width: 768px) {
+      display: table-row;
+    }
+  }
+
+  &__header--border-top {
     border-top: 1px solid #E9EAEA;
     border-bottom: 1px solid #E9EAEA;
 
@@ -116,6 +140,16 @@
       &--full {
         flex-basis: 100%;
         padding: 12px 12px;
+        border-bottom: 1px solid #E9EAEA;
+
+        &.no-border {
+          border-bottom: none;
+        }
+      }
+
+      &--input {
+        flex-basis: 100%;
+        padding: 4px 8px;
         border-bottom: 1px solid #E9EAEA;
 
         &.no-border {
