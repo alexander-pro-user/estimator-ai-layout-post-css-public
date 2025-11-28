@@ -392,17 +392,30 @@
 
 
 .block-list {
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #727A90;
+  }
+
+  &__description-2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #727A90;
+  }
+
   &__form-item {
-    /* display: flex;
-     padding: 12px 8px;
-     align-items: center;
-     gap: 16px;
-     align-self: stretch;
-     flex-direction: column;
-
-
-     border-bottom: 1px solid #E9EAEA;
-     background: #FFF; */
   }
 
   &__row {
@@ -420,7 +433,6 @@
     align-self: stretch;
 
     border-bottom: 1px solid #E9EAEA;
-    /* background: #FFF; */
   }
 
   &__row--footer {
@@ -477,6 +489,11 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    @media (min-width: 768px) {
+      width: 85%;
+      margin: auto;
+    }
   }
 
   &__input-icon {
@@ -516,8 +533,9 @@
   }
 
   &__amount {
-    display: flex;
+    // display: flex;
     flex-direction: column;
+    // align-items: center;
     gap: 2px;
   }
 
@@ -557,12 +575,14 @@
   &__actions {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    flex-wrap: nowrap;
 
     @media (min-width: 640px) {
       gap: 1px;
+      display: flex;
     }
-
   }
 
   &__action {
@@ -584,7 +604,6 @@
     }
 
     &:hover {
-      /* background: #f3f4f6; */
     }
   }
 }
