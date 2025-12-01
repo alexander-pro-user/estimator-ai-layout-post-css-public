@@ -85,14 +85,17 @@
 }
 
 .pagination-table {
-  display: none;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   color: #727A90;
+  gap: 8px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 640px) {
     display: flex;
+    flex-direction: row;
   }
 
   &-pages {
