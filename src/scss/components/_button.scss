@@ -428,3 +428,45 @@
     padding: 4px;
   }
 }
+
+.btn-span-add {
+  padding: 4px 8px 4px 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  border-radius: 8px;
+  border: 1px solid #E9EAEA;
+  background: #F1E7F8;
+
+  color: #7D55BE;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.06px;
+
+  height: 28px;
+
+  @media (min-width: 640px) {
+    display: flex;
+    padding: 6px 14px 6px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 12px;
+    border: 1px solid #E9EAEA;
+    background: #F1E7F8;
+
+    color: #7D55BE;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.07px;
+    height: 32px;
+  }
+}

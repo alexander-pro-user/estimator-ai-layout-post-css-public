@@ -446,6 +446,7 @@
   &__icon {
     width: 16px;
     height: 16px;
+    flex: 0 0 16px;
 
     img {
       width: 100%;
@@ -498,5 +499,11 @@
       line-height: 20px;
       letter-spacing: 0.07px;
     }
+  }
+
+  &__span-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 }

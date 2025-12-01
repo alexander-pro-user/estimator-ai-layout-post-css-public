@@ -1,8 +1,84 @@
 @use "../utils/variables" as *;
 
 .spn {
-
   &__purple {
     color: $purple-text-color;
+  }
+}
+
+.custom-span-item {
+  display: flex;
+  padding: 4px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.06px;
+
+  min-height: 28px;
+
+
+  @media (min-width: 640px) {
+    display: flex;
+    padding: 6px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 12px;
+
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
+
+    height: 32px;
+  }
+
+  &--blue {
+    border: 1px solid var(--Cyan-cyan-100, #B0E0FC);
+    background: var(--Cyan-cyan-50, #E6F5FE);
+    color: var(--Cyan-cyan-500, #019BF4);
+  }
+
+  &--green {
+    color: #009499;
+    border: 1px solid #B0DEDF;
+    background: #E6F4F5;
+  }
+}
+
+.number-list-element {
+  color: #333;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.065px;
+
+  @media (min-width: 640px) {
+    color: #333;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
+
   }
 }
