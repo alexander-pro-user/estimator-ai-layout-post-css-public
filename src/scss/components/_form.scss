@@ -627,5 +627,371 @@
       width: 85px;
     }
   }
+}
 
+
+.payment-form {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+
+  border-radius: 12px;
+  background: #FFF;
+
+  box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100);
+
+
+  @media (min-width: 768px) {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    width: 630px;
+    min-height: 126px;
+
+    border-radius: 12px;
+    background: #FFF;
+
+    box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100);
+  }
+
+
+  &__header {
+    &__title {
+      color: #333;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+    }
+
+    &__description {
+      color: #727A90;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #727A90;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__card-number-block {
+    position: relative;
+
+    label {
+      color: #333;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.078px;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.084px;
+      }
+    }
+
+    & .payment-form__card-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .payment-form__card-input {
+        display: flex;
+        padding: 10px 12px;
+        align-items: center;
+        gap: 12px;
+        align-self: stretch;
+
+        border-radius: 8px;
+        border: 1px solid #CBD5E1;
+        background: #FFF;
+
+        @media (min-width: 768px) {
+          display: flex;
+          padding: 10px 12px;
+          align-items: center;
+          gap: 12px;
+          align-self: stretch;
+
+          border-radius: 8px;
+          border: 1px solid #CBD5E1;
+          background: #FFF;
+
+          color: #727A90;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: -0.098px;
+        }
+      }
+
+      .payment-form__card-icon {
+        position: absolute;
+        right: 12px;
+        height: 24px;
+        width: 34px;
+        height: 24px;
+        fill: var(--gray-0-white, #FFF);
+        stroke-width: 1px;
+        stroke: var(--Gray-20, #E2E8F0);
+      }
+    }
+  }
+
+  &__card-additional-info {
+    display: flex;
+    gap: 12px;
+
+    @media (min-width: 768px) {
+    }
+
+    select.payment-form__select,
+    input.payment-form__cvc-input,
+    input.payment-form__number-input {
+      display: flex;
+      padding: 10px 12px;
+      align-items: center;
+      gap: 12px;
+      flex: 1 0 0;
+
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background: #FFF;
+
+      color: #727A90;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.091px;
+
+      @media (min-width: 768px) {
+        display: flex;
+        padding: 10px 12px;
+        align-items: center;
+        gap: 12px;
+        flex: 1 0 0;
+
+        border-radius: 8px;
+        border: 1px solid #CBD5E1;
+        background: #FFF;
+
+        color: #727A90;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.098px;
+      }
+
+    }
+  }
+
+  &__auto-recharge {
+    &__title {
+      color: #333;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    &__description {
+      color: #727A90;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #727A90;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .payment-form__switcher {
+      width: 40px;
+      height: 20px;
+    }
+  }
+
+  &__total-info {
+    &__label {
+      color: #333;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    &__label-main {
+      color: #333;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    &__price {
+      color: #333;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+    }
+
+    &__price-main {
+      color: #333;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+    }
+
+  }
+
+  &__divider {
+    height: 1px;
+    background: #E5E5E5;
+    margin: 12px 0;
+  }
+
+  &__button {
+    display: flex;
+    padding: 10px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+
+    border-radius: 12px;
+    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
+
+
+    color: #FFF;
+
+    /* Text M/Semibold */
+    font-family: "Public Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.07px;
+
+    @media (min-width: 768px) {
+      display: flex;
+      padding: 10px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+
+      border-radius: 12px;
+      background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
+
+      color: #FFF;
+
+      font-family: "Public Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.07px;
+    }
+  }
 }
