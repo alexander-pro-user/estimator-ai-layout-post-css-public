@@ -631,18 +631,16 @@
 
 
 .payment-form {
+  max-width: 100%;
   display: flex;
   padding: 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
-
   border-radius: 12px;
   background: #FFF;
-
-  box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100);
-
+  box-shadow: 0px 1px 4px rgba(12, 12, 13, 0.05);
 
   @media (min-width: 768px) {
     display: flex;
@@ -651,16 +649,15 @@
     align-items: flex-start;
     gap: 24px;
     align-self: stretch;
-
     width: 630px;
     min-height: 126px;
-
     border-radius: 12px;
     background: #FFF;
-
-    box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100);
   }
 
+  &__content {
+    width: 100%;
+  }
 
   &__header {
     &__title {
@@ -679,7 +676,6 @@
         font-weight: 600;
         line-height: normal;
       }
-
     }
 
     &__description {
@@ -739,6 +735,7 @@
         border-radius: 8px;
         border: 1px solid #CBD5E1;
         background: #FFF;
+        height: 44px;
 
         @media (min-width: 768px) {
           display: flex;
@@ -778,6 +775,26 @@
     display: flex;
     gap: 12px;
 
+    label {
+      color: #333;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.078px;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.084px;
+      }
+    }
+
     @media (min-width: 768px) {
     }
 
@@ -788,7 +805,8 @@
       padding: 10px 12px;
       align-items: center;
       gap: 12px;
-      flex: 1 0 0;
+      min-width: 0;
+      width: 100%;
 
       border-radius: 8px;
       border: 1px solid #CBD5E1;
@@ -801,13 +819,13 @@
       font-weight: 400;
       line-height: 22px;
       letter-spacing: -0.091px;
+      height: 42px;
 
       @media (min-width: 768px) {
         display: flex;
         padding: 10px 12px;
         align-items: center;
         gap: 12px;
-        flex: 1 0 0;
 
         border-radius: 8px;
         border: 1px solid #CBD5E1;
@@ -821,11 +839,73 @@
         line-height: 22px;
         letter-spacing: -0.098px;
       }
-
     }
   }
 
   &__auto-recharge {
+    label {
+      color: #333;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.078px;
+
+      @media (min-width: 768px) {
+        color: #333;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.084px;
+      }
+    }
+
+    input {
+      display: flex;
+      padding: 10px 12px;
+      align-items: center;
+      gap: 12px;
+      align-self: stretch;
+
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background: #FFF;
+
+      color: #727A90;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.091px;
+
+      width: 100%;
+      height: 42px;
+
+      @media (min-width: 768px) {
+        display: flex;
+        padding: 10px 12px;
+        align-items: center;
+        gap: 12px;
+        align-self: stretch;
+
+        border-radius: 8px;
+        border: 1px solid #CBD5E1;
+        background: #FFF;
+
+        color: #727A90;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+        letter-spacing: -0.098px;
+      }
+    }
+
     &__title {
       color: #333;
       font-family: Inter;
@@ -921,7 +1001,6 @@
         font-weight: 400;
         line-height: normal;
       }
-
     }
 
     &__price-main {
@@ -940,15 +1019,13 @@
         font-weight: 600;
         line-height: normal;
       }
-
     }
-
   }
 
   &__divider {
     height: 1px;
-    background: #E5E5E5;
-    margin: 12px 0;
+    background: #E9EAEA;
+    margin: 1px 0;
   }
 
   &__button {
@@ -961,11 +1038,9 @@
 
     border-radius: 12px;
     background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
-
-
+    width: 100%;
     color: #FFF;
 
-    /* Text M/Semibold */
     font-family: "Public Sans";
     font-size: 14px;
     font-style: normal;
@@ -980,12 +1055,9 @@
       align-items: center;
       gap: 8px;
       align-self: stretch;
-
       border-radius: 12px;
       background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
-
       color: #FFF;
-
       font-family: "Public Sans";
       font-size: 14px;
       font-style: normal;

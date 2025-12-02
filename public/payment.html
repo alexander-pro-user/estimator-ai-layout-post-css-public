@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<div class="auth">
+    <header class="auth__header">
+        <div class="auth__logo"><a href="/">Estimator.AI</a></div>
+    </header>
+
+    <main class="auth__main self-center">
+        <section class="auth-text">
+            <h1 class="auth-text__title pt-8">Complete your Registration</h1>
+            <p class="auth-text__subtitle">A simple choice for a solid start.</p>
+        </section>
+
+        <div class="pricing-plan mb-5">
+            <div class="pricing-plan__content flex flex-col md:flex-row gap-6 md:gap-10">
+                <div class="pricing-plan__text flex flex-col gap-2">
+                    <div class="pricing-plan__title">Usage Based Plan</div>
+                    <div class="pricing-plan__description">
+                        You only pay for usage - pay for each estimate separately, with no hidden fees or subscriptions.
+                    </div>
+                </div>
+                <div class="pricing-plan__price flex items-center">
+                    $XXX/estimation
+                </div>
+            </div>
+        </div>
+
+        <div class="bonus-banner mb-5">
+            <div class="bonus-banner__content flex flex-col md:flex-row gap-6 md:gap-4">
+                <div class="bonus-banner__text flex flex-col gap-3">
+                    <div class="bonus-banner__title">Sign up now</div>
+                    <div class="bonus-banner__description">
+                        And receive $20 in free credits added to your balance.
+                    </div>
+                </div>
+                <div class="bonus-banner__bonus flex items-center">
+                    $20 bonus
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-form">
+            <div class="payment-form__content flex flex-col gap-6">
+                <div class="payment-form__header flex flex-col gap-2">
+                    <div class="payment-form__header__title">Payment Information</div>
+                    <div class="payment-form__header__description">Enter your payment details</div>
+                </div>
+                <div class="payment-form__card-number-block relative flex flex-col gap-2">
+                    <label for="cardNumber">Card Number</label>
+                    <div class="payment-form__card-input-wrapper relative">
+                        <input id="cardNumber" placeholder="0000 0000 0000 0000" type="text"
+                               class="payment-form__card-input w-full"/>
+                        <img src="images/icons/visa-icon.svg" alt="Visa" class="payment-form__card-icon"/>
+                    </div>
+                </div>
+                <div class="payment-form__card-additional-info flex flex-col md:flex-row gap-4 md:gap-[10px]">
+                    <div class="payment-form__card-expiration-block flex flex-col w-full gap-2">
+                        <label for="month">Expire Date</label>
+                        <div class="flex flex-row gap-4 md:gap-[10px]">
+                            <select id="month" name="month" class="payment-form__select w-full">
+                                <option selected>Month</option>
+                            </select>
+                            <select id="year" name="year" class="payment-form__select w-full">
+                                <option selected>Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payment-form__card-cvc-block flex flex-col gap-2 w-full">
+                        <label for="cvc">CVC</label>
+                        <input id="cvc" placeholder="123" type="text" class="payment-form__cvc-input"/>
+                    </div>
+                </div>
+                <div class="payment-form__divider"></div>
+                <div class="payment-form__auto-recharge flex flex-col gap-6">
+                    <div class="flex flex-row justify-between items-center gap-[10px]">
+                        <div class="flex flex-col gap-2">
+                            <div class="payment-form__auto-recharge__title">Auto recharge</div>
+                            <div class="payment-form__auto-recharge__description">Set the minimum balance for recharge
+                                and the amount of auto-recharge.
+                            </div>
+                        </div>
+                        <div class="recharge_block__block-title-switcher__switcher self-center">
+                            <div class="custom-form-switcher-body-input">
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer">
+                                    <div class="w-[40px] h-[24px] bg-[#CBD5E1] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[16px] after:w-[16px] after:transition-all peer-checked:bg-[#7D55BE]"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-4 md:gap-[10px]">
+                        <div class="flex flex-col gap-2 flex-1 w-full">
+                            <label for="minBalance">Minimum balance</label>
+                            <input id="minBalance" placeholder="0" type="number" class="payment-form__number-input"/>
+                        </div>
+                        <div class="flex flex-col gap-2 flex-1 w-full">
+                            <label for="rechargeAmount">Recharge amount</label>
+                            <input id="rechargeAmount" placeholder="10" type="number"
+                                   class="payment-form__number-input"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-form__divider"></div>
+                <div class="payment-form__total-info flex flex-col gap-4">
+                    <div class="flex justify-between">
+                        <div class="payment-form__total-info__label">Subtotal:</div>
+                        <div class="payment-form__total-info__price">$XXX USD</div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="payment-form__total-info__label">Tax(%):</div>
+                        <div class="payment-form__total-info__price">$0.00 USD</div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="payment-form__total-info__label-main">Billed Now:</div>
+                        <div class="payment-form__total-info__price-main">$0 USD</div>
+                    </div>
+                </div>
+                <div class="payment-form__divider"></div>
+                <div class="payment-form__actions">
+                    <button class="payment-form__button">Add Payment Method</button>
+                </div>
+            </div>
+        </div>
+        <div class="payment-footer">
+            <div class="max-w-[420px]">
+                <div>The payment will not be charged immediately after registration, but only when a credit top-up is
+                    needed.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
