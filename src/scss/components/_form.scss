@@ -629,441 +629,201 @@
   }
 }
 
-
 .payment-form {
-  max-width: 100%;
-  display: flex;
+  width: 100%;
   padding: 24px;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 24px;
-  align-self: stretch;
   border-radius: 12px;
   background: #FFF;
-  box-shadow: 0px 1px 4px rgba(12, 12, 13, 0.05);
+  box-shadow: 0 1px 4px rgba(12, 12, 13, 0.05);
 
   @media (min-width: 768px) {
-    display: flex;
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
     width: 630px;
-    min-height: 126px;
-    border-radius: 12px;
-    background: #FFF;
   }
 
   &__content {
     width: 100%;
   }
 
-  &__header {
-    &__title {
-      color: #333;
-      font-family: Inter;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+  /* HEADER */
 
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-    }
-
-    &__description {
-      color: #727A90;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #727A90;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-  }
-
-  &__card-number-block {
-    position: relative;
-
-    label {
-      color: #333;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-      letter-spacing: -0.078px;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: -0.084px;
-      }
-    }
-
-    & .payment-form__card-input-wrapper {
-      position: relative;
-      display: flex;
-      align-items: center;
-
-      .payment-form__card-input {
-        display: flex;
-        padding: 10px 12px;
-        align-items: center;
-        gap: 12px;
-        align-self: stretch;
-
-        border-radius: 8px;
-        border: 1px solid #CBD5E1;
-        background: #FFF;
-        height: 44px;
-
-        @media (min-width: 768px) {
-          display: flex;
-          padding: 10px 12px;
-          align-items: center;
-          gap: 12px;
-          align-self: stretch;
-
-          border-radius: 8px;
-          border: 1px solid #CBD5E1;
-          background: #FFF;
-
-          color: #727A90;
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;
-          letter-spacing: -0.098px;
-        }
-      }
-
-      .payment-form__card-icon {
-        position: absolute;
-        right: 12px;
-        height: 24px;
-        width: 34px;
-        height: 24px;
-        fill: var(--gray-0-white, #FFF);
-        stroke-width: 1px;
-        stroke: var(--Gray-20, #E2E8F0);
-      }
-    }
-  }
-
-  &__card-additional-info {
-    display: flex;
-    gap: 12px;
-
-    label {
-      color: #333;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-      letter-spacing: -0.078px;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: -0.084px;
-      }
-    }
+  &__header-title {
+    color: #333;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
 
     @media (min-width: 768px) {
-    }
-
-    select.payment-form__select,
-    input.payment-form__cvc-input,
-    input.payment-form__number-input {
-      display: flex;
-      padding: 10px 12px;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-      width: 100%;
-
-      border-radius: 8px;
-      border: 1px solid #CBD5E1;
-      background: #FFF;
-
-      color: #727A90;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22px;
-      letter-spacing: -0.091px;
-      height: 42px;
-
-      @media (min-width: 768px) {
-        display: flex;
-        padding: 10px 12px;
-        align-items: center;
-        gap: 12px;
-
-        border-radius: 8px;
-        border: 1px solid #CBD5E1;
-        background: #FFF;
-
-        color: #727A90;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: -0.098px;
-      }
+      font-size: 20px;
     }
   }
 
-  &__auto-recharge {
-    label {
-      color: #333;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-      letter-spacing: -0.078px;
+  &__header-description {
+    color: #727A90;
+    font-family: Inter;
+    font-size: 13px;
 
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: -0.084px;
-      }
-    }
-
-    input {
-      display: flex;
-      padding: 10px 12px;
-      align-items: center;
-      gap: 12px;
-      align-self: stretch;
-
-      border-radius: 8px;
-      border: 1px solid #CBD5E1;
-      background: #FFF;
-
-      color: #727A90;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 22px;
-      letter-spacing: -0.091px;
-
-      width: 100%;
-      height: 42px;
-
-      @media (min-width: 768px) {
-        display: flex;
-        padding: 10px 12px;
-        align-items: center;
-        gap: 12px;
-        align-self: stretch;
-
-        border-radius: 8px;
-        border: 1px solid #CBD5E1;
-        background: #FFF;
-
-        color: #727A90;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px; /* 157.143% */
-        letter-spacing: -0.098px;
-      }
-    }
-
-    &__title {
-      color: #333;
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-    }
-
-    &__description {
-      color: #727A90;
-      font-family: Inter;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #727A90;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-
-    .payment-form__switcher {
-      width: 40px;
-      height: 20px;
-    }
-  }
-
-  &__total-info {
-    &__label {
-      color: #333;
-      font-family: Inter;
+    @media (min-width: 768px) {
       font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-
-    &__label-main {
-      color: #333;
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
-    }
-
-    &__price {
-      color: #333;
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
-
-    &__price-main {
-      color: #333;
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-
-      @media (min-width: 768px) {
-        color: #333;
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-      }
     }
   }
+
+  /* LABELS */
+
+  &__label {
+    color: #333;
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__auto-title {
+    color: #333;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__auto-description {
+    color: #727A90;
+    font-family: Inter;
+    font-size: 13px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  /* INPUTS */
+
+  &__input {
+    display: flex;
+    padding: 10px 12px;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    background: #FFF;
+
+    color: #727A90;
+    font-family: Inter;
+    font-size: 13px;
+    height: 42px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__input--card {
+    height: 44px;
+  }
+
+  &__input--select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: url('/images/icons/arrow-dark-down-icon.svg') no-repeat right 12px center / 20px auto;
+
+  }
+
+  /* CARD */
+
+  &__card-extra {
+    @media (min-width: 768px) {
+    }
+  }
+
+  &__card-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__card-icon {
+    position: absolute;
+    right: 12px;
+    width: 34px;
+    height: 24px;
+  }
+
+  /* DIVIDER */
 
   &__divider {
     height: 1px;
     background: #E9EAEA;
-    margin: 1px 0;
   }
 
-  &__button {
-    display: flex;
-    padding: 10px 14px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
+  /* TOTAL */
 
-    border-radius: 12px;
-    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
-    width: 100%;
-    color: #FFF;
-
-    font-family: "Public Sans";
+  &__total-label {
+    color: #333;
+    font-family: Inter;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.07px;
 
     @media (min-width: 768px) {
-      display: flex;
-      padding: 10px 14px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      align-self: stretch;
-      border-radius: 12px;
-      background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), #7D55BE;
-      color: #FFF;
-      font-family: "Public Sans";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 20px;
-      letter-spacing: 0.07px;
+      font-size: 16px;
     }
+  }
+
+  &__total-label--main {
+    color: #333;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__total-price {
+    color: #333;
+    font-family: Inter;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__total-price--main {
+    color: #333;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  /* BUTTON */
+
+  &__button {
+    width: 100%;
+    padding: 10px 14px;
+    text-align: center;
+
+    border-radius: 12px;
+    background: linear-gradient(299deg, #7D55BE, #63428D);
+
+    color: #FFF;
+    font-family: "Public Sans";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
   }
 }

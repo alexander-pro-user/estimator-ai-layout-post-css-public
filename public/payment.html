@@ -54,89 +54,126 @@
 
         <div class="payment-form">
             <div class="payment-form__content flex flex-col gap-6">
+
+                <!-- Header -->
                 <div class="payment-form__header flex flex-col gap-2">
-                    <div class="payment-form__header__title">Payment Information</div>
-                    <div class="payment-form__header__description">Enter your payment details</div>
+                    <div class="payment-form__header-title">Payment Information</div>
+                    <div class="payment-form__header-description">Enter your payment details</div>
                 </div>
-                <div class="payment-form__card-number-block relative flex flex-col gap-2">
-                    <label for="cardNumber">Card Number</label>
+
+                <!-- Card number -->
+                <div class="payment-form__card-number flex flex-col gap-2 relative">
+                    <label class="payment-form__label" for="cardNumber">Card Number</label>
+
                     <div class="payment-form__card-input-wrapper relative">
                         <input id="cardNumber" placeholder="0000 0000 0000 0000" type="text"
-                               class="payment-form__card-input w-full"/>
+                               class="payment-form__input payment-form__input--card w-full"/>
                         <img src="images/icons/visa-icon.svg" alt="Visa" class="payment-form__card-icon"/>
                     </div>
                 </div>
-                <div class="payment-form__card-additional-info flex flex-col md:flex-row gap-4 md:gap-[10px]">
-                    <div class="payment-form__card-expiration-block flex flex-col w-full gap-2">
-                        <label for="month">Expire Date</label>
-                        <div class="flex flex-row gap-4 md:gap-[10px]">
-                            <select id="month" name="month" class="payment-form__select w-full">
-                                <option selected>Month</option>
-                            </select>
-                            <select id="year" name="year" class="payment-form__select w-full">
-                                <option selected>Year</option>
-                            </select>
-                        </div>
+
+                <!-- Additional card info -->
+                <div class="payment-form__card-extra grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-4 md:grid-areas-desktop">
+
+                    <!-- Month -->
+                    <div class="flex flex-col gap-2 col-start-1 col-end-2">
+                        <label class="payment-form__label" for="month">Month</label>
+                        <select id="month" name="month" class="payment-form__input payment-form__input--select w-full">
+                            <option selected>Month</option>
+                        </select>
                     </div>
-                    <div class="payment-form__card-cvc-block flex flex-col gap-2 w-full">
-                        <label for="cvc">CVC</label>
-                        <input id="cvc" placeholder="123" type="text" class="payment-form__cvc-input"/>
+
+                    <!-- Year -->
+                    <div class="flex flex-col gap-2 col-start-2 col-end-3">
+                        <label class="payment-form__label" for="year">Year</label>
+                        <select id="year" name="year" class="payment-form__input payment-form__input--select w-full">
+                            <option selected>Year</option>
+                        </select>
                     </div>
+
+                    <!-- CVC -->
+                    <div class="flex flex-col gap-2 col-start-1 col-end-3 md:col-start-3 md:col-end-4">
+                        <label class="payment-form__label" for="cvc">CVC</label>
+                        <input id="cvc" placeholder="123" type="text" class="payment-form__input w-full"/>
+                    </div>
+
                 </div>
+
                 <div class="payment-form__divider"></div>
-                <div class="payment-form__auto-recharge flex flex-col gap-6">
-                    <div class="flex flex-row justify-between items-center gap-[10px]">
+
+                <!-- Auto recharge -->
+                <div class="payment-form__auto flex flex-col gap-6">
+
+                    <div class="payment-form__auto-header flex flex-row justify-between items-center gap-[10px]">
                         <div class="flex flex-col gap-2">
-                            <div class="payment-form__auto-recharge__title">Auto recharge</div>
-                            <div class="payment-form__auto-recharge__description">Set the minimum balance for recharge
-                                and the amount of auto-recharge.
+                            <div class="payment-form__auto-title">Auto recharge</div>
+                            <div class="payment-form__auto-description">
+                                Set the minimum balance for recharge and the amount of auto-recharge.
                             </div>
                         </div>
-                        <div class="recharge_block__block-title-switcher__switcher self-center">
-                            <div class="custom-form-switcher-body-input">
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" class="sr-only peer">
-                                    <div class="w-[40px] h-[24px] bg-[#CBD5E1] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[16px] after:w-[16px] after:transition-all peer-checked:bg-[#7D55BE]"></div>
-                                </label>
+
+                        <div class="payment-form__switcher self-start md:self-end">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input onclick="toRechargePaymentPage()" checked type="checkbox" class="sr-only peer">
+                                <div class="w-[40px] h-[24px] bg-[#CBD5E1] rounded-full peer
+                                 peer-checked:bg-[#7D55BE]
+                                 after:content-[''] after:absolute after:top-[4px] after:left-[3px]
+                                 after:w-[16px] after:h-[16px] after:bg-white after:rounded-full
+                                 after:transition-all peer-checked:after:translate-x-full"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="payment-form__auto-fields-id">
+                        <div class="flex flex-row gap-4 md:gap-[10px]">
+                            <div class="payment-form__auto-field flex flex-col gap-2 flex-1">
+                                <label class="payment-form__label" for="minBalance">Minimum balance</label>
+                                <input id="minBalance" placeholder="0" type="number" class="payment-form__input"/>
+                            </div>
+
+                            <div class="payment-form__auto-field flex flex-col gap-2 flex-1">
+                                <label class="payment-form__label" for="rechargeAmount">Recharge amount</label>
+                                <input id="rechargeAmount" placeholder="10" type="number" class="payment-form__input"/>
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row gap-4 md:gap-[10px]">
-                        <div class="flex flex-col gap-2 flex-1 w-full">
-                            <label for="minBalance">Minimum balance</label>
-                            <input id="minBalance" placeholder="0" type="number" class="payment-form__number-input"/>
-                        </div>
-                        <div class="flex flex-col gap-2 flex-1 w-full">
-                            <label for="rechargeAmount">Recharge amount</label>
-                            <input id="rechargeAmount" placeholder="10" type="number"
-                                   class="payment-form__number-input"/>
-                        </div>
+
+                </div>
+
+                <div class="payment-form__divider"></div>
+
+                <!-- Totals -->
+                <div class="payment-form__total flex flex-col gap-4">
+                    <div class="payment-form__total-row flex justify-between">
+                        <div class="payment-form__total-label">Subtotal:</div>
+                        <div class="payment-form__total-price">$XXX USD</div>
+                    </div>
+
+                    <div class="payment-form__total-row flex justify-between">
+                        <div class="payment-form__total-label">Tax(%):</div>
+                        <div class="payment-form__total-price">$0.00 USD</div>
+                    </div>
+
+                    <div class="payment-form__total-row flex justify-between">
+                        <div class="payment-form__total-label payment-form__total-label--main">Billed Now:</div>
+                        <div class="payment-form__total-price payment-form__total-price--main">$0 USD</div>
                     </div>
                 </div>
+
                 <div class="payment-form__divider"></div>
-                <div class="payment-form__total-info flex flex-col gap-4">
-                    <div class="flex justify-between">
-                        <div class="payment-form__total-info__label">Subtotal:</div>
-                        <div class="payment-form__total-info__price">$XXX USD</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="payment-form__total-info__label">Tax(%):</div>
-                        <div class="payment-form__total-info__price">$0.00 USD</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="payment-form__total-info__label-main">Billed Now:</div>
-                        <div class="payment-form__total-info__price-main">$0 USD</div>
-                    </div>
-                </div>
-                <div class="payment-form__divider"></div>
+
+                <!-- Button -->
                 <div class="payment-form__actions">
                     <button class="payment-form__button">Add Payment Method</button>
                 </div>
+
             </div>
         </div>
+
         <div class="payment-footer">
             <div class="max-w-[420px]">
-                <div>The payment will not be charged immediately after registration, but only when a credit top-up is
+                <div>
+                    The payment will not be charged immediately after registration, but only when a credit top-up is
                     needed.
                 </div>
             </div>
@@ -145,6 +182,17 @@
 </div>
 
 <script src="main.js"></script>
+
+<script>
+    function toRechargePaymentPage() {
+        const idBillingForm = document.getElementById('payment-form__auto-fields-id');
+        if (idBillingForm.classList.contains('hidden')) {
+            idBillingForm.classList.remove('hidden');
+        } else {
+            idBillingForm.classList.add('hidden');
+        }
+    }
+</script>
 
 </body>
 </html>
