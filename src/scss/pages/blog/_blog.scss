@@ -1,0 +1,147 @@
+@use "../../utils/variables" as *;
+
+/* BLOG BLOCK */
+.blog {
+  &__title {
+    color: #333;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+
+    &--purple {
+      color: #7D55BE;
+    }
+  }
+}
+
+
+/* MAIN ARTICLE SECTION BLOCK */
+.block-main-article-section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: #FFF;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 83.01%, #FFF 100%), radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0) 100%), url("/images/landing/professional-ai-estimation-generator.png") 50%/cover no-repeat, #FAFCFF;
+
+  width: 100%;
+  margin: 0 auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+
+  gap: 30px;
+
+  @media (min-width: 768px) {
+    padding: 80px 100px;
+    gap: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: 460px;
+    padding: 20px 20px 20px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1240px;
+    margin: 0 auto;
+
+    border-radius: 16px;
+    border: 1px solid #F5EDFF;
+    background: #FFF;
+
+    @media (min-width: 768px) {
+      padding: 24px 24px 24px 56px;
+      gap: 48px;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__tag-block {
+  }
+
+  &__title {
+    color: #333;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    color: #666;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__read-more {
+    color: var(--Text-text-accent, #73178A);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    gap: 24px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      align-self: center;
+    }
+
+    svg path {
+      stroke: #73178A;
+    }
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: flex-start;
+    max-width: 556px;
+
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+  }
+}
