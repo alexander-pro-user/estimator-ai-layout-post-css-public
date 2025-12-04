@@ -34,8 +34,12 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (min-width: 1020px) {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
 
-    @media (min-width: 1150px) {
+    @media (min-width: 1200px) {
       padding-right: 80px;
       padding-left: 80px;
     }
