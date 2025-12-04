@@ -59,249 +59,57 @@
             <section class="block-article-list-section">
                 <div class="block-article-list-section__wrapper flex flex-col lg:flex-row gap-12">
                     <div class="block-article-list-section__content flex flex-col w-full">
-                        <ul class="block-article-list-section__tag-list self-center max-w-full mb-12 pb-4 flex gap-2">
+
+                        <ul class="block-article-list-section__tag-list self-center max-w-full mb-12 pb-4 flex gap-2"
+                            id="filter-tags">
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive tag-block--active">All</div>
+                                <div class="tag-block tag-block--interactive tag-block--active" data-filter="all">All
+                                </div>
                             </li>
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive">Tag name</div>
+                                <div class="tag-block tag-block--interactive" data-filter="design">Design</div>
                             </li>
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive">Tag name</div>
+                                <div class="tag-block tag-block--interactive" data-filter="development">Development
+                                </div>
                             </li>
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive">Tag name</div>
+                                <div class="tag-block tag-block--interactive" data-filter="marketing">Marketing</div>
                             </li>
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive">Tag name</div>
+                                <div class="tag-block tag-block--interactive" data-filter="seo">SEO</div>
                             </li>
                             <li class="block-article-list-section__tag-item">
-                                <div class="tag-block tag-block--interactive">Tag name</div>
+                                <div class="tag-block tag-block--interactive" data-filter="tutorial">Tutorials</div>
                             </li>
                         </ul>
 
-                        <ul class="block-article-list-section__article-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
+                        <ul class="block-article-list-section__article-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                            id="articles-container">
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="design">
                                 <div class="article-card__image-wrapper w-full">
                                     <div class="article-card__image">
                                         <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
                                              alt="blog image"/>
                                     </div>
                                 </div>
-
                                 <div class="flex flex-col flex-grow p-2">
                                     <div class="p-2">
                                         <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
+                                            <div class="tag-block tag-block--small">Design</div>
                                             <div class="tag-block tag-block--read-time">5 min read</div>
                                         </div>
-
                                         <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
+                                            UX Principles for 2025
                                         </h3>
-
                                         <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
                                             ipsum.
                                             Sed accumsan quam vitae est varius fringilla.
                                         </p>
                                     </div>
-
-                                    <div class="p-2">
-                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
-                                            <span>Read more</span>
-                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
-                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
-                                <div class="article-card__image-wrapper w-full">
-                                    <div class="article-card__image">
-                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
-                                             alt="blog image"/>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col flex-grow p-2">
-                                    <div class="p-2">
-                                        <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
-                                            <div class="tag-block tag-block--read-time">5 min read</div>
-                                        </div>
-
-                                        <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
-                                        </h3>
-
-                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
-                                            ipsum.
-                                            Sed accumsan quam vitae est varius fringilla.
-                                        </p>
-                                    </div>
-
-                                    <div class="p-2">
-                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
-                                            <span>Read more</span>
-                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
-                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
-                                <div class="article-card__image-wrapper w-full">
-                                    <div class="article-card__image">
-                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
-                                             alt="blog image"/>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col flex-grow p-2">
-                                    <div class="p-2">
-                                        <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
-                                            <div class="tag-block tag-block--read-time">5 min read</div>
-                                        </div>
-
-                                        <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
-                                        </h3>
-
-                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
-                                            ipsum.
-                                            Sed accumsan quam vitae est varius fringilla.
-                                        </p>
-                                    </div>
-
-                                    <div class="p-2">
-                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
-                                            <span>Read more</span>
-                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
-                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
-                                <div class="article-card__image-wrapper w-full">
-                                    <div class="article-card__image">
-                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
-                                             alt="blog image"/>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col flex-grow p-2">
-                                    <div class="p-2">
-                                        <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
-                                            <div class="tag-block tag-block--read-time">5 min read</div>
-                                        </div>
-
-                                        <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
-                                        </h3>
-
-                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
-                                            ipsum.
-                                            Sed accumsan quam vitae est varius fringilla.
-                                        </p>
-                                    </div>
-
-                                    <div class="p-2">
-                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
-                                            <span>Read more</span>
-                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
-                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
-                                <div class="article-card__image-wrapper w-full">
-                                    <div class="article-card__image">
-                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
-                                             alt="blog image"/>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col flex-grow p-2">
-                                    <div class="p-2">
-                                        <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
-                                            <div class="tag-block tag-block--read-time">5 min read</div>
-                                        </div>
-
-                                        <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
-                                        </h3>
-
-                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
-                                            ipsum.
-                                            Sed accumsan quam vitae est varius fringilla.
-                                        </p>
-                                    </div>
-
-                                    <div class="p-2">
-                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
-                                            <span>Read more</span>
-                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
-                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="block-article-list-section__article-item article-card flex flex-col h-full">
-                                <div class="article-card__image-wrapper w-full">
-                                    <div class="article-card__image">
-                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
-                                             alt="blog image"/>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col flex-grow p-2">
-                                    <div class="p-2">
-                                        <div class="article-card__meta flex gap-4 mb-6">
-                                            <div class="tag-block tag-block--small">Tag name</div>
-                                            <div class="tag-block tag-block--read-time">5 min read</div>
-                                        </div>
-
-                                        <h3 class="article-card__title block-article-list-section__title mb-3">
-                                            Heading text
-                                        </h3>
-
-                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
-                                            ipsum.
-                                            Sed accumsan quam vitae est varius fringilla.
-                                        </p>
-                                    </div>
-
                                     <div class="p-2">
                                         <a href="#" class="article-card__read-more read-more-btn mt-auto">
                                             <span>Read more</span>
@@ -313,6 +121,182 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="development">
+                                <div class="article-card__image-wrapper w-full">
+                                    <div class="article-card__image">
+                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
+                                             alt="blog image"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-grow p-2">
+                                    <div class="p-2">
+                                        <div class="article-card__meta flex gap-4 mb-6">
+                                            <div class="tag-block tag-block--small">Development</div>
+                                            <div class="tag-block tag-block--read-time">10 min read</div>
+                                        </div>
+                                        <h3 class="article-card__title block-article-list-section__title mb-3">
+                                            React vs Vue: A Comparison
+                                        </h3>
+                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                                            ipsum.
+                                            Sed accumsan quam vitae est varius fringilla.
+                                        </p>
+                                    </div>
+                                    <div class="p-2">
+                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
+                                            <span>Read more</span>
+                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="marketing">
+                                <div class="article-card__image-wrapper w-full">
+                                    <div class="article-card__image">
+                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
+                                             alt="blog image"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-grow p-2">
+                                    <div class="p-2">
+                                        <div class="article-card__meta flex gap-4 mb-6">
+                                            <div class="tag-block tag-block--small">Marketing</div>
+                                            <div class="tag-block tag-block--read-time">3 min read</div>
+                                        </div>
+                                        <h3 class="article-card__title block-article-list-section__title mb-3">
+                                            How to boost conversion
+                                        </h3>
+                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                                            ipsum.
+                                            Sed accumsan quam vitae est varius fringilla.
+                                        </p>
+                                    </div>
+                                    <div class="p-2">
+                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
+                                            <span>Read more</span>
+                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="design">
+                                <div class="article-card__image-wrapper w-full">
+                                    <div class="article-card__image">
+                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
+                                             alt="blog image"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-grow p-2">
+                                    <div class="p-2">
+                                        <div class="article-card__meta flex gap-4 mb-6">
+                                            <div class="tag-block tag-block--small">Design</div>
+                                            <div class="tag-block tag-block--read-time">6 min read</div>
+                                        </div>
+                                        <h3 class="article-card__title block-article-list-section__title mb-3">
+                                            Color Theory Basics
+                                        </h3>
+                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                                            ipsum.
+                                            Sed accumsan quam vitae est varius fringilla.
+                                        </p>
+                                    </div>
+                                    <div class="p-2">
+                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
+                                            <span>Read more</span>
+                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="seo">
+                                <div class="article-card__image-wrapper w-full">
+                                    <div class="article-card__image">
+                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
+                                             alt="blog image"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-grow p-2">
+                                    <div class="p-2">
+                                        <div class="article-card__meta flex gap-4 mb-6">
+                                            <div class="tag-block tag-block--small">SEO</div>
+                                            <div class="tag-block tag-block--read-time">7 min read</div>
+                                        </div>
+                                        <h3 class="article-card__title block-article-list-section__title mb-3">
+                                            SEO Audit Checklist
+                                        </h3>
+                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                                            ipsum.
+                                            Sed accumsan quam vitae est varius fringilla.
+                                        </p>
+                                    </div>
+                                    <div class="p-2">
+                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
+                                            <span>Read more</span>
+                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="block-article-list-section__article-item article-card flex flex-col h-full"
+                                data-category="tutorial">
+                                <div class="article-card__image-wrapper w-full">
+                                    <div class="article-card__image">
+                                        <img class="w-full h-auto object-cover" src="images/blog/blog-image.png"
+                                             alt="blog image"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-grow p-2">
+                                    <div class="p-2">
+                                        <div class="article-card__meta flex gap-4 mb-6">
+                                            <div class="tag-block tag-block--small">Tutorials</div>
+                                            <div class="tag-block tag-block--read-time">15 min read</div>
+                                        </div>
+                                        <h3 class="article-card__title block-article-list-section__title mb-3">
+                                            Step-by-step Guide
+                                        </h3>
+                                        <p class="article-card__description block-article-list-section__description mb-4 flex-grow">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                                            ipsum.
+                                            Sed accumsan quam vitae est varius fringilla.
+                                        </p>
+                                    </div>
+                                    <div class="p-2">
+                                        <a href="#" class="article-card__read-more read-more-btn mt-auto">
+                                            <span>Read more</span>
+                                            <svg class="read-more-btn__icon" width="5" height="10" viewBox="0 0 20 20"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#73178A" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -325,8 +309,8 @@
 </div>
 </body>
 </html>
-<script src="main.js"></script>
 
+<script src="main.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         fetch('/header-authorized.html')
@@ -340,5 +324,28 @@
             .then(res => res.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 
+        initTagFiltering();
     });
+
+    function initTagFiltering() {
+        const filterButtons = document.querySelectorAll('.block-article-list-section__tag-item .tag-block--interactive');
+        const articles = document.querySelectorAll('.block-article-list-section__article-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('tag-block--active'));
+                button.classList.add('tag-block--active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                articles.forEach(article => {
+                    if (filterValue === 'all' || article.getAttribute('data-category') === filterValue) {
+                        article.style.display = '';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 </script>
