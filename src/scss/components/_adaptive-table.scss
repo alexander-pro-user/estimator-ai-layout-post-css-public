@@ -213,7 +213,7 @@
   &__input,
   &__select {
     width: 100%;
-    padding: 12px 12px 12px 38px;
+    padding: 0px 12px 0px 38px;
     font-family: "Inter", sans-serif;
     font-size: 12px;
     line-height: 14px;
@@ -231,18 +231,34 @@
       outline: none;
       border-color: #6366f1;
     }
+
+    height: 40px;
+    line-height: 38px;
+
+    @media (min-width: 1280px) {
+      height: 48px;
+      line-height: 46px;
+    }
+
   }
 
   &__select {
-    padding: 9px 12px;
+    padding: 0px 12px;
     gap: 12px;
     appearance: none;
     -webkit-appearance: none;
     background: url('/images/icons/arrow-dark-down-icon.svg') no-repeat right 12px center / 12px auto;
     font-weight: 500;
     font-size: 14px;
-    line-height: 22px;
     color: #475569;
+
+    height: 40px;
+    line-height: 38px;
+    
+    @media (min-width: 1280px) {
+      height: 48px;
+      line-height: 46px;
+    }
   }
 
   &__input:not(:placeholder-shown) {

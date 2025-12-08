@@ -23,11 +23,11 @@
 
   background: url('/images/icons/arrow-dark-down-icon.svg') no-repeat right 12px center / 20px auto;
 
-  display: flex;
   width: 120px;
-  padding: 9px 10px 9px 12px;
-  align-items: center;
+  padding: 0px 10px 0px 12px;
   gap: 4px;
+
+  height: 40px;
 
   border-radius: 12px;
   border: 1px solid #E9EAEA;
@@ -37,17 +37,21 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 157.143% */
+  line-height: 38px; /* 157.143% */
   letter-spacing: -0.098px;
 
   @media (min-width: 1024px) {
-    display: flex;
     width: 160px;
-    padding: 9px 10px 9px 12px;
-    align-items: center;
     gap: 4px;
   }
 
+}
+
+.custom-select option {
+  font-size: 14px;
+  line-height: 38px;
+  height: 40px;
+  padding: 0;
 }
 
 .form-navigation {
@@ -243,6 +247,7 @@
       &-image {
         width: 28px;
         height: 28px;
+        cursor: pointer;
 
         @media (min-width: 1024px) {
           width: 24px;
