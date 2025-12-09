@@ -339,6 +339,12 @@
     letter-spacing: 0.06px;
 
     height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      color: #794ebe;
+      background: #eed9f8;
+    }
 
     @media (min-width: 640px) {
       display: flex;

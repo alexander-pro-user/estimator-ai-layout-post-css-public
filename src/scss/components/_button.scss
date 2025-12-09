@@ -26,6 +26,10 @@
     border: 1px solid #63428D;
     font-family: Inter;
 
+    &:hover {
+      background: linear-gradient(299.32deg, #7843c0 16.39%, #62358d 81.05%);
+    }
+
     @media (min-width: 1024px) {
       line-height: 19px
     }
@@ -36,6 +40,10 @@
     color: #7D55BE;
     border: 1px solid #63428D;
 
+    &:hover {
+      background: #efe5ff;
+    }
+
     @media (min-width: 1024px) {
       line-height: 19px
     }
@@ -44,6 +52,10 @@
   &__tertiary {
     color: #202125;
     border: none;
+
+    &:hover {
+      color: #030305;
+    }
   }
 
   &__play {
@@ -71,6 +83,10 @@
 
     font-weight: 500;
     color: #7D55BE;
+
+    &:hover {
+      background: #f0e7ff;
+    }
   }
 
   &__prev {
@@ -87,6 +103,10 @@
     align-items: center;
     padding: 0px;
 
+    &:hover {
+      background: #d7dee8;
+    }
+
     svg {
       width: 20px;
       height: 20px;
@@ -99,6 +119,10 @@
     &--active {
       background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
       cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(299.32deg, #704ca8 16.39%, #543775 81.05%);
+      }
 
       svg path {
         stroke: #FFFFFF;
@@ -119,6 +143,11 @@
     align-items: center;
     padding: 0px;
 
+    &:hover {
+      background: #d7dee8;
+    }
+
+
     svg {
       width: 20px;
       height: 20px;
@@ -131,6 +160,10 @@
     &--active {
       background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
       cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(299.32deg, #704ca8 16.39%, #533775 81.05%);
+      }
 
       svg path {
         stroke: #FFFFFF;
@@ -146,6 +179,10 @@
     border: 1px solid #E9EAEA;
     padding: 8px;
     background: #ffffff;
+
+    &:hover {
+      background: #fdf7f7;
+    }
 
     img {
       width: 100%;
@@ -165,6 +202,10 @@
     line-height: 150%;
     letter-spacing: 0px;
     color: #676C76;
+
+    &:hover {
+      background: #dbdbdc;
+    }
 
     @media (min-width: 1024px) {
       padding-top: 6px;
@@ -186,6 +227,10 @@
     line-height: 150%;
     letter-spacing: 0px;
     color: #FFFFFF;
+
+    &:hover {
+      background: linear-gradient(299.32deg, #784bc0 16.39%, #653891 81.05%);
+    }
 
     @media (min-width: 1024px) {
       padding-top: 6px;
@@ -213,6 +258,10 @@
     line-height: 150%;
     color: #1B9A8B;
 
+    &:hover {
+      background: #defff9;
+    }
+
     @media (min-width: 1024px) {
       padding-top: 6px;
       padding-right: 12px;
@@ -238,8 +287,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-  }
 
+    &:hover {
+      background: linear-gradient(90deg, #1acbba 0%, #03c4ae 100%);
+    }
+  }
 
   &__next-main {
     display: flex;
@@ -258,6 +310,10 @@
 
     border-radius: 10px;
     background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), linear-gradient(90deg, #1B9A8B 0%, #16B5A1 100%);
+
+    &:hover {
+      background: linear-gradient(299deg, #7046a9 16.39%, #4f306e 81.05%), linear-gradient(90deg, #14988a 0%, #10b29e 100%);
+    }
   }
 
   &__cancel-main {
@@ -277,6 +333,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
+
+    &:hover {
+      background: #dcdbdb;
+    }
+
   }
 
   &__purple {
@@ -295,6 +356,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+
+    &:hover {
+      background: #ece7fd;
+    }
 
     @media (min-width: 1024px) {
       display: flex;
@@ -361,6 +426,7 @@
 
     &:hover {
       color: #c94444;
+      background: #ffcdc1;
     }
   }
 
@@ -375,7 +441,8 @@
     background: #EAF7FF;
 
     &:hover {
-      color: #475569;
+      color: #015fe1;
+      background: #bfedff;
     }
   }
 
@@ -390,7 +457,8 @@
     background: #F8F3FF;
 
     &:hover {
-      color: #475569;
+      color: #7944c2;
+      background: #dbc8ff;
     }
   }
 
@@ -405,7 +473,8 @@
     background: #E2FBFB;
 
     &:hover {
-      color: #475569;
+      color: #0098a1;
+      background: #c0ffec;
     }
   }
 
@@ -420,7 +489,8 @@
     background: #E6F4F5;
 
     &:hover {
-      color: #257645;
+      color: #018083;
+      background: #d4edf3;
     }
   }
 
@@ -448,6 +518,11 @@
   letter-spacing: 0.06px;
 
   height: 28px;
+
+  &:hover {
+    color: #794ebe;
+    background: #eed9f8;
+  }
 
   @media (min-width: 640px) {
     display: flex;

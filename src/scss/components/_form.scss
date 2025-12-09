@@ -830,5 +830,9 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+
+    &:hover {
+      background: linear-gradient(299deg, #763cbe, #5f328c);
+    }
   }
 }
