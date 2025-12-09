@@ -138,6 +138,10 @@
       line-height: 20px;
       letter-spacing: 0.065px;
 
+      &:hover {
+        background: #f5e7e2;
+      }
+
       @media (min-width: 1024px) {
         display: flex;
         padding: 10px 14px;
