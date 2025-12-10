@@ -86,6 +86,12 @@
       font-weight: 600;
       line-height: 20px;
       letter-spacing: 0.065px;
+      cursor: pointer;
+
+      &:hover {
+        color: #794ebe;
+        background: #eed9f8;
+      }
 
       @media (min-width: 1024px) {
         display: flex;
@@ -137,6 +143,7 @@
       font-weight: 600;
       line-height: 20px;
       letter-spacing: 0.065px;
+      cursor: pointer;
 
       &:hover {
         background: #f5e7e2;
