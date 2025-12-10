@@ -296,6 +296,14 @@
                 .then(html => {
                     stepperEl.innerHTML = html;
                     initHeader();
+                })
+                .then(() => {
+                    requestAnimationFrame(() => {
+                        const block = document.querySelector('.form-stepper__steps');
+                        if (block) {
+                            block.scrollLeft = block.scrollWidth;
+                        }
+                    });
                 });
         }
 
