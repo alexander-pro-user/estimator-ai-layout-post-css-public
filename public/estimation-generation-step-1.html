@@ -359,5 +359,16 @@
                     initHeader();
                 });
         }
+
+        document.querySelectorAll('.estimations__items-item').forEach(template => {
+            if (template.classList.contains('estimations__items-item-green-bg')) return;
+
+            template.addEventListener('click', () => {
+                document.querySelectorAll('.estimations__items-item').forEach(el => el.classList.remove('active'));
+
+                template.classList.add('active');
+            });
+        });
+
     });
 </script>

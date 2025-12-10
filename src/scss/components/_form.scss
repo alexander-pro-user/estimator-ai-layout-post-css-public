@@ -528,6 +528,7 @@
     align-items: flex-start;
     gap: 4px;
     align-self: stretch;
+    cursor: pointer;
 
     border-radius: 6px;
     border: 1px solid rgba(154, 2, 219, 0.25);
@@ -555,6 +556,16 @@
       font-weight: 400;
       line-height: 150%;
     }
+
+    &:hover {
+      border-color: $purple-light-text-color;
+      box-shadow: 0 4px 14px -2px rgba(154, 2, 219, 0.25);
+    }
+  }
+
+  .active {
+    border: 1px solid #b78eff;
+    box-shadow: 0 0 0 7px rgba(154, 2, 219, 0.2);
   }
 }
 
