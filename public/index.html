@@ -196,7 +196,8 @@
                     </div>
 
                     <div class="take-closer-look__buttons">
-                        <button class="btn inline-block btn__primary"><a href="estimations.html">Get Estimate</a></button>
+                        <button class="btn inline-block btn__primary"><a href="estimations.html">Get Estimate</a>
+                        </button>
                         <button onclick="openModal(true)" class="btn inline-block btn__tertiary">Contact Us</button>
                         </button>
                     </div>
@@ -792,8 +793,9 @@
         </div>
     </main>
 
-    <div id="testimonialModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-[9999999]">
-        <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-6 relative">
+    <div id="testimonialModal"
+         class="fixed inset-0 bg-black/40 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200 z-[9999999]">
+        <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-6 relative transform scale-95 opacity-0 transition-all duration-200">
             <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;
             </button>
 
@@ -996,16 +998,17 @@
 
     function initTestimonialModal() {
         const modal = document.getElementById("testimonialModal");
-        const modalContent = document.getElementById("modalContent");
+        const modalContainer = modal.querySelector("div");
         const closeModal = document.getElementById("closeModal");
 
         const modalAvatar = document.getElementById("modalAvatar");
         const modalName = document.getElementById("modalName");
         const modalCompany = document.getElementById("modalCompany");
         const modalRating = document.getElementById("modalRating");
+        const modalContent = document.getElementById("modalContent");
 
         // Modal opening
-        document.querySelectorAll(".btn__read-more").forEach((btn) => {
+        document.querySelectorAll(".btn__read-more").forEach(btn => {
             btn.addEventListener("click", () => {
                 const item = btn.closest(".testimonials__items-item");
                 const avatar = item.querySelector(".testimonials__items-item-text-main-avatar img").src;
@@ -1027,22 +1030,32 @@
                 modalCompany.textContent = company;
                 modalContent.textContent = text;
 
-                modal.classList.remove("hidden");
-                modal.classList.add("flex");
+                modal.classList.add("open");
+                modal.style.pointerEvents = "auto";
+                modal.style.opacity = "1";
+
+                modalContainer.style.transform = "scale(1)";
+                modalContainer.style.opacity = "1";
             });
         });
 
         // Closing
         closeModal.addEventListener("click", () => {
-            modal.classList.add("hidden");
-            modal.classList.remove("flex");
+            modal.style.opacity = "0";
+            modal.style.pointerEvents = "none";
+
+            modalContainer.style.transform = "scale(0.95)";
+            modalContainer.style.opacity = "0";
         });
 
         // Click outside modal
         modal.addEventListener("click", (e) => {
             if (e.target === modal) {
-                modal.classList.add("hidden");
-                modal.classList.remove("flex");
+                modal.style.opacity = "0";
+                modal.style.pointerEvents = "none";
+
+                modalContainer.style.transform = "scale(0.95)";
+                modalContainer.style.opacity = "0";
             }
         });
     }
