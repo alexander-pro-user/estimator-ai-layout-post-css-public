@@ -118,9 +118,9 @@
         if (!modal) return;
 
         if (show) {
-            modal.style.display = 'flex';
+            modal.classList.add('open');
         } else {
-            modal.style.display = 'none';
+            modal.classList.remove('open');
         }
     }
 
