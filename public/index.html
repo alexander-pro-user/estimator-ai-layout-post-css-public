@@ -859,11 +859,9 @@
         const modal = document.getElementById('contactUsModal');
 
         if (show) {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            modal.classList.add('open');
         } else {
-            modal.classList.add('hidden');
-            modal.classList.add('flex');
+            modal.classList.remove('open');
         }
     }
 
