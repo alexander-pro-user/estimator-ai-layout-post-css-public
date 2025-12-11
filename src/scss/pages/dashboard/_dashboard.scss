@@ -53,6 +53,11 @@
         flex: 1;
         width: 100%;
       }
+
+      &:hover {
+        background: #ffffff;
+        box-shadow: 1px 1px 10px #e7e7e7;
+      }
     }
 
     &-active {
