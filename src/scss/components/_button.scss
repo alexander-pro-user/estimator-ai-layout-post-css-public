@@ -11,6 +11,8 @@
   font-size: 13px;
   font-weight: 500;
 
+  transition: background-color 0.3s ease, color 0.3s ease;
+
   @media (min-width: 1024px) {
     font-size: 14px;
     padding-top: 9px;
@@ -89,64 +91,57 @@
     }
   }
 
-  &__prev {
-    display: flex;
-    width: 32px;
-    height: 32px;
-    gap: 10px;
-    border-radius: 55px;
-    border-width: 1px;
-    background: #F7FAFF;
-    border: 1px solid #F0F6FF;
-    cursor: default;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-
-    &:hover {
-      background: #eff5fd;
-    }
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    svg path {
-      stroke: #808080;
-    }
-
-    &--active {
-      background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
-      cursor: pointer;
-
-      &:hover {
-        background: linear-gradient(299.32deg, #704ca8 16.39%, #543775 81.05%);
-      }
-
-      svg path {
-        stroke: #FFFFFF;
-      }
-    }
-  }
-
+  &__prev,
   &__next {
+    position: relative;
+    overflow: hidden;
+    border-radius: 55px;
+
     display: flex;
     width: 32px;
     height: 32px;
     gap: 10px;
-    border-radius: 55px;
-    background: #F7FAFF;
-    cursor: default;
-    border: 1px solid #F0F6FF;
     justify-content: center;
     align-items: center;
-    padding: 0px;
 
-    &:hover {
-      background: #eff5fd;
+    background-color: #F7FAFF;
+    border: 1px solid #F0F6FF;
+    cursor: default;
+    padding: 0;
+
+    transition: background-color .25s ease,
+    border-color .25s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
+      opacity: 0;
+      transition: opacity .25s ease;
+      z-index: 0;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(299.32deg, #704ca8 16.39%, #543775 81.05%);
+      opacity: 0;
+      transition: opacity .25s ease;
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:not(&--active):hover {
+      background-color: #F7FAFF;
+    }
 
     svg {
       width: 20px;
@@ -155,21 +150,29 @@
 
     svg path {
       stroke: #808080;
+      transition: stroke .25s ease;
     }
 
     &--active {
-      background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
       cursor: pointer;
+      border-color: transparent;
 
-      &:hover {
-        background: linear-gradient(299.32deg, #704ca8 16.39%, #533775 81.05%);
+      &::before {
+        opacity: 1;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
 
       svg path {
-        stroke: #FFFFFF;
+        stroke: #fff;
       }
     }
   }
+
+  &__prev:hover { background-color: #F7FAFF; }
+  &__next:hover { background-color: #F7FAFF; }
 
   &__filter {
     width: 40px;
