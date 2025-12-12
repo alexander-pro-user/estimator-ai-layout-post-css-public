@@ -849,6 +849,22 @@
                 if (container) container.addEventListener('click', (e) => e.stopPropagation());
             });
 
+        fetch('/components/terms-and-privacy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndPrivacyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openTermsModal(false);
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
         // Init Testimonial Carousel
         initTestimonialCarousel();
         // Init Testimonial Modal
@@ -1078,5 +1094,18 @@
                 });
             }
         });
+    }
+
+    function openTermsModal(show, event) {
+        if (event) event.preventDefault();
+
+        const modal = document.getElementById('termsAndPrivacyModal');
+        if (!modal) return;
+
+        if (show) {
+            modal.classList.add('open');
+        } else {
+            modal.classList.remove('open');
+        }
     }
 </script>

@@ -50,7 +50,7 @@
                     <div class="flex flex-row flex-nowrap gap-2">
                         <input type="checkbox" id="agree" class="auth-form__checkbox accent-purple-600"/>
                         <label for="agree" class="auth-form__checkbox__label cursor-pointer">
-                            I agree to the <a onclick="openModal(true, event)" class="auth-form__link--thin">Terms &
+                            I agree to the <a onclick="openTermsModal(true, event)" class="auth-form__link--thin">Terms &
                             Privacy</a>
                         </label>
                     </div>
@@ -103,7 +103,7 @@
                 if (!modal) return;
 
                 modal.addEventListener('click', (e) => {
-                    if (e.target === modal) openModal(false);
+                    if (e.target === modal) openTermsModal(false);
                 });
 
                 const container = modal.querySelector('.terms-and-privacy-modal__container');
@@ -111,7 +111,7 @@
             });
     });
 
-    function openModal(show, event) {
+    function openTermsModal(show, event) {
         if (event) event.preventDefault();
 
         const modal = document.getElementById('termsAndPrivacyModal');
