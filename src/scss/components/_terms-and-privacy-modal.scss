@@ -1,45 +1,13 @@
 @use "../utils/variables" as *;
 
 .terms-and-privacy-modal {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.25);
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-
-  &.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
 
   &__container {
-    position: relative;
-    background: $white;
-    border-radius: 16px;
     max-width: 1280px;
-    width: 100%;
-    max-height: 90vh;
-    padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-
-    transform: scale(0.95);
-    opacity: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-
-    .open & {
-      transform: scale(1);
-      opacity: 1;
-    }
+    padding: 40px 20px;
 
     @media (min-width: 640px) {
       margin: auto;
@@ -71,16 +39,6 @@
   }
 
   &__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    font-size: 20px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: $text-secondary-light;
   }
 
   &--body {
