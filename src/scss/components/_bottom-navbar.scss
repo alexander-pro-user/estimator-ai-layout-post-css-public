@@ -11,16 +11,16 @@
   max-width: 480px;
   box-sizing: border-box;
 
-  background: #ffffff;
+  background: $white-bg;
   border-radius: 12px;
   padding: 8px 16px;
 
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fs-14;
   line-height: 20px;
-  color: #727A90;
-  box-shadow: 0px 1px 4px 0px #0C0C0D0D;
+  color: $text-muted;
+  box-shadow: $shadow-soft-hex;
 
   &__list {
     display: flex;
@@ -39,7 +39,7 @@
         height: 40px;
 
         &-active {
-          background: #F1E7F8;
+          background: $bg-purple-75;
           border-radius: 12px;
         }
 

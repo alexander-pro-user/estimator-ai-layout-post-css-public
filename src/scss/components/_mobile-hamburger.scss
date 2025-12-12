@@ -4,9 +4,9 @@
   gap: 10px;
   border-radius: 8px;
   padding: 10px;
-  border: 1px solid #E5E5FF;
+  border: 1px solid $border-purple-50;
   background: radial-gradient(102.35% 66.81% at 97.92% 144.66%, rgba(204, 203, 255, 0.35) 0%, rgba(255, 214, 224, 0.35) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(159.24% 84.18% at 0.45% 98.81%, rgba(198, 214, 255, 0.35) 0%, rgba(234, 247, 255, 0.35) 60.9%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(123.33% 76.48% at 85.9% -17.47%, rgba(211, 211, 255, 0.35) 0%, rgba(255, 226, 233, 0.35) 60.9%, rgba(255, 255, 255, 0.17) 100%), #FFF;
-  box-shadow: 0 2px 6px 0 rgba(58, 206, 197, 0.13);
+  box-shadow: $shadow-teal-soft;
 
   img {
     width: 100%;

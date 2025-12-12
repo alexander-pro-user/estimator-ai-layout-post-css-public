@@ -75,7 +75,7 @@
       &-description {
         font-weight: 400;
         font-size: 14px;
-        color: #666666;
+        color: $text-gray-666;
         text-align: left;
         justify-self: left;
         margin-bottom: 18px;
@@ -124,7 +124,7 @@
             font-size: 13px;
             line-height: 150%;
             letter-spacing: 0px;
-            color: #58397F;
+            color: $primary-color;
 
             @media (min-width: 1024px) {
               font-size: 16px;
@@ -138,7 +138,7 @@
         padding: 0 24px;
         font-weight: 700;
         font-size: 20px;
-        color: #58397F;
+        color: $primary-color;
         margin-bottom: 8px;
         text-align: left;
       }
@@ -172,7 +172,7 @@
 
   &__pagination {
     display: flex;
-    border-top: 1px solid #F5EDFF;
+    border-top: 1px solid $border-white-soft;
     width: 100%;
     justify-content: space-between;
     padding-top: 19px;
@@ -185,7 +185,7 @@
       span {
         font-weight: 600;
         font-size: 14px;
-        color: #7D55BE;
+        color: $purple-text-color;
       }
     }
 
@@ -204,13 +204,13 @@
         padding-left: 22px;
         border-radius: 47px;
         border-width: 1px;
-        background: #F7FAFF;
-        border: 1px solid #F0F6FF;
+        background: $bg-blue-25;
+        border: 1px solid $border-blue-50;
         font-weight: 500;
         font-size: 14px;
         line-height: 148%;
         letter-spacing: 0px;
-        color: #666666;
+        color: $text-gray-666;
       }
 
       &-elements {

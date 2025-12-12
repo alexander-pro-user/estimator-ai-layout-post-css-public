@@ -3,7 +3,7 @@
 .popup-menu, .popup-menu-page {
   z-index: 99999999;
   position: absolute;
-  background: #ffffff;
+  background: $white-bg;
   min-width: 165px;
   border-radius: 12px;
   padding: 20px;
@@ -11,10 +11,10 @@
   /*top: 50px;*/
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fs-14;
   line-height: 20px;
-  color: #676C76;
-  box-shadow: 0px 2px 10px 0px #727A9029;
+  color: $text-gray-600;
+  box-shadow: $shadow-muted-md;
 
   &__list {
     display: flex;

@@ -22,7 +22,7 @@
 
   &__container {
     position: relative;
-    background: var(--Background-color-primary, #FFF);
+    background: $white;
     border-radius: 16px;
     max-width: 1280px;
     width: 100%;
@@ -49,23 +49,23 @@
     &__title {
       font-family: Inter;
       font-weight: 600;
-      font-size: 24px;
+      font-size: $fs-24;
       text-align: center;
 
       @media (min-width: 1024px) {
-        font-size: 32px;
+        font-size: $fs-32;
       }
     }
 
     &__description {
       font-family: Inter;
       font-weight: 400;
-      font-size: 14px;
+      font-size: $fs-14;
       text-align: center;
-      color: var(--Text-text-light-secondary, #5C5069);
+      color: $text-secondary-light;
 
       @media (min-width: 1024px) {
-        font-size: 16px;
+        font-size: $fs-16;
       }
     }
   }
@@ -80,7 +80,7 @@
     cursor: pointer;
     background: none;
     border: none;
-    color: #5C5069;
+    color: $text-secondary-light;
   }
 
   &--body {
@@ -99,7 +99,7 @@
 
     hr {
       border: none;
-      border-top: 1px solid #ECECEC;
+      border-top: 1px solid $border-grey-ec;
       margin: 16px 0;
     }
   }

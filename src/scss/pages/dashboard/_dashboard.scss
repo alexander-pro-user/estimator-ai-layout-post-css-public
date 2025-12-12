@@ -55,17 +55,17 @@
       }
 
       &:hover {
-        background: #ffffff;
+        background: $white-bg;
         box-shadow: 1px 1px 10px #e7e7e7;
       }
     }
 
     &-active {
-      background: #FFFFFF;
+      background: $white;
       font-weight: 700;
       font-size: 16px;
       line-height: 20px;
-      color: #63428D !important;
+      color: $brand-accent !important;
     }
 
     a {
@@ -85,12 +85,12 @@
     margin-left: 20px;
     width: 100%;
     border-radius: 12px;
-    background: #FFFFFF;
+    background: $white;
 
     @media (min-width: 1340px) {
       margin: auto;
-      background: #ffffff;
-      box-shadow: #0C0C0D0D 0 1px 4px 0;
+      background: $white-bg;
+      box-shadow: $shadow-soft-hex;
       /*  margin-left: 50px;
         margin-right: 80px; */
       margin-top: 24px;
@@ -107,12 +107,12 @@
     margin-left: 20px;
     width: 100%;
     border-radius: 12px;
-    background: #FFFFFF;
+    background: $white;
 
     @media (min-width: 1340px) {
       margin: auto;
-      background: #ffffff;
-      box-shadow: #0C0C0D0D 0 1px 4px 0;
+      background: $white-bg;
+      box-shadow: $shadow-soft-hex;
       margin-top: 24px;
       margin-bottom: 24px;
       height: fit-content;
@@ -127,20 +127,20 @@
 
   &__content-item {
     width: 100%;
-    background: #FFFFFF;
+    background: $white;
 
     @media (min-width: 1340px) {
       margin: auto;
-      background: #ffffff;
-      box-shadow: #0C0C0D0D 0 1px 4px 0;
+      background: $white-bg;
+      box-shadow: $shadow-soft-hex;
       //margin-top: 24px;
       // margin-bottom: 24px;
       height: fit-content;
     }
 
     &--border {
-      box-shadow: #0C0C0D0D 0 1px 4px 0;
-      border: 1px solid #DFE7EF;
+      box-shadow: $shadow-soft-hex;
+      border: 1px solid $border-light;
     }
 
     &--border-radius-up {
@@ -153,10 +153,10 @@
 
     &--border-only-desktop {
       @media (min-width: 640px) {
-        box-shadow: #0C0C0D0D 0 1px 4px 0;
-        border-left: 1px solid #DFE7EF;
-        border-right: 1px solid #DFE7EF;
-        border-bottom: 1px solid #DFE7EF;
+        box-shadow: $shadow-soft-hex;
+        border-left: 1px solid $border-light;
+        border-right: 1px solid $border-light;
+        border-bottom: 1px solid $border-light;
         border-radius: 0 0 12px 12px;
       }
     }
@@ -184,8 +184,8 @@
   }
 
   &__content {
-    box-shadow: #0C0C0D0D 0 1px 4px 0;
-    border: 1px solid #DFE7EF;
+    box-shadow: $shadow-soft-hex;
+    border: 1px solid $border-light;
   }
 
   &__colored-background {

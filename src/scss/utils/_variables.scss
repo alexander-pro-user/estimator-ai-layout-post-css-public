@@ -2,3 +2,89 @@ $primary-color: #58397F;
 $purple-text-color: #7D55BE;
 $grey-color-light: #E9EAEA;
 $purple-light-text-color: #b78eff;
+
+$white: #FFFFFF;
+$white-bg: #ffffff;
+$black-333: #333333;
+$black-333-short: #333;
+$text-muted: #727A90;
+$text-dark: #202125;
+$text-body: #1E293B;
+$text-secondary: #24282E;
+$text-accent: #475569;
+$text-placeholder: #98A2B3;
+$text-gray-600: #676C76;
+$text-gray-500: #888;
+$text-secondary-light: #5C5069;
+$text-gray-666: #666666;
+
+// Brand accents and variations
+$brand-accent: #63428D;
+$brand-accent-strong: #6409A7;
+$brand-secondary: #7D55BE;
+
+// Background tints
+$bg-purple-50: #F8F3FF;
+$bg-purple-75: #F1E7F8;
+$bg-success-50: #F7FFFC;
+$bg-offwhite: #F9FAFD;
+
+// Borders
+$border-light: #DFE7EF;
+$border-soft-blue: #CBD5E1;
+$border-white-soft: #F5EDFF;
+$border-blue-50: #F0F6FF;
+$border-success-600: #1B9A8B;
+$border-grey-ec: #ECECEC;
+$border-purple-50: #E5E5FF;
+
+// Greys/Neutrals
+$grey-100: #F1F2F4;
+$grey-200: #D3D6DD;
+$grey-300: #BEC2CC;
+
+// Light blues
+$bg-blue-25: #F7FAFF;
+
+// Additional brand/semantic colors
+$brand-accent-alt: #6E0AB8;
+$footer-bg: #1F1228;
+
+// Shadows
+$shadow-soft: 0 1px 4px rgba(12, 12, 13, 0.05);
+$shadow-soft-hex: #0C0C0D0D 0 1px 4px 0;
+$shadow-focus-brand: 0 0 0 5px rgba(154, 2, 219, 0.2);
+$shadow-card-brand-hover: 0 4px 14px -2px rgba(154, 2, 219, 0.25);
+$shadow-muted-md: 0 2px 10px 0 #727A9029;
+$shadow-teal-soft: 0 2px 6px 0 rgba(58, 206, 197, 0.13);
+
+// Font sizes
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-20: 20px;
+$fs-18: 18px;
+$fs-24: 24px;
+$fs-40: 40px;
+$fs-32: 32px;
+
+// Gradients
+$gradient-primary: linear-gradient(299.32deg, $purple-text-color 16.39%, $brand-accent 81.05%);
+$gradient-primary-hover: linear-gradient(299.32deg, #7843c0 16.39%, #62358d 81.05%);
+$gradient-success: linear-gradient(90deg, $border-success-600 0%, #16B5A1 100%);
+$gradient-success-hover: linear-gradient(90deg, #177e73 0%, #12a997 100%);
+
+// Semantic palettes
+$green-500: #009499;
+$green-100: #B0DEDF;
+$green-50: #E6F4F5;
+$red-500: #E51B1B;
+$red-100: #F7B8B8;
+$red-50: #FCE8E8;
+$cyan-500: #019BF4;
+$cyan-100: #B0E0FC;
+$cyan-50: #E6F5FE;
+$orange-500: #F05D3D;
+$orange-100: #FACDC3;
+$orange-50: #FEEFEC;

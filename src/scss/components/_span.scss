@@ -50,20 +50,20 @@
   }
 
   &--blue {
-    border: 1px solid var(--Cyan-cyan-100, #B0E0FC);
+    border: 1px solid var(--Cyan-cyan-100, $cyan-100);
     background: var(--Cyan-cyan-50, #E6F5FE);
-    color: var(--Cyan-cyan-500, #019BF4);
+    color: var(--Cyan-cyan-500, $cyan-500);
   }
 
   &--green {
-    color: #009499;
-    border: 1px solid #B0DEDF;
-    background: #E6F4F5;
+    color: $green-500;
+    border: 1px solid $green-100;
+    background: $green-50;
   }
 }
 
 .number-list-element {
-  color: #333;
+  color: $black-333-short;
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
@@ -72,7 +72,7 @@
   letter-spacing: 0.065px;
 
   @media (min-width: 640px) {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;

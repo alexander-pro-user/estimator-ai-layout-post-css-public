@@ -12,7 +12,7 @@
 
   @media (min-width: 768px) {
     padding: 0px;
-    border: 1px solid #E9EAEA;
+    border: 1px solid $grey-color-light;
   }
 }
 
@@ -23,9 +23,9 @@
 
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fs-14;
   line-height: 20px;
-  color: #333333;
+  color: $black-333;
 
   width: 100%;
 
@@ -36,11 +36,11 @@
     border-radius: 0;
     border: none;
     border-collapse: collapse;
-    // border-top: 1px solid #E9EAEA;
+    // border-top: 1px solid $grey-color-light;
   }
 
   &__header {
-    border-bottom: 1px solid #E9EAEA;
+    border-bottom: 1px solid $grey-color-light;
 
     @media (min-width: 768px) {
       display: table-row;
@@ -48,8 +48,8 @@
   }
 
   &__header--border-top {
-    border-top: 1px solid #E9EAEA;
-    border-bottom: 1px solid #E9EAEA;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
 
     @media (min-width: 768px) {
       display: table-row;
@@ -58,9 +58,9 @@
 
   &__th {
     font-weight: 500;
-    font-size: 14px;
+    font-size: $fs-14;
     line-height: 20px;
-    color: #727A90;
+    color: $text-muted;
     padding: 18px 22px;
     text-align: left;
 
@@ -79,8 +79,8 @@
 
   &__row {
     // Mobile - block
-    box-shadow: #0C0C0D0D 0 1px 4px 0;
-    border: 1px solid #E9EAEA;
+    box-shadow: $shadow-soft-hex;
+    border: 1px solid $grey-color-light;
     border-radius: 8px;
     overflow: visible;
 
@@ -96,7 +96,7 @@
       border-radius: 0;
       box-shadow: none;
       border: none;
-      border-bottom: 1px solid #E9EAEA;
+      border-bottom: 1px solid $grey-color-light;
       padding: 0;
     }
 
@@ -120,7 +120,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #333333;
+    color: $black-333;
     position: relative;
 
     // Desktop - table-cell
@@ -141,7 +141,7 @@
       &--full {
         flex-basis: 100%;
         padding: 12px 12px;
-        border-bottom: 1px solid #E9EAEA;
+        border-bottom: 1px solid $grey-color-light;
 
         &.no-border {
           border-bottom: none;
@@ -151,7 +151,7 @@
       &--input {
         flex-basis: 100%;
         padding: 4px 8px;
-        border-bottom: 1px solid #E9EAEA;
+        border-bottom: 1px solid $grey-color-light;
 
         &.no-border {
           border-bottom: none;
@@ -168,23 +168,23 @@
    // display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: $fs-14;
     line-height: 20px;
-    color: #333333;
+    color: $black-333;
   }
 
   &__sub-title {
     font-weight: 400;
-    font-size: 12px;
+    font-size: $fs-12;
     line-height: 18px;
-    color: #727A90;
+    color: $text-muted;
   }
 
   &__mobile-label {
     font-weight: 500;
-    font-size: 14px;
+    font-size: $fs-14;
     line-height: 20px;
-    color: #727A90;
+    color: $text-muted;
   }
 
   &__field {
@@ -215,13 +215,13 @@
     width: 100%;
     padding: 0px 12px 0px 38px;
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: $fs-12;
     line-height: 14px;
 
     border-radius: 8px;
-    border: 1px solid #CBD5E1;
-    background: #FFF;
-    color: #333333;
+    border: 1px solid $border-soft-blue;
+    background: $white;
+    color: $black-333;
 
     white-space: nowrap;
     overflow: hidden;
@@ -249,8 +249,8 @@
     -webkit-appearance: none;
     background: url('/images/icons/arrow-dark-down-icon.svg') no-repeat right 12px center / 12px auto;
     font-weight: 500;
-    font-size: 14px;
-    color: #475569;
+    font-size: $fs-14;
+    color: $text-accent;
 
     height: 40px;
     line-height: 38px;
@@ -270,7 +270,7 @@
     gap: 2px;
 
     &-label {
-      color: #727A90;
+      color: $text-muted;
       font-size: 13px;
       font-weight: 500;
       line-height: 20px;
@@ -278,7 +278,7 @@
 
     &-value {
       overflow: hidden;
-      color: #727A90;
+      color: $text-muted;
       text-overflow: ellipsis;
       font-size: 13px;
       font-weight: 500;

@@ -10,13 +10,13 @@
   &__inner {
     border-radius: 5px;
     border-collapse: separate;
-    border: 1px solid #E9EAEA;
+    border: 1px solid $grey-color-light;
   }
 
   &__inner-radius-up-none {
     border-radius: 0 0 5px 5px;
     border-collapse: collapse;
-    border-top: 1px solid #E9EAEA;
+    border-top: 1px solid $grey-color-light;
     border-right: 0px;
     border-bottom: 0px;
     border-left: 0px;
@@ -28,8 +28,8 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #727A90;
-        border-bottom: 1px solid #E9EAEA;
+        color: $text-muted;
+        border-bottom: 1px solid $grey-color-light;
 
         .th-container {
           display: flex;
@@ -50,8 +50,8 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
-      color: #333333;
-      border-bottom: 1px solid #E9EAEA;
+      color: $black-333;
+      border-bottom: 1px solid $grey-color-light;
     }
 
     tr:last-child td {
@@ -73,14 +73,14 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #333333;
+    color: $black-333;
   }
 
   &__td-description {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #727A90;
+    color: $text-muted;
   }
 }
 
@@ -90,7 +90,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  color: #727A90;
+  color: $text-muted;
   gap: 8px;
 
   @media (min-width: 640px) {
@@ -109,14 +109,14 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #727A90;
+    color: $text-muted;
   }
 
   button {
     width: 32px;
     height: 32px;
-    background: #ffffff;
-    border: 1px solid #E9EAEA;
+    background: $white-bg;
+    border: 1px solid $grey-color-light;
     padding: 6px;
     border-radius: 10px;
     font-family: "Inter", sans-serif;
@@ -126,8 +126,8 @@
   }
 
   &__btn-selected {
-    background: #F1E7F8 !important;
-    color: #6E0AB8 !important;
+    background: $bg-purple-75 !important;
+    color: $brand-accent-alt !important;
   }
 }
 

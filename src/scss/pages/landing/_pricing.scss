@@ -1,7 +1,7 @@
 @use "../../utils/variables" as *;
 
 .pricing {
-  background: #F9FAFD;
+  background: $bg-offwhite;
   gap: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -37,8 +37,8 @@
     gap: 32px;
     border-radius: 16px;
     border-width: 1px;
-    border: 1px solid #F5EDFF;
-    background: #FFFFFF;
+    border: 1px solid $border-white-soft;
+    background: $white;
     justify-content: center;
 
     @media (min-width: 1024px) {
@@ -68,23 +68,23 @@
 
       &-title {
         font-weight: 600;
-        font-size: 24px;
-        color: #333333;
+        font-size: $fs-24;
+        color: $black-333;
 
         @media (min-width: 1024px) {
-          font-size: 40px;
+          font-size: $fs-40;
         }
       }
 
       &-description {
         display: flex;
         font-weight: 400;
-        font-size: 13px;
-        color: #666666;
+        font-size: $fs-13;
+        color: $text-gray-666;
         text-align: center;
 
         @media (min-width: 1024px) {
-          font-size: 16px;
+          font-size: $fs-16;
           text-align: left;
         }
       }
@@ -112,21 +112,21 @@
         &-value {
           font-weight: 600;
           font-size: 32px;
-          color: #333333;
+          color: $black-333;
           margin-right: 5px;
         }
 
         &-per-text {
           font-weight: 500;
           font-size: 14px;
-          color: #666666;
+          color: $text-gray-666;
         }
       }
 
       &-description {
         font-weight: 500;
         font-size: 16px;
-        color: #63428D;
+        color: $brand-accent;
 
         span {
           font-weight: 800;
@@ -164,13 +164,13 @@
       &-title {
         font-weight: 700;
         font-size: 20px;
-        color: #63428D;
+        color: $brand-accent;
       }
 
       &-description {
         font-weight: 400;
         font-size: 14px;
-        color: #333333;
+        color: $black-333;
 
         @media (min-width: 1024px) {
           font-size: 16px;
@@ -190,7 +190,7 @@
       padding-bottom: 20px;
       padding-left: 20px;
       border: 1px solid #D2DFDB80;
-      background: #FFFFFF;
+      background: $white;
       box-shadow: 0px 16px 28.8px -12px #0DB29D1A;
 
       @media (min-width: 1024px) {

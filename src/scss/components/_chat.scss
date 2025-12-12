@@ -40,9 +40,9 @@
         }
 
         &__title {
-          color: #333;
+          color: $black-333-short;
           font-family: Inter;
-          font-size: 14px;
+          font-size: $fs-14;
           font-style: normal;
           font-weight: 500;
           line-height: 20px;
@@ -50,9 +50,9 @@
         }
 
         &__time {
-          color: var(--Grey-grey-500, #727A90);
+          color: $text-muted;
           font-family: Inter;
-          font-size: 12px;
+          font-size: $fs-12;
           font-style: normal;
           font-weight: 400;
           line-height: 20px;
@@ -61,18 +61,18 @@
       }
 
       &__body {
-        color: #676C76;
+        color: $text-gray-600;
         font-family: Inter;
-        font-size: 13px;
+        font-size: $fs-13;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 0.065px;
 
         @media (min-width: 1024px) {
-          color: #676C76;
+          color: $text-gray-600;
           font-family: Inter;
-          font-size: 14px;
+          font-size: $fs-14;
           font-style: normal;
           font-weight: 400;
           line-height: 20px;
@@ -90,7 +90,7 @@
         gap: 16px;
         align-self: stretch;
         width: 100%;
-        border-bottom: 1px solid var(--Black-black-50, #E9EAEA);
+        border-bottom: 1px solid $grey-color-light;
       }
     }
   }
@@ -107,12 +107,12 @@
     min-height: 100px;
 
     border-radius: 12px;
-    border: 1px solid var(--Black-black-50, #E9EAEA);
-    background: var(--White, #FFF);
+    border: 1px solid $grey-color-light;
+    background: $white;
 
-    color: #98A2B3;
+    color: $text-placeholder;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;

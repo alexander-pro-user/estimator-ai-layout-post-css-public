@@ -30,9 +30,9 @@
   height: 40px;
 
   border-radius: 12px;
-  border: 1px solid #E9EAEA;
+  border: 1px solid $grey-color-light;
 
-  color: #727A90;
+  color: $text-muted;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -91,8 +91,8 @@
         gap: 12px;
         align-self: stretch;
         border-radius: 8px;
-        border: 1px solid #CBD5E1;
-        background: #FFF;
+        border: 1px solid $border-soft-blue;
+        background: $white;
 
         @media (min-width: 1024px) {
           padding: 12px;
@@ -112,8 +112,8 @@
         line-height: 22px;
 
         border-radius: 8px;
-        border: 1px solid #CBD5E1;
-        background: #FFF;
+        border: 1px solid $border-soft-blue;
+        background: $white;
 
         @media (min-width: 1024px) {
           min-height: 327px;
@@ -182,7 +182,7 @@
         }
 
         .checkbox-label {
-          color: #333;
+          color: $black-333-short;
           font-family: Inter;
           font-size: 14px;
           font-style: normal;
@@ -195,7 +195,7 @@
   }
 
   .custom-label {
-    color: #1E293B;
+    color: $text-body;
     font-family: Inter;
     font-size: 13px;
     font-style: normal;
@@ -205,7 +205,7 @@
     margin-bottom: 8px;
 
     @media (min-width: 1024px) {
-      color: #1E293B;
+      color: $text-body;
       font-family: Inter;
       font-size: 14px;
       font-style: normal;
@@ -225,7 +225,7 @@
     align-self: stretch;
 
     border-radius: 12px;
-    border: 1px solid #F5EDFF;
+    border: 1px solid $border-white-soft;
     background: #FFF;
 
     &-header {
@@ -236,7 +236,7 @@
       width: 100%;
 
       &-title {
-        color: #333;
+        color: $black-333-short;
         font-family: Inter;
         font-size: 14px;
         font-style: normal;
@@ -278,7 +278,7 @@
         flex: 1 0 0;
         align-self: stretch;
         border-radius: 8px;
-        border: 1px solid #CBD5E1;
+        border: 1px solid $border-soft-blue;
         background: #FFF;
 
         font-size: 14px;
@@ -315,7 +315,7 @@
 
     &:hover {
       border-color: $purple-light-text-color;
-      box-shadow: 0 4px 14px -2px rgba(154, 2, 219, 0.25);
+      box-shadow: $shadow-card-brand-hover;
       cursor: pointer;
     }
 
@@ -334,7 +334,7 @@
       gap: 4px;
 
       &-title {
-        color: #58397F;
+        color: $primary-color;
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
@@ -369,7 +369,7 @@
 
   &-switcher {
     &-title {
-      color: #333;
+      color: $black-333-short;
       font-family: Inter;
       font-size: 16px;
       font-style: normal;
@@ -377,7 +377,7 @@
       line-height: 150%; /* 24px */
 
       @media (min-width: 1024px) {
-        color: #333;
+        color: $black-333-short;
         font-family: Inter;
         font-size: 18px;
         font-style: normal;
@@ -397,7 +397,7 @@
       }
 
       &-label {
-        color: #676C76;
+        color: $text-gray-600;
         font-family: Inter;
         font-size: 14px;
         font-style: normal;
@@ -465,7 +465,7 @@
       }
 
       &-title {
-        color: #333;
+        color: $black-333-short;
         display: flex;
         font-family: Inter;
         font-size: 14px;
@@ -488,7 +488,7 @@
 }
 
 .label-optional {
-  color: #475569;
+  color: $text-accent;
   text-align: right;
   font-family: Inter;
   font-size: 13px;
@@ -540,7 +540,7 @@
     }
 
     &__title {
-      color: #58397F;
+      color: $primary-color;
       font-family: Inter;
       font-size: 14px;
       font-style: normal;
@@ -549,7 +549,7 @@
     }
 
     &__description {
-      color: #333;
+      color: $black-333-short;
       font-family: Inter;
       font-size: 13px;
       font-style: normal;
@@ -559,12 +559,12 @@
 
     &:hover {
       border-color: $purple-light-text-color;
-      box-shadow: 0 4px 14px -2px rgba(154, 2, 219, 0.25);
+      box-shadow: $shadow-card-brand-hover;
     }
   }
 
   .active {
-    border: 1px solid #b78eff;
+    border: 1px solid $purple-light-text-color;
     box-shadow: 0 0 0 7px rgba(154, 2, 219, 0.2);
   }
 }
@@ -588,7 +588,7 @@
 
   label {
     display: flex;
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -607,10 +607,10 @@
     width: 100%;
 
     border-radius: 8px;
-    border: 1px solid #CBD5E1;
+    border: 1px solid $border-soft-blue;
     background: #FFF;
 
-    color: #727A90;
+    color: $text-muted;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -630,7 +630,7 @@
     align-self: stretch;
 
     border-radius: 10px;
-    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+    background: linear-gradient(299deg, $purple-text-color 16.39%, $brand-accent 81.05%);
 
     color: #FFF;
     font-family: Inter;
@@ -653,7 +653,7 @@
   gap: 24px;
   border-radius: 12px;
   background: #FFF;
-  box-shadow: 0 1px 4px rgba(12, 12, 13, 0.05);
+  box-shadow: $shadow-soft;
 
   @media (min-width: 768px) {
     width: 630px;
@@ -666,7 +666,7 @@
   /* HEADER */
 
   &__header-title {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
     font-size: 18px;
     font-weight: 600;
@@ -677,7 +677,7 @@
   }
 
   &__header-description {
-    color: #727A90;
+    color: $text-muted;
     font-family: Inter;
     font-size: 13px;
 
@@ -689,7 +689,7 @@
   /* LABELS */
 
   &__label {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
     font-size: 13px;
     font-weight: 500;
@@ -700,7 +700,7 @@
   }
 
   &__auto-title {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
     font-size: 14px;
     font-weight: 600;
@@ -711,7 +711,7 @@
   }
 
   &__auto-description {
-    color: #727A90;
+    color: $text-muted;
     font-family: Inter;
     font-size: 13px;
 
@@ -729,10 +729,10 @@
     gap: 12px;
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #CBD5E1;
+    border: 1px solid $border-soft-blue;
     background: #FFF;
 
-    color: #727A90;
+    color: $text-muted;
     font-family: Inter;
     font-size: 13px;
     height: 42px;
@@ -779,50 +779,50 @@
 
   &__divider {
     height: 1px;
-    background: #E9EAEA;
+    background: $grey-color-light;
   }
 
   /* TOTAL */
 
   &__total-label {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
 
     @media (min-width: 768px) {
-      font-size: 16px;
+      font-size: $fs-16;
     }
   }
 
   &__total-label--main {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
-    font-size: 16px;
+    font-size: $fs-16;
     font-weight: 600;
 
     @media (min-width: 768px) {
-      font-size: 18px;
+      font-size: $fs-18;
     }
   }
 
   &__total-price {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
 
     @media (min-width: 768px) {
-      font-size: 16px;
+      font-size: $fs-16;
     }
   }
 
   &__total-price--main {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
-    font-size: 16px;
+    font-size: $fs-16;
     font-weight: 600;
 
     @media (min-width: 768px) {
-      font-size: 18px;
+      font-size: $fs-18;
     }
   }
 
@@ -834,16 +834,16 @@
     text-align: center;
 
     border-radius: 12px;
-    background: linear-gradient(299deg, #7D55BE, #63428D);
+    background: $gradient-primary;
 
-    color: #FFF;
+    color: $white;
     font-family: "Public Sans";
-    font-size: 14px;
+    font-size: $fs-14;
     font-weight: 600;
     line-height: 20px;
 
     &:hover {
-      background: linear-gradient(299deg, #763cbe, #5f328c);
+      background: $gradient-primary-hover;
     }
   }
 }

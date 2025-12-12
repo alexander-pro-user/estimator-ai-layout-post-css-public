@@ -23,13 +23,13 @@
 
 
   &__primary {
-    background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
-    color: #FFFFFF;
-    border: 1px solid #63428D;
+    background: $gradient-primary;
+    color: $white;
+    border: 1px solid $brand-accent;
     font-family: Inter;
 
     &:hover {
-      background: linear-gradient(299.32deg, #7843c0 16.39%, #62358d 81.05%);
+      background: $gradient-primary-hover;
     }
 
     @media (min-width: 1024px) {
@@ -38,9 +38,9 @@
   }
 
   &__secondary {
-    background: #F8F3FF;
-    color: #7D55BE;
-    border: 1px solid #63428D;
+    background: $bg-purple-50;
+    color: $purple-text-color;
+    border: 1px solid $brand-accent;
 
     &:hover {
       background: #efe5ff;
@@ -52,7 +52,7 @@
   }
 
   &__tertiary {
-    color: #202125;
+    color: $text-dark;
     border: none;
 
     &:hover {
@@ -80,11 +80,11 @@
     padding-right: 18px;
     padding-bottom: 9px;
     padding-left: 18px;
-    background: #F8F3FF;
+    background: $bg-purple-50;
     border: 1px solid #9A02DB40;
 
     font-weight: 500;
-    color: #7D55BE;
+    color: $purple-text-color;
 
     &:hover {
       background: #f0e7ff;
@@ -104,8 +104,8 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #F7FAFF;
-    border: 1px solid #F0F6FF;
+    background-color: $bg-blue-25;
+    border: 1px solid $border-blue-50;
     cursor: default;
     padding: 0;
 
@@ -117,7 +117,7 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
+      background: $gradient-primary;
       opacity: 0;
       transition: opacity .25s ease;
       z-index: 0;
@@ -140,7 +140,7 @@
     }
 
     &:not(&--active):hover {
-      background-color: #F7FAFF;
+      background-color: $bg-blue-25;
     }
 
     svg {
@@ -171,17 +171,17 @@
     }
   }
 
-  &__prev:hover { background-color: #F7FAFF; }
-  &__next:hover { background-color: #F7FAFF; }
+  &__prev:hover { background-color: $bg-blue-25; }
+  &__next:hover { background-color: $bg-blue-25; }
 
   &__filter {
     width: 40px;
     height: 40px;
     gap: 10px;
     border-radius: 12px;
-    border: 1px solid #E9EAEA;
+    border: 1px solid $grey-color-light;
     padding: 8px;
-    background: #ffffff;
+    background: $white-bg;
 
     &:hover {
       background: #fdf7f7;
@@ -197,14 +197,14 @@
   &__cancel {
     padding: 8px;
     border-radius: 8px;
-    background: #E5E5FF;
+    background: $border-purple-50;
 
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: $fs-13;
     line-height: 150%;
     letter-spacing: 0px;
-    color: #676C76;
+    color: $text-gray-600;
 
     &:hover {
       background: #e0e0f3;
@@ -221,15 +221,15 @@
   &__next-step {
     padding: 8px;
     border-radius: 8px;
-    background: linear-gradient(299.32deg, #7D55BE 16.39%, #63428D 81.05%);
+    background: $gradient-primary;
     border: none;
 
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: $fs-13;
     line-height: 150%;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: $white;
 
     &:hover {
       background: linear-gradient(299.32deg, #784bc0 16.39%, #653891 81.05%);
@@ -241,7 +241,7 @@
       padding-bottom: 6px;
       padding-left: 16px;
 
-      border: 1px solid #63428D;
+      border: 1px solid $brand-accent;
     }
   }
 
@@ -252,14 +252,14 @@
     padding-left: 10px;
     border-radius: 8px;
 
-    border: 1px solid #1B9A8B;
-    background: #F7FFFC;
+    border: 1px solid $border-success-600;
+    background: $bg-success-50;
 
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: $fs-12;
     line-height: 150%;
-    color: #1B9A8B;
+    color: $border-success-600;
 
     &:hover {
       background: #ebfdf7;
@@ -282,17 +282,17 @@
     gap: 10px;
 
     border-radius: 10px;
-    background: linear-gradient(90deg, #1B9A8B 0%, #16B5A1 100%);
+    background: $gradient-success;
 
-    color: #FFF;
+    color: $white;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
 
     &:hover {
-      background: linear-gradient(90deg, #177e73 0%, #12a997 100%);
+      background: $gradient-success-hover;
     }
   }
 
@@ -304,18 +304,18 @@
     align-items: center;
     gap: 4px;
 
-    color: #FFF;
+    color: $white;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
 
     border-radius: 10px;
-    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%), linear-gradient(90deg, #1B9A8B 0%, #16B5A1 100%);
+    background: $gradient-primary, $gradient-success;
 
     &:hover {
-      background: linear-gradient(299deg, #7046a9 16.39%, #4f306e 81.05%), linear-gradient(90deg, #14988a 0%, #10b29e 100%);
+      background: $gradient-primary-hover, $gradient-success-hover;
     }
   }
 
@@ -330,9 +330,9 @@
     border-radius: 10px;
     background: #EBF3FA;
 
-    color: #676C76;
+    color: $text-gray-600;
     font-family: Inter;
-    font-size: 14px;
+    font-size: $fs-14;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -351,8 +351,8 @@
     gap: 4px;
 
     border-radius: 8px;
-    border: 1px solid #7D55BE;
-    background: #F8F3FF;
+    border: 1px solid $purple-text-color;
+    background: $bg-purple-50;
 
     font-family: Inter;
     font-size: 12px;
@@ -372,14 +372,14 @@
       gap: 4px;
 
       font-family: Inter;
-      font-size: 13px;
+      font-size: $fs-13;
       font-style: normal;
       font-weight: 500;
       line-height: 150%;
     }
 
     span {
-      background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+      background: $gradient-primary;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -448,14 +448,14 @@
   }
 
   &--copy {
-    color: #7D55BE;
+    color: $purple-text-color;
     padding: 10px 14px;
     justify-content: center;
     align-items: center;
     gap: 4px;
     border-radius: 12px;
     border: 1px solid rgba(125, 85, 190, 0.20);
-    background: #F8F3FF;
+    background: $bg-purple-50;
 
     &:hover {
       background: #f1e9fc;
@@ -478,14 +478,14 @@
   }
 
   &--publish {
-    color: #009499;
+    color: $green-500;
     padding: 10px 14px;
     justify-content: center;
     align-items: center;
     gap: 4px;
     border-radius: 12px;
     border: 1px solid rgba(0, 148, 153, 0.20);
-    background: #E6F4F5;
+    background: $green-50;
 
     &:hover {
       background: #def1f3;
@@ -504,10 +504,10 @@
   gap: 2px;
 
   border-radius: 8px;
-  border: 1px solid #E9EAEA;
-  background: #F1E7F8;
+  border: 1px solid $grey-color-light;
+  background: $bg-purple-75;
 
-  color: #7D55BE;
+  color: $purple-text-color;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -530,10 +530,10 @@
     gap: 4px;
 
     border-radius: 12px;
-    border: 1px solid #E9EAEA;
-    background: #F1E7F8;
+    border: 1px solid $grey-color-light;
+    background: $bg-purple-75;
 
-    color: #7D55BE;
+    color: $purple-text-color;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;

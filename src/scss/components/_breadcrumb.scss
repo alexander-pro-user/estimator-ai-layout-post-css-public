@@ -17,10 +17,10 @@
   margin-right: 8px;
   content: "/";
 
-  color: #BEC2CC;
+  color: $grey-300;
 
   font-family: "Public Sans";
-  font-size: 14px;
+  font-size: $fs-14;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
@@ -28,9 +28,9 @@
 }
 
 .custom-breadcrumb li {
-  color: #727A90;
+  color: $text-muted;
   font-family: Inter;
-  font-size: 14px;
+  font-size: $fs-14;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
@@ -38,9 +38,9 @@
 }
 
 .custom-breadcrumb li:first-child {
-  color: #7D55BE;
+  color: $purple-text-color;
   font-family: Inter;
-  font-size: 14px;
+  font-size: $fs-14;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;

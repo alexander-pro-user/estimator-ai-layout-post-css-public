@@ -24,7 +24,7 @@
 
   &__container {
     max-height: 100%;
-    background: var(--Background-color-primary, #FFF);
+    background: $white;
     border-radius: 16px;
     width: 100%;
     padding: 40px 20px;
@@ -53,30 +53,30 @@
     }
 
     &__title {
-      color: #333;
+      color: $black-333;
       text-align: center;
       font-family: Inter;
-      font-size: 24px;
+      font-size: $fs-24;
       font-style: normal;
       font-weight: 600;
       line-height: 120%;
 
       @media (min-width: 1024px) {
-        font-size: 32px;
+        font-size: $fs-32;
       }
     }
 
     &__description {
-      color: var(--Text-text-light-secondary, #5C5069);
+      color: $text-secondary-light;
       text-align: center;
       font-family: Inter;
-      font-size: 14px;
+      font-size: $fs-14;
       font-style: normal;
       font-weight: 400;
       line-height: 150%;
 
       @media (min-width: 1024px) {
-        font-size: 16px;
+        font-size: $fs-16;
       }
     }
   }
@@ -94,9 +94,9 @@
     gap: 8px;
 
     &__label {
-      color: #1E293B;
+      color: $text-body;
       font-family: Inter;
-      font-size: 14px;
+      font-size: $fs-14;
       font-style: normal;
       font-weight: 700;
       line-height: 20px;
@@ -111,8 +111,8 @@
       align-self: stretch;
 
       border-radius: 8px;
-      border: 1px solid #CBD5E1;
-      background: #FFF;
+      border: 1px solid $border-soft-blue;
+      background: $white;
 
       width: 100%;
 
@@ -132,8 +132,8 @@
       align-self: stretch;
 
       border-radius: 8px;
-      border: 1px solid #CBD5E1;
-      background: #FFF;
+      border: 1px solid $border-soft-blue;
+      background: $white;
 
       @media (min-width: 1024px) {
         height: 160px;
@@ -144,9 +144,9 @@
       }
 
       &::placeholder {
-        color: #5C5069;
+        color: $text-secondary-light;
         font-family: Inter;
-        font-size: 14px;
+        font-size: $fs-14;
         font-style: normal;
         font-weight: 400;
         line-height: 22px;
@@ -154,7 +154,7 @@
         opacity: 0.5;
 
         @media (min-width: 1024px) {
-          font-size: 16px;
+          font-size: $fs-16;
           letter-spacing: -0.112px;
         }
       }
@@ -170,7 +170,7 @@
       line-height: 150%; /* 21px */
 
       &-link {
-        color: #7D55BE;
+        color: $purple-text-color;
 
         font-family: Roboto;
         font-size: 14px;
@@ -192,8 +192,8 @@
       height: 18px;
 
       border-radius: 4px;
-      border: 1px solid #7D55BE;
-      background: var(--Color-Neutral-white, #FFF);
+      border: 1px solid $purple-text-color;
+      background: $white;
     }
   }
 
@@ -206,11 +206,11 @@
     align-self: stretch;
 
     border-radius: 10px;
-    background: linear-gradient(299deg, #7D55BE 16.39%, #63428D 81.05%);
+    background: $gradient-primary;
 
-    color: var(--card-white, #FFF);
+    color: $white;
     font-family: Manrope;
-    font-size: 16px;
+    font-size: $fs-16;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 24px */

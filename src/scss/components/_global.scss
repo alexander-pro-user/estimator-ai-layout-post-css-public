@@ -1,7 +1,8 @@
+@use "../utils/variables" as *;
 .status-block {
   font-family: "Public Sans", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: $fs-12;
   line-height: 18px;
 
   padding-top: 2px;
@@ -11,72 +12,72 @@
   border-radius: 100px;
 
   &-grey {
-    background: #F1F2F4;
-    border: 1px solid #D3D6DD;
-    color: #727A90;
+    background: $grey-100;
+    border: 1px solid $grey-200;
+    color: $text-muted;
   }
 
   &-red {
     border-radius: 100px;
-    border: 1px solid var(--Red-red-100, #F7B8B8);
-    background: var(--Red-red-50, #FCE8E8);
+    border: 1px solid $red-100;
+    background: $red-50;
 
-    color: var(--Red-red-500, #E51B1B);
+    color: $red-500;
     text-align: center;
   }
 
   &-green {
     border-radius: 100px;
-    border: 1px solid var(--Green-green-100, #B0DEDF);
-    background: var(--Green-green-50, #E6F4F5);
+    border: 1px solid $green-100;
+    background: $green-50;
 
-    color: var(--Green-green-500, #009499);
+    color: $green-500;
     text-align: center;
   }
 
   &-blue {
     border-radius: 100px;
-    border: 1px solid var(--Cyan-cyan-100, #B0E0FC);
-    background: var(--Cyan-cyan-50, #E6F5FE);
+    border: 1px solid $cyan-100;
+    background: $cyan-50;
 
-    color: var(--Cyan-cyan-500, #019BF4);
+    color: $cyan-500;
     text-align: center;
   }
 
   &-orange {
     border-radius: 100px;
-    border: 1px solid var(--Orange-orange-100, #FACDC3);
-    background: var(--Orange-orange-50, #FEEFEC);
+    border: 1px solid $orange-100;
+    background: $orange-50;
 
-    color: var(--Orange-orange-500, #F05D3D);
+    color: $orange-500;
   }
 }
 
 .green-price {
   font-family: "Public Sans", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fs-14;
   line-height: 20px;
-  color: #009499 !important;
+  color: $green-500 !important;
 }
 
 .green-price-only-color {
-  color: #009499 !important;
+  color: $green-500 !important;
 }
 
 .title-page {
-  color: #333;
+  color: $black-333-short;
   font-family: Inter;
-  font-size: 18px;
+  font-size: $fs-18;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
   letter-spacing: 0.09px;
 
   @media (min-width: 1024px) {
-    color: #333;
+    color: $black-333-short;
     font-family: Inter;
-    font-size: 24px;
+    font-size: $fs-24;
     font-style: normal;
     font-weight: 600;
     line-height: 32px;

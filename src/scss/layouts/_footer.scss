@@ -6,7 +6,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
   gap: 40px;
-  background: #1F1228;
+  background: $footer-bg;
 
   @media (min-width: 1024px) {
     display: flex;
@@ -70,7 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #FFFFFF;
+      color: $white;
       font-weight: 600;
       font-size: 24px;
       line-height: 150%;
@@ -91,7 +91,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        color: #FFFFFF;
+        color: $white;
 
         @media (min-width: 640px) {
           flex-direction: row;
@@ -109,7 +109,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 150%;
-        color: #FFFFFF;
+        color: $white;
         white-space: nowrap;
 
         &:hover {
@@ -176,7 +176,7 @@
 
   &__bottom {
     display: flex;
-    color: #FFFFFF;
+    color: $white;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
@@ -193,7 +193,7 @@
       font-weight: 400;
       font-size: 13px;
       line-height: 150%;
-      color: #FFFFFF;
+      color: $white;
 
       @media (min-width: 640px) {
         width: 50%;
@@ -224,7 +224,7 @@
         line-height: 150%;
         text-decoration: underline;
         text-decoration-style: solid;
-        color: #FFFFFF;
+        color: $white;
 
         @media (min-width: 1024px) {
           font-size: 14px;
@@ -253,7 +253,7 @@
   padding-bottom: 24px;
   margin: auto;
 
-  color: #727A90;
+  color: $text-muted;
   text-align: center;
   font-family: Inter;
   font-size: 13px;
@@ -263,7 +263,7 @@
 
 
   @media (min-width: 640px) {
-    color: #727A90;
+    color: $text-muted;
     text-align: center;
     font-family: Inter;
     font-size: 14px;
