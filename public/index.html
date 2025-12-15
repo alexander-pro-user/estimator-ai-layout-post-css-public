@@ -889,6 +889,7 @@
         if (show) {
             modal.classList.add('open');
             body.style.overflow = 'hidden';
+            resetAllModalBodiesScroll()
         } else {
             modal.classList.remove('open');
             body.style.overflow = '';
@@ -1081,6 +1082,7 @@
                 modalContent.textContent = btn.dataset.modalText || "";
 
                 openModal();
+                resetAllModalBodiesScroll();
             });
         });
 
@@ -1124,6 +1126,7 @@
         if (show) {
             modal.classList.add('open');
             body.style.overflow = 'hidden';
+            resetAllModalBodiesScroll()
         } else {
             modal.classList.remove('open');
             // Because this modal overlaps another one

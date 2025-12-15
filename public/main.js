@@ -294,3 +294,9 @@ async function initShowMoreEstimationPageItemPopup() {
         });
     });
 }
+
+function resetAllModalBodiesScroll() {
+    document.querySelectorAll('.custom-modal-body').forEach(el => {
+        el.scrollTop = 0;
+    });
+}
