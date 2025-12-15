@@ -794,8 +794,15 @@
     </main>
 
     <div id="testimonialModal"
-         class="fixed inset-0 bg-black/40 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200 z-[9999999]">
-        <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-6 relative transform scale-95 opacity-0 transition-all duration-200">
+         class="custom-modal-overlay fixed inset-0 bg-black/40
+            flex items-center justify-center px-5
+            opacity-0 pointer-events-none transition-opacity duration-200">
+        <div class="custom-modal-container
+                bg-white rounded-2xl shadow-xl
+                max-w-xl w-full max-h-[90vh]
+                p-6 relative
+                transform scale-95 opacity-0
+                transition-all duration-200">
             <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;
             </button>
 
@@ -874,12 +881,17 @@
     });
 
     function openModal(show) {
+        const body = document.body;
         const modal = document.getElementById('contactUsModal');
+
+        if (!modal) return;
 
         if (show) {
             modal.classList.add('open');
+            body.style.overflow = 'hidden';
         } else {
             modal.classList.remove('open');
+            body.style.overflow = '';
         }
     }
 
@@ -1013,9 +1025,12 @@
     }
 
     function initTestimonialModal() {
+        const body = document.body;
         const modal = document.getElementById("testimonialModal");
-        const modalContainer = modal.querySelector("div");
-        const closeModal = document.getElementById("closeModal");
+        if (!modal) return;
+
+        const modalContainer = modal.querySelector(".custom-modal-container");
+        const closeModalBtn = document.getElementById("closeModal");
 
         const modalAvatar = document.getElementById("modalAvatar");
         const modalName = document.getElementById("modalName");
@@ -1023,55 +1038,59 @@
         const modalRating = document.getElementById("modalRating");
         const modalContent = document.getElementById("modalContent");
 
-        // Modal opening
+        function openModal() {
+            modal.classList.add("open");
+            body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            modal.classList.remove("open");
+            body.style.overflow = "";
+        }
+
+        // opening
         document.querySelectorAll(".btn__read-more").forEach(btn => {
             btn.addEventListener("click", () => {
                 const item = btn.closest(".testimonials__items-item");
-                const avatar = item.querySelector(".testimonials__items-item-text-main-avatar img").src;
-                const name = item.querySelector(".testimonials__items-item-text-main-title-block-name").textContent;
-                const company = item.querySelector(".testimonials__items-item-text-main-title-block-company").textContent;
-                const text = btn.getAttribute("data-modal-text");
+                if (!item) return;
 
-                const stars = item.querySelectorAll(".testimonials__items-item-rating-marks-star img");
+                const avatarImg = item.querySelector(
+                    ".testimonials__items-item-text-main-avatar img"
+                );
+                const nameEl = item.querySelector(
+                    ".testimonials__items-item-text-main-title-block-name"
+                );
+                const companyEl = item.querySelector(
+                    ".testimonials__items-item-text-main-title-block-company"
+                );
+
+                // rating
                 modalRating.innerHTML = "";
-                stars.forEach(star => {
+                item.querySelectorAll(
+                    ".testimonials__items-item-rating-marks-star img"
+                ).forEach(star => {
                     const clone = star.cloneNode(true);
                     clone.classList.add("w-4", "h-4", "mr-1");
                     modalRating.appendChild(clone);
                 });
 
-                // Filling the modal
-                modalAvatar.src = avatar;
-                modalName.textContent = name;
-                modalCompany.textContent = company;
-                modalContent.textContent = text;
+                // fill modal
+                if (avatarImg) modalAvatar.src = avatarImg.src;
+                modalName.textContent = nameEl?.textContent || "";
+                modalCompany.textContent = companyEl?.textContent || "";
+                modalContent.textContent = btn.dataset.modalText || "";
 
-                modal.classList.add("open");
-                modal.style.pointerEvents = "auto";
-                modal.style.opacity = "1";
-
-                modalContainer.style.transform = "scale(1)";
-                modalContainer.style.opacity = "1";
+                openModal();
             });
         });
 
-        // Closing
-        closeModal.addEventListener("click", () => {
-            modal.style.opacity = "0";
-            modal.style.pointerEvents = "none";
+        // closing by button
+        closeModalBtn?.addEventListener("click", closeModal);
 
-            modalContainer.style.transform = "scale(0.95)";
-            modalContainer.style.opacity = "0";
-        });
-
-        // Click outside modal
-        modal.addEventListener("click", (e) => {
+        // closing by overlay
+        modal.addEventListener("click", e => {
             if (e.target === modal) {
-                modal.style.opacity = "0";
-                modal.style.pointerEvents = "none";
-
-                modalContainer.style.transform = "scale(0.95)";
-                modalContainer.style.opacity = "0";
+                closeModal();
             }
         });
     }
@@ -1098,14 +1117,17 @@
 
     function openTermsModal(show, event) {
         if (event) event.preventDefault();
-
+        const body = document.body;
         const modal = document.getElementById('termsAndPrivacyModal');
         if (!modal) return;
 
         if (show) {
             modal.classList.add('open');
+            body.style.overflow = 'hidden';
         } else {
             modal.classList.remove('open');
+            // Because this modal overlaps another one
+            //body.style.overflow = '';
         }
     }
 </script>

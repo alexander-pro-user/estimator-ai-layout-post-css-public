@@ -1,5 +1,5 @@
 <div id="contactUsModal"
-     class="contactUsModal custom-modal-overlay fixed inset-0 bg-black/25 hidden z-50">
+     class="contactUsModal custom-modal-overlay">
     <div class="contactUsModal__container custom-modal-container" onclick="event.stopPropagation()">
         <button onclick="openModal(false)"
                 class="custom-modal-close">
@@ -12,41 +12,42 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
         </div>
+        <div class="contactUsModal__body w-full overflow-y-auto">
+            <form class="w-full contactUsModal__form">
+                <div class="contactUsModal__inputs">
+                    <label class="contactUsModal__inputs__label">First Name</label>
+                    <input type="text"
+                           name="firstName"
+                           class="contactUsModal__inputs__input"/>
+                </div>
 
-        <form class="w-full contactUsModal__form">
-            <div class="contactUsModal__inputs">
-                <label class="contactUsModal__inputs__label">First Name</label>
-                <input type="text"
-                       name="firstName"
-                       class="contactUsModal__inputs__input"/>
-            </div>
+                <div class="contactUsModal__inputs">
+                    <label class="contactUsModal__inputs__label">Email</label>
+                    <input type="email"
+                           name="email"
+                           class="contactUsModal__inputs__input"/>
+                </div>
 
-            <div class="contactUsModal__inputs">
-                <label class="contactUsModal__inputs__label">Email</label>
-                <input type="email"
-                       name="email"
-                       class="contactUsModal__inputs__input"/>
-            </div>
+                <div class="contactUsModal__inputs">
+                    <label class="contactUsModal__inputs__label">Message</label>
+                    <textarea rows="4" placeholder="Type your message..."
+                              class="contactUsModal__inputs__textarea"></textarea>
+                </div>
 
-            <div class="contactUsModal__inputs">
-                <label class="contactUsModal__inputs__label">Message</label>
-                <textarea rows="4" placeholder="Type your message..."
-                          class="contactUsModal__inputs__textarea"></textarea>
-            </div>
+                <div class="flex flex-row flex-nowrap gap-2">
+                    <input name="isAgree" type="checkbox" id="agree"
+                           class="contactUsModal__inputs__checkbox accent-purple-600"/>
+                    <label for="agree" class="contactUsModal__inputs__checkbox-label cursor-pointer">
+                        I agree to the <a onclick="openTermsModal(true, event)"
+                                          class="contactUsModal__inputs__checkbox-label-link">Terms & Privacy</a>
+                    </label>
+                </div>
 
-            <div class="flex flex-row flex-nowrap gap-2">
-                <input name="isAgree" type="checkbox" id="agree"
-                       class="contactUsModal__inputs__checkbox accent-purple-600"/>
-                <label for="agree" class="contactUsModal__inputs__checkbox-label cursor-pointer">
-                    I agree to the <a onclick="openTermsModal(true, event)"
-                                      class="contactUsModal__inputs__checkbox-label-link">Terms & Privacy</a>
-                </label>
-            </div>
-
-            <button type="submit"
-                    class="contactUsModal__submit-button">
-                Submit
-            </button>
-        </form>
+                <button type="submit"
+                        class="contactUsModal__submit-button">
+                    Submit
+                </button>
+            </form>
+        </div>
     </div>
 </div>
