@@ -116,17 +116,24 @@
 
     function openTermsModal(show, event) {
         if (event) event.preventDefault();
+
         const body = document.body;
         const modal = document.getElementById('termsAndPrivacyModal');
         if (!modal) return;
 
         if (show) {
+            const scrollbarWidth = getScrollbarWidth();
             modal.classList.add('open');
             body.style.overflow = 'hidden';
-            resetAllModalBodiesScroll()
+            if (scrollbarWidth > 0) {
+                body.style.paddingRight = `${scrollbarWidth}px`;
+            }
+
+            resetAllModalBodiesScroll();
         } else {
             modal.classList.remove('open');
             body.style.overflow = '';
+            body.style.paddingRight = '';
         }
     }
 

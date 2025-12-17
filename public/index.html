@@ -891,12 +891,18 @@
         if (!modal) return;
 
         if (show) {
+            const scrollbarWidth = getScrollbarWidth();
             modal.classList.add('open');
             body.style.overflow = 'hidden';
-            resetAllModalBodiesScroll()
+            if (scrollbarWidth > 0) {
+                body.style.paddingRight = `${scrollbarWidth}px`;
+            }
+
+            resetAllModalBodiesScroll();
         } else {
             modal.classList.remove('open');
             body.style.overflow = '';
+            body.style.paddingRight = '';
         }
     }
 
@@ -1044,13 +1050,16 @@
         const modalContent = document.getElementById("modalContent");
 
         function openModal() {
+            const scrollbarWidth = getScrollbarWidth();
             modal.classList.add("open");
             body.style.overflow = "hidden";
+            body.style.paddingRight = scrollbarWidth + "px";
         }
 
         function closeModal() {
             modal.classList.remove("open");
             body.style.overflow = "";
+            body.style.paddingRight = "";
         }
 
         // opening

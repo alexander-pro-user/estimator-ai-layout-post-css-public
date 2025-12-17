@@ -300,3 +300,7 @@ function resetAllModalBodiesScroll() {
         el.scrollTop = 0;
     });
 }
+
+function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+}
