@@ -901,8 +901,10 @@
             resetAllModalBodiesScroll();
         } else {
             modal.classList.remove('open');
-            body.style.overflow = '';
-            body.style.paddingRight = '';
+            setTimeout(() => {
+                body.style.overflow = '';
+                body.style.paddingRight = '';
+            }, 200);
         }
     }
 
@@ -1058,8 +1060,11 @@
 
         function closeModal() {
             modal.classList.remove("open");
-            body.style.overflow = "";
-            body.style.paddingRight = "";
+
+            setTimeout(() => {
+                body.style.overflow = "";
+                body.style.paddingRight = "";
+            }, 200);
         }
 
         // opening
@@ -1142,6 +1147,7 @@
             resetAllModalBodiesScroll()
         } else {
             modal.classList.remove('open');
+
             // Because this modal overlaps another one
             //body.style.overflow = '';
         }

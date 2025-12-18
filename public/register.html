@@ -132,8 +132,10 @@
             resetAllModalBodiesScroll();
         } else {
             modal.classList.remove('open');
-            body.style.overflow = '';
-            body.style.paddingRight = '';
+            setTimeout(() => {
+                body.style.overflow = "";
+                body.style.paddingRight = "";
+            }, 200);
         }
     }
 
