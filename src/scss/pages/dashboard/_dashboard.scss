@@ -87,10 +87,14 @@
     border-radius: 12px;
     background: $white;
 
+    @media (min-width: 1024px) {
+      box-shadow: $shadow-soft-hex;
+      border: 1px solid $border-light;
+    }
+
     @media (min-width: 1340px) {
       margin: auto;
       background: $white-bg;
-      box-shadow: $shadow-soft-hex;
       /*  margin-left: 50px;
         margin-right: 80px; */
       margin-top: 24px;
