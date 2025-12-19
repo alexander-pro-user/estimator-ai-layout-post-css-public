@@ -202,7 +202,7 @@
                     <div class="take-closer-look__buttons">
                         <button class="btn inline-block btn__primary"><a href="estimations.html">Get Estimate</a>
                         </button>
-                        <button onclick="openModal(true)" class="btn inline-block btn__tertiary">Contact Us</button>
+                        <button onclick="openModal(true, 'contactUsModal')" class="btn inline-block btn__tertiary">Contact Us</button>
                         </button>
                     </div>
                 </div>
@@ -253,7 +253,7 @@
 
                             <div class="pricing__items-item__buttons">
                                 <button class="btn inline-block btn__primary">Get Your Billing Plan</button>
-                                <button onclick="openModal(true)" class="btn btn__tertiary">Contact Us</button>
+                                <button onclick="openModal(true, 'contactUsModal')" class="btn btn__tertiary">Contact Us</button>
                             </div>
                         </div>
                         <div class="pricing__items-colored-item">
@@ -853,7 +853,7 @@
                 if (!modal) return;
 
                 modal.addEventListener('click', (e) => {
-                    if (e.target === modal) openModal(false);
+                    if (e.target === modal) openModal(false, 'contactUsModal');
                 });
 
                 const container = modal.querySelector('.contactUsModal__container');
@@ -869,7 +869,39 @@
                 if (!modal) return;
 
                 modal.addEventListener('click', (e) => {
-                    if (e.target === modal) openTermsModal(false);
+                    if (e.target === modal) openModal(false, 'termsAndPrivacyModal', false,  false);
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/terms-and-service-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndServiceModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'termsAndServiceModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/privacy-policy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('privacyAndPolicyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'privacyAndPolicyModal');
                 });
 
                 const container = modal.querySelector('.terms-and-privacy-modal__container');
@@ -884,29 +916,6 @@
         initVideoPlay();
     });
 
-    function openModal(show) {
-        const body = document.body;
-        const modal = document.getElementById('contactUsModal');
-
-        if (!modal) return;
-
-        if (show) {
-            const scrollbarWidth = getScrollbarWidth();
-            modal.classList.add('open');
-            body.style.overflow = 'hidden';
-            if (scrollbarWidth > 0) {
-                body.style.paddingRight = `${scrollbarWidth}px`;
-            }
-
-            resetAllModalBodiesScroll();
-        } else {
-            modal.classList.remove('open');
-            setTimeout(() => {
-                body.style.overflow = '';
-                body.style.paddingRight = '';
-            }, 200);
-        }
-    }
 
     function initTestimonialCarousel() {
         const container = document.querySelector('.testimonials__items');
@@ -1133,23 +1142,5 @@
                 });
             }
         });
-    }
-
-    function openTermsModal(show, event) {
-        if (event) event.preventDefault();
-        const body = document.body;
-        const modal = document.getElementById('termsAndPrivacyModal');
-        if (!modal) return;
-
-        if (show) {
-            modal.classList.add('open');
-            body.style.overflow = 'hidden';
-            resetAllModalBodiesScroll()
-        } else {
-            modal.classList.remove('open');
-
-            // Because this modal overlaps another one
-            //body.style.overflow = '';
-        }
     }
 </script>

@@ -1,7 +1,7 @@
 <div id="contactUsModal"
      class="contactUsModal custom-modal-overlay">
     <div class="contactUsModal__container custom-modal-container" onclick="event.stopPropagation()">
-        <button onclick="openModal(false)"
+        <button onclick="openModal(false, 'contactUsModal')"
                 class="custom-modal-close">
             ✕
         </button>
@@ -38,7 +38,7 @@
                     <input name="isAgree" type="checkbox" id="agree"
                            class="contactUsModal__inputs__checkbox accent-purple-600"/>
                     <label for="agree" class="contactUsModal__inputs__checkbox-label cursor-pointer">
-                        I agree to the <a onclick="openTermsModal(true, event)"
+                        I agree to the <a onclick="openModal(true, 'termsAndPrivacyModal', event, false)"
                                           class="contactUsModal__inputs__checkbox-label-link">Terms & Privacy</a>
                     </label>
                 </div>

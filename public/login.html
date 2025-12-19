@@ -74,10 +74,10 @@
         <div class="auth-footer__inner">
             <div>© 2024 Estimator.AI. All rights reserved.</div>
             <div>
-                <a href="#">Terms & Conditions</a>
+                <a href="#" onclick="openModal(true, 'termsAndServiceModal', event)">Terms & Conditions</a>
             </div>
             <div>
-                <a href="#">Privacy Policy</a>
+                <a href="#" onclick="openModal(true, 'privacyAndPolicyModal', event)">Privacy Policy</a>
             </div>
         </div>
     </footer>
@@ -86,6 +86,40 @@
 <script src="main.js"></script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        fetch('/components/terms-and-service-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndServiceModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'termsAndServiceModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/privacy-policy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('privacyAndPolicyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'privacyAndPolicyModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+    });
+
     const passwordInput = document.getElementById("password");
     const togglePassword = document.getElementById("togglePassword");
 

@@ -53,7 +53,8 @@
                     <div class="flex flex-row flex-nowrap gap-2">
                         <input type="checkbox" id="agree" class="auth-form__checkbox accent-purple-600"/>
                         <label for="agree" class="auth-form__checkbox__label cursor-pointer">
-                            I agree to the <a onclick="openTermsModal(true, event)" class="auth-form__link--thin">Terms &
+                            I agree to the <a onclick="openModal(true, 'termsAndPrivacyModal', event, false)"
+                                              class="auth-form__link--thin">Terms &
                             Privacy</a>
                         </label>
                     </div>
@@ -84,10 +85,10 @@
         <div class="auth-footer__inner">
             <div>© 2024 Estimator.AI. All rights reserved.</div>
             <div>
-                <a href="#">Terms & Conditions</a>
+                <a href="#" onclick="openModal(true, 'termsAndServiceModal', event)">Terms & Conditions</a>
             </div>
             <div>
-                <a href="#">Privacy Policy</a>
+                <a href="#" onclick="openModal(true, 'privacyAndPolicyModal', event)">Privacy Policy</a>
             </div>
         </div>
     </footer>
@@ -106,38 +107,45 @@
                 if (!modal) return;
 
                 modal.addEventListener('click', (e) => {
-                    if (e.target === modal) openTermsModal(false);
+                    if (e.target === modal) openModal(false, 'termsAndPrivacyModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/terms-and-service-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndServiceModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'termsAndServiceModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/privacy-policy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('privacyAndPolicyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'privacyAndPolicyModal');
                 });
 
                 const container = modal.querySelector('.terms-and-privacy-modal__container');
                 if (container) container.addEventListener('click', (e) => e.stopPropagation());
             });
     });
-
-    function openTermsModal(show, event) {
-        if (event) event.preventDefault();
-
-        const body = document.body;
-        const modal = document.getElementById('termsAndPrivacyModal');
-        if (!modal) return;
-
-        if (show) {
-            const scrollbarWidth = getScrollbarWidth();
-            modal.classList.add('open');
-            body.style.overflow = 'hidden';
-            if (scrollbarWidth > 0) {
-                body.style.paddingRight = `${scrollbarWidth}px`;
-            }
-
-            resetAllModalBodiesScroll();
-        } else {
-            modal.classList.remove('open');
-            setTimeout(() => {
-                body.style.overflow = "";
-                body.style.paddingRight = "";
-            }, 200);
-        }
-    }
 
     const passwordInput = document.getElementById("password");
     const togglePassword = document.getElementById("togglePassword");

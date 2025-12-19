@@ -304,3 +304,38 @@ function resetAllModalBodiesScroll() {
 function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth;
 }
+
+const MODAL_ANIMATION_DURATION = 200;
+
+function openModal(show, idModal, event = null, isBodyOverflowReturn = true) {
+    if (event) event.preventDefault();
+
+    const modal = idModal && document.getElementById(idModal);
+    if (!modal) return;
+
+    const body = document.body;
+
+    if (show) {
+        const scrollbarWidth = getScrollbarWidth();
+
+        modal.classList.add('open');
+        body.style.overflow = 'hidden';
+
+        if (scrollbarWidth > 0) {
+            body.style.paddingRight = `${scrollbarWidth}px`;
+        }
+
+        resetAllModalBodiesScroll();
+    } else {
+        modal.classList.remove('open');
+
+        if (isBodyOverflowReturn) {
+            setTimeout(() => {
+                if (!document.querySelector('.modal.open')) {
+                    body.style.overflow = '';
+                    body.style.paddingRight = '';
+                }
+            }, MODAL_ANIMATION_DURATION);
+        }
+    }
+}

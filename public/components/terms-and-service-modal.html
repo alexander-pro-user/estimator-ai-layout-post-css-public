@@ -1,10 +1,12 @@
-<div id="termsAndPrivacyModal" class="terms-and-privacy-modal custom-modal-overlay">
+<div id="termsAndServiceModal" class="terms-and-privacy-modal custom-modal-overlay">
+
+
+
+
     <div class="terms-and-privacy-modal__container  custom-modal-container" onclick="event.stopPropagation()">
+        <button class="terms-and-privacy-modal__close custom-modal-close" onclick="openModal(false, 'termsAndServiceModal')">✕</button>
 
-
-        <button class="terms-and-privacy-modal__close custom-modal-close" onclick="openModal(false, 'termsAndPrivacyModal', false,  false)">✕</button>
-
-        <h2 class="terms-and-privacy-modal__container__title">Terms & Privacy</h2>
+        <h2 class="terms-and-privacy-modal__container__title">Terms of Service</h2>
         <p class="terms-and-privacy-modal__container__description"></p>
 
         <div class="terms-and-privacy-modal--body custom-modal-body">

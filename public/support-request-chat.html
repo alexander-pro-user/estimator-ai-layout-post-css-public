@@ -239,5 +239,37 @@
                     initHeader();
                 });
         }
+
+        fetch('/components/terms-and-service-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndServiceModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'termsAndServiceModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/privacy-policy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('privacyAndPolicyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'privacyAndPolicyModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
     });
 </script>

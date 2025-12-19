@@ -105,7 +105,8 @@
                             <div class="recharge_block__block-title-switcher__switcher">
                                 <div class="custom-form-switcher-body-input">
                                     <label class="relative inline-flex items-center cursor-pointer">
-                                        <input name="recharge" onclick="toRecharge()" type="checkbox" class="sr-only peer">
+                                        <input name="recharge" onclick="toRecharge()" type="checkbox"
+                                               class="sr-only peer">
                                         <div class="w-[40px] h-[24px] bg-[#CBD5E1] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[16px] after:w-[16px] after:transition-all peer-checked:bg-[#7D55BE]"></div>
                                     </label>
                                 </div>
@@ -179,6 +180,38 @@
                     initHeader();
                 });
         }
+
+        fetch('/components/terms-and-service-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('termsAndServiceModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'termsAndServiceModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
+
+        fetch('/components/privacy-policy-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+
+                const modal = document.getElementById('privacyAndPolicyModal');
+                if (!modal) return;
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) openModal(false, 'privacyAndPolicyModal');
+                });
+
+                const container = modal.querySelector('.terms-and-privacy-modal__container');
+                if (container) container.addEventListener('click', (e) => e.stopPropagation());
+            });
     });
 
     function toRecharge() {
