@@ -85,7 +85,9 @@
     &-image {
       width: 302px;
       height: 260px;
-      border-bottom-width: 1px;
+      border: #9A02DB40 solid 1px;
+      border-radius: 16px 16px 0 0;
+      border-bottom-width: 0px;
 
       img {
         width: 100%;
