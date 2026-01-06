@@ -91,6 +91,18 @@
     }
   }
 
+  &__sort {
+    cursor: pointer;
+
+    img {
+      transition: filter .2s;
+    }
+
+    &:hover img {
+      filter: brightness(0);
+    }
+  }
+
   &__prev,
   &__next {
     position: relative;
@@ -171,8 +183,13 @@
     }
   }
 
-  &__prev:hover { background-color: $bg-blue-25; }
-  &__next:hover { background-color: $bg-blue-25; }
+  &__prev:hover {
+    background-color: $bg-blue-25;
+  }
+
+  &__next:hover {
+    background-color: $bg-blue-25;
+  }
 
   &__filter {
     width: 40px;
