@@ -194,8 +194,10 @@
   }
 
   &__tag-list {
+    display: flex;
     list-style: none;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 10px 8px;
   }
 
   &__article-list {
