@@ -46,7 +46,7 @@
   }
 
   @media (min-width: 768px) {
-    padding: 50px 60px 40px 60px;
+    padding: 50px 20px 40px 20px;
     gap: 30px;
   }
 
@@ -67,7 +67,10 @@
     margin: 0 auto;
 
     border-radius: 16px;
-    border: 1px solid $border-white-soft;
+  //  border: 1px solid $border-white-soft;
+    box-shadow: $shadow-soft-hex;
+    border: 1px solid $border-light;
+
     background: #FFF;
 
     @media (min-width: 768px) {
@@ -102,10 +105,15 @@
   &__description {
     color: #666;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+
   }
 
   &__read-more {
@@ -169,6 +177,10 @@
   margin: 0 auto;
 
   @media (min-width: 768px) {
+    padding: 20px 20px 20px 20px;
+  }
+
+  @media (min-width: 1024px) {
     padding: 20px 60px 80px 60px;
   }
 
@@ -235,7 +247,9 @@
   flex: 1 0 0;
 
   border-radius: 16px;
-  border: 1px solid $border-white-soft;
+  //border: 1px solid $border-white-soft;
+  box-shadow: $shadow-soft-hex;
+  border: 1px solid $border-light;
   background: #FFF;
 
   &__meta {
@@ -266,7 +280,7 @@
 
   &__description {
     color: $text-muted;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Inter;
     font-weight: 400;
     line-height: 24px;
@@ -277,6 +291,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media (min-width: 1024px) {
+      font-size: 15px;
+    }
 
   }
 
@@ -331,7 +349,7 @@
   }
 
   @media (min-width: 768px) {
-    padding: 50px 60px 20px 60px;
+    padding: 50px 20px 20px 20px;
   }
 
   @media (min-width: 1024px) {
@@ -565,10 +583,10 @@
 .prose-content {
   margin: 0 auto;
   color: #4a4a4a;
-  line-height: 1.7;
-  font-size: 18px;
+  line-height: 1.6;
+  font-size: 16px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     font-size: 18px;
     line-height: 1.75;
   }
