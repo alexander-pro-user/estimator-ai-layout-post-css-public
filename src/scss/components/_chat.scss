@@ -110,12 +110,16 @@
     border: 1px solid $grey-color-light;
     background: $white;
 
-    color: $text-placeholder;
+    color: $text-gray-600;
     font-family: Inter;
     font-size: $fs-14;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.07px;
+
+    &::placeholder {
+      color: $text-placeholder;
+    }
   }
 }
