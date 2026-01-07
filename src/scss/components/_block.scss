@@ -35,7 +35,7 @@
       font-weight: 600;
       line-height: 28px;
       letter-spacing: 0.09px;
-      word-wrap: break-word
+      overflow-wrap: break-word
 
     }
   }
@@ -56,7 +56,7 @@
       font-weight: 500;
       line-height: 32px;
       letter-spacing: 0.16px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -108,7 +108,7 @@
         font-weight: 600;
         line-height: 20px;
         letter-spacing: 0.07px;
-        word-wrap: break-word
+        overflow-wrap: break-word
       }
 
       &__image {
@@ -164,7 +164,7 @@
         font-weight: 600;
         line-height: 20px;
         letter-spacing: 0.07px;
-        word-wrap: break-word
+        overflow-wrap: break-word
       }
     }
   }
@@ -476,7 +476,6 @@
 
     border-radius: 8px;
     border: 1px solid $border-soft-blue;
-    background: #FFF;
 
     appearance: none;
     -webkit-appearance: none;
@@ -522,9 +521,6 @@
 
   &__input {
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding: 12px 12px 12px 38px;
     font-size: 12px;
     line-height: 14px;
@@ -583,7 +579,7 @@
       font-weight: 500;
       line-height: 20px;
       letter-spacing: 0.07px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -789,11 +785,6 @@
   }
 
   &--active {
-    border-radius: 33px;
-    border: 1px solid rgba(125, 85, 190, 0.32);
-    background: $border-purple-50;
-    box-shadow: $shadow-teal-soft;
-
     border-radius: 33px;
     border: 1px solid rgba(125, 85, 190, 0.32);
     background: $border-purple-50;

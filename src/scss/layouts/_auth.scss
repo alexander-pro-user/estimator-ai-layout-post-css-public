@@ -60,10 +60,7 @@
 
   &__main {
     margin: auto 0;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     display: flex;
     padding: 0 20px;
@@ -205,7 +202,7 @@
       font-family: Inter;
       font-weight: 600;
       line-height: 42px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -223,7 +220,7 @@
       font-family: Inter;
       font-weight: 400;
       line-height: 20px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 }
@@ -248,7 +245,7 @@
     font-family: Inter;
     font-weight: 400;
     line-height: 20px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @media (min-width: 640px) {
       color: $text-muted;
@@ -256,7 +253,7 @@
       font-family: Inter;
       font-weight: 500;
       line-height: 20px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -288,8 +285,8 @@
       border-radius: 8px;
       border: 1px solid $border-soft-blue;
       background: #FFF;
-     // color: $text-muted;
-     // color: $text-gray-600;
+      // color: $text-muted;
+      // color: $text-gray-600;
       font-family: Inter;
       font-size: 14px;
       font-style: normal;
@@ -505,7 +502,6 @@
 
 
       @media (min-width: 640px) {
-        color: #FFF;
         font-family: Inter;
         font-size: 14px;
         font-style: normal;
@@ -577,7 +573,6 @@
   }
 
   &__signup-text {
-    color: $black-333-short;
     font-family: Inter;
     font-size: $fs-13;
     font-style: normal;
@@ -585,13 +580,15 @@
     line-height: 20px;
     color: $black-333-short;
     text-align: center;
-
-    font-family: Inter;
-    font-size: $fs-14;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
     margin-bottom: 16px;
+
+    @media (min-width: 640px) {
+      font-family: Inter;
+      font-size: $fs-14;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
 
     a {
       font-weight: 500;

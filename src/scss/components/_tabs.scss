@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+
 .tabs {
   display: flex;
   border-bottom: none;
@@ -118,7 +119,7 @@
     font-weight: 600;
     line-height: 28px;
     letter-spacing: 0.07px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @media (min-width: 640px) {
       color: $black-333;
@@ -127,7 +128,7 @@
       font-weight: 600;
       line-height: 28px;
       letter-spacing: 0.09px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
 
   }
@@ -144,7 +145,7 @@
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 0.10px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @media (min-width: 640px) {
       color: $black-333;
@@ -153,7 +154,7 @@
       font-weight: 600;
       line-height: 36px;
       letter-spacing: 0.14px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -165,7 +166,7 @@
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 0.09px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @media (min-width: 640px) {
       color: $black-333;
@@ -174,7 +175,7 @@
       font-weight: 600;
       line-height: 36px;
       letter-spacing: 0.14px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -185,7 +186,7 @@
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 0.07px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     @media (min-width: 640px) {
       color: $text-muted;
@@ -194,7 +195,7 @@
       font-weight: 600;
       line-height: 36px;
       letter-spacing: 0.07px;
-      word-wrap: break-word
+      overflow-wrap: break-word
     }
   }
 
@@ -217,9 +218,7 @@
   }
 
   .estimations__table-header {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
 
     display: flex;
