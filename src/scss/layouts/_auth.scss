@@ -5,22 +5,30 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0) 100%),
-  linear-gradient(0deg, rgba(240, 240, 255, 0.14) 0%, rgba(240, 240, 255, 0.14) 100%),
-  url("/images/auth/auth-background-mobile.png");
+  position: relative;
+  z-index: 0;
 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 
-  @media (min-width: 640px) {
     background-image: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0) 100%),
     linear-gradient(0deg, rgba(240, 240, 255, 0.14) 0%, rgba(240, 240, 255, 0.14) 100%),
     url("/images/auth/auth-background-mobile.png");
 
-    background-position: center;
+    background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: 640px) {
+    &::before {
+      background-image: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(0deg, rgba(240, 240, 255, 0.14) 0%, rgba(240, 240, 255, 0.14) 100%),
+      url("/images/auth/auth-background.png");
+    }
   }
 
   &__header {
