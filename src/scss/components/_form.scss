@@ -114,9 +114,14 @@
         border-radius: 8px;
         border: 1px solid $border-soft-blue;
         background: $white;
+        // color: $text-gray-600;
 
         @media (min-width: 1024px) {
           min-height: 327px;
+        }
+
+        &::placeholder {
+          // color: $text-placeholder;
         }
       }
 
@@ -283,6 +288,7 @@
 
         font-size: 14px;
         line-height: 22px;
+        // color: $text-gray-600;
 
         &-short {
           min-height: 48px;
@@ -290,6 +296,10 @@
 
         &-long {
           min-height: 260px;
+        }
+
+        &::placeholder {
+          // color: $text-placeholder;
         }
       }
     }
@@ -610,7 +620,7 @@
     border: 1px solid $border-soft-blue;
     background: #FFF;
 
-    color: $text-muted;
+    // color: $text-muted;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -731,8 +741,8 @@
     border-radius: 8px;
     border: 1px solid $border-soft-blue;
     background: #FFF;
-
-    color: $text-muted;
+    // color: $text-muted;
+    // color: $text-gray-600;
     font-family: Inter;
     font-size: 13px;
     height: 42px;
@@ -854,4 +864,21 @@ select:focus {
   outline: none;
   box-shadow: 0 0 0 1px $primary-color;
   border-color: rgb(168 85 247);
+}
+
+
+textarea {
+  color: $text-gray-input;
+
+  &::placeholder {
+    color: $text-placeholder;
+  }
+}
+
+input {
+  color: $text-gray-input;
+
+  &::placeholder {
+    color: $text-placeholder;
+  }
 }

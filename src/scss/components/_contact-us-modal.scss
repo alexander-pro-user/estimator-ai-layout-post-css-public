@@ -70,7 +70,7 @@
     gap: 8px;
 
     &__label {
-      color: $text-body;
+      // color: $text-body;
       font-family: Inter;
       font-size: $fs-14;
       font-style: normal;
@@ -108,6 +108,7 @@
       border-radius: 8px;
       border: 1px solid $border-soft-blue;
       background: $white;
+      // color: $text-gray-600;
 
       @media (min-width: 1024px) {
         height: 160px;
@@ -117,7 +118,7 @@
       }
 
       &::placeholder {
-        color: $text-secondary-light;
+        // color: $text-placeholder;
         font-family: Inter;
         font-size: $fs-14;
         font-style: normal;
