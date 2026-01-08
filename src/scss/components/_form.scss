@@ -862,7 +862,6 @@ input:not([type="checkbox"]):not([type="radio"]):focus,
 textarea:focus,
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 1px $primary-color;
   border-color: rgb(168 85 247);
 }
 
