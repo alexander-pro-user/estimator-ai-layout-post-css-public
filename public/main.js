@@ -172,6 +172,51 @@ async function initShowMorePopup() {
     });
 }
 
+async function initPopupFilterEstimation() {
+    console.log('initPopupFilterEstimation');
+
+    const popupHtml = await fetch('/components/popup-filter-estimations.html')
+        .then(r => r.text());
+
+    const filters = document.querySelectorAll('.popup-filter');
+
+    filters.forEach(filter => {
+        const btn = filter.querySelector('.popup-filter__button');
+        const popupMenu = filter.querySelector('.popup-filter__popup');
+        if (!btn || !popupMenu) return;
+
+        popupMenu.innerHTML = popupHtml;
+
+        const cancelBtn = popupMenu.querySelector('#cancelFilter');
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', e => {
+                e.stopPropagation();
+                popupMenu.classList.add('hidden');
+            });
+        }
+
+        btn.addEventListener('click', e => {
+            e.stopPropagation();
+
+            document.querySelectorAll('.popup-filter__popup').forEach(p => {
+                if (p !== popupMenu) p.classList.add('hidden');
+            });
+
+            popupMenu.classList.toggle('hidden');
+        });
+
+        popupMenu.addEventListener('click', e => {
+            e.stopPropagation();
+        });
+    });
+    
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.popup-filter__popup').forEach(popup => {
+            popup.classList.add('hidden');
+        });
+    });
+}
+
 async function initShowMorePopupSupportRequests() {
     const popupHtml = await fetch('/components/popup-menu-support-requests.html')
         .then(r => r.text());

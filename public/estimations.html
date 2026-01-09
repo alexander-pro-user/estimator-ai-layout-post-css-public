@@ -90,10 +90,13 @@
                                     </svg>
                                 </button>
                             </div>
-                            <button class="btn inline-block btn__filter">
-                                <img src="images/icons/filter-icon.svg">
-                            </button>
+                            <div class="popup-filter relative">
+                                <button class="btn btn__filter popup-filter__button">
+                                    <img src="images/icons/filter-icon.svg" alt="Filter">
+                                </button>
 
+                                <div class="popup-filter__popup hidden"></div>
+                            </div>
                             <a href="/estimation-generation-step-1.html"
                                class="btn btn__primary hidden lg:inline-flex text-nowrap">
                                 Create New</a>
@@ -114,7 +117,8 @@
                                 </div>
                                 <div class="adaptive-table__th">
                                     <div class="adaptive-table__th-container min-w-[110px]">
-                                        Total Amount <a class="btn__sort" href="#"><img src="images/icons/caret-down-icon.svg"></a>
+                                        Total Amount <a class="btn__sort" href="#"><img
+                                            src="images/icons/caret-down-icon.svg"></a>
                                     </div>
                                 </div>
                                 <div class="adaptive-table__th min-w-[100px]"></div>
@@ -650,5 +654,6 @@
 
         initHeader();
         await initShowMorePopup();
+        await initPopupFilterEstimation();
     });
 </script>
