@@ -173,8 +173,6 @@ async function initShowMorePopup() {
 }
 
 async function initPopupFilterEstimation() {
-    console.log('initPopupFilterEstimation');
-
     const popupHtml = await fetch('/components/popup-filter-estimations.html')
         .then(r => r.text());
 
@@ -195,6 +193,24 @@ async function initPopupFilterEstimation() {
             });
         }
 
+        const amountInput = popupMenu.querySelector('#amountFilter');
+        if (amountInput) {
+            amountInput.addEventListener('input', e => {
+                let value = e.target.value;
+
+                value = value.replace(',', '.');
+
+                const parts = value.split('.');
+                if (parts.length > 2) {
+                    value = parts[0] + '.' + parts.slice(1).join('');
+                }
+
+                value = value.replace(/[^0-9.]/g, '');
+
+                e.target.value = value;
+            });
+        }
+
         btn.addEventListener('click', e => {
             e.stopPropagation();
 
@@ -209,7 +225,7 @@ async function initPopupFilterEstimation() {
             e.stopPropagation();
         });
     });
-    
+
     document.addEventListener('click', () => {
         document.querySelectorAll('.popup-filter__popup').forEach(popup => {
             popup.classList.add('hidden');

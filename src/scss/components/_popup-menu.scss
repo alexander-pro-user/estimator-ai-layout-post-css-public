@@ -64,75 +64,75 @@
 
 .table-filter {
   position: absolute;
-}
 
-.table-filter--popup {
-  position: relative;
-}
+  &--popup {
+    position: relative;
+  }
 
-.table-filter__form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-.table-filter__field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
 
-.table-filter__label {
-  font-size: 14px;
-  color: #555;
-  font-weight: 500;
-}
+  &__label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+  }
 
-.table-filter__input {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
+  &__input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
 
-.table-filter__input:focus {
-  outline: none;
-  border-color: #7d55be;
-  box-shadow: 0 0 0 2px rgba(125, 85, 190, 0.2);
-}
+    &:focus {
+      outline: none;
+      border-color: #7d55be;
+      box-shadow: 0 0 0 2px rgba(125, 85, 190, 0.2);
+    }
+  }
 
-.table-filter__actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 8px;
-}
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+  }
 
-.table-filter__btn {
-  padding: 6px 14px;
-  border: none;
-  border-radius: 8px;
-  background-color: #7d55be;
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
+  &__btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7d55be;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
 
-.table-filter__btn:hover {
-  background-color: #653fae;
-}
+    &:hover {
+      background-color: #653fae;
+    }
 
-.table-filter__btn--cancel {
-  background-color: #eee;
-  color: #555;
-}
+    &--cancel {
+      background-color: #eee;
+      color: #555;
 
-.table-filter__btn--cancel:hover {
-  background-color: #ddd;
-}
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
 
-.table-filter.table-filter--active {
-  display: flex;
+  &.table-filter--active {
+    display: flex;
+  }
 }
