@@ -76,10 +76,9 @@
 }
 
 .table-filter {
-  position: absolute;
+  position: relative;
 
   &--popup {
-    position: relative;
   }
 
   &__form {
