@@ -868,6 +868,7 @@ select:focus {
 
 textarea {
   color: $text-gray-input;
+  resize: none;
 
   &::placeholder {
     color: $text-placeholder;
