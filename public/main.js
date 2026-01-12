@@ -186,8 +186,16 @@ async function initPopupFilterEstimation() {
         popupMenu.innerHTML = popupHtml;
 
         const cancelBtn = popupMenu.querySelector('#cancelFilter');
+        const appleBtn = popupMenu.querySelector('#applyFilter');
         if (cancelBtn) {
             cancelBtn.addEventListener('click', e => {
+                e.stopPropagation();
+                popupMenu.classList.add('hidden');
+            });
+        }
+
+        if (appleBtn) {
+            appleBtn.addEventListener('click', e => {
                 e.stopPropagation();
                 popupMenu.classList.add('hidden');
             });
