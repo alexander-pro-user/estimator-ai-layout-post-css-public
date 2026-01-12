@@ -186,7 +186,8 @@ async function initPopupFilterEstimation() {
         popupMenu.innerHTML = popupHtml;
 
         const cancelBtn = popupMenu.querySelector('#cancelFilter');
-        const appleBtn = popupMenu.querySelector('#applyFilter');
+        const applyBtn = popupMenu.querySelector('#applyFilter');
+
         if (cancelBtn) {
             cancelBtn.addEventListener('click', e => {
                 e.stopPropagation();
@@ -194,16 +195,19 @@ async function initPopupFilterEstimation() {
             });
         }
 
-        if (appleBtn) {
-            appleBtn.addEventListener('click', e => {
+        if (applyBtn) {
+            applyBtn.addEventListener('click', e => {
                 e.stopPropagation();
                 popupMenu.classList.add('hidden');
             });
         }
 
-        const amountInput = popupMenu.querySelector('#amountFilter');
-        if (amountInput) {
-            amountInput.addEventListener('input', e => {
+        const presets = popupMenu.querySelectorAll('.table-filter__preset');
+        const minInput = popupMenu.querySelector('#amountMin');
+        const maxInput = popupMenu.querySelector('#amountMax');
+
+        function normalizeAmountInput(input) {
+            input.addEventListener('input', e => {
                 let value = e.target.value;
 
                 value = value.replace(',', '.');
@@ -216,8 +220,23 @@ async function initPopupFilterEstimation() {
                 value = value.replace(/[^0-9.]/g, '');
 
                 e.target.value = value;
+
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
             });
         }
+
+        if (minInput) normalizeAmountInput(minInput);
+        if (maxInput) normalizeAmountInput(maxInput);
+
+        presets.forEach(preset => {
+            preset.addEventListener('click', () => {
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+                preset.classList.add('table-filter__preset--active');
+
+                if (minInput) minInput.value = preset.dataset.min || '';
+                if (maxInput) maxInput.value = preset.dataset.max || '';
+            });
+        });
 
         btn.addEventListener('click', e => {
             e.stopPropagation();

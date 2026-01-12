@@ -10,9 +10,39 @@
             <input class="table-filter__input" type="number" id="timeFilter" placeholder="Filter by Time">
         </div>
 
-        <div class="table-filter__field">
-            <label class="table-filter__label" for="amountFilter">Total Amount</label>
-            <input class="table-filter__input" type="text" id="amountFilter" placeholder="Filter by Total Amount">
+        <div class="table-filter__field table-filter__field--amount">
+            <label class="table-filter__label">Total Amount</label>
+
+            <div class="table-filter__amount-presets">
+                <button type="button" class="table-filter__preset" data-min="0" data-max="1000">
+                    $0 – $1,000
+                </button>
+                <button type="button" class="table-filter__preset" data-min="1000" data-max="5000">
+                    $1,000 – $5,000
+                </button>
+                <button type="button" class="table-filter__preset" data-min="5000" data-max="10000">
+                    $5,000 – $10,000
+                </button>
+                <button type="button" class="table-filter__preset" data-min="10000">
+                    $10,000+
+                </button>
+            </div>
+
+            <div class="table-filter__amount-custom">
+                <input
+                        class="table-filter__input"
+                        type="text"
+                        id="amountMin"
+                        placeholder="Min $"
+                >
+                <span class="table-filter__amount-separator">—</span>
+                <input
+                        class="table-filter__input"
+                        type="text"
+                        id="amountMax"
+                        placeholder="Max $"
+                >
+            </div>
         </div>
 
         <div class="table-filter__actions">
