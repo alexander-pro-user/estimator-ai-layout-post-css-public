@@ -45,9 +45,29 @@
             </div>
         </div>
 
-        <div class="table-filter__actions">
-            <button class="table-filter__btn" type="button" id="applyFilter">Apply</button>
-            <button class="table-filter__btn table-filter__btn--cancel" type="button" id="cancelFilter">Cancel</button>
+        <div class="table-filter__actions table-filter__actions--between">
+            <div class="table-filter__actions-group table-filter__actions-group--left">
+                <button
+                        class="table-filter__btn table-filter__btn--clear"
+                        type="button"
+                        id="clearFilter"
+                >
+                    Clear
+                </button>
+            </div>
+
+            <div class="table-filter__actions-group table-filter__actions-group--right">
+                <button class="table-filter__btn" type="button" id="applyFilter">
+                    Apply
+                </button>
+                <button
+                        class="table-filter__btn table-filter__btn--cancel"
+                        type="button"
+                        id="cancelFilter"
+                >
+                    Cancel
+                </button>
+            </div>
         </div>
     </form>
 </div>

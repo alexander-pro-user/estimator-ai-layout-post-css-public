@@ -187,24 +187,34 @@ async function initPopupFilterEstimation() {
 
         const cancelBtn = popupMenu.querySelector('#cancelFilter');
         const applyBtn = popupMenu.querySelector('#applyFilter');
+        const clearBtn = popupMenu.querySelector('#clearFilter');
 
-        if (cancelBtn) {
-            cancelBtn.addEventListener('click', e => {
-                e.stopPropagation();
-                popupMenu.classList.add('hidden');
-            });
-        }
-
-        if (applyBtn) {
-            applyBtn.addEventListener('click', e => {
-                e.stopPropagation();
-                popupMenu.classList.add('hidden');
-            });
-        }
-
-        const presets = popupMenu.querySelectorAll('.table-filter__preset');
+        const nameInput = popupMenu.querySelector('#nameFilter');
+        const timeInput = popupMenu.querySelector('#timeFilter');
         const minInput = popupMenu.querySelector('#amountMin');
         const maxInput = popupMenu.querySelector('#amountMax');
+        const presets = popupMenu.querySelectorAll('.table-filter__preset');
+
+        [cancelBtn, applyBtn].forEach(btn => {
+            if (!btn) return;
+            btn.addEventListener('click', e => {
+                e.stopPropagation();
+                popupMenu.classList.add('hidden');
+            });
+        });
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', e => {
+                e.stopPropagation();
+
+                if (nameInput) nameInput.value = '';
+                if (timeInput) timeInput.value = '';
+                if (minInput) minInput.value = '';
+                if (maxInput) maxInput.value = '';
+
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+            });
+        }
 
         function normalizeAmountInput(input) {
             input.addEventListener('input', e => {
@@ -248,9 +258,7 @@ async function initPopupFilterEstimation() {
             popupMenu.classList.toggle('hidden');
         });
 
-        popupMenu.addEventListener('click', e => {
-            e.stopPropagation();
-        });
+        popupMenu.addEventListener('click', e => e.stopPropagation());
     });
 
     document.addEventListener('click', () => {
