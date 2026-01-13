@@ -11,6 +11,16 @@
             >
         </div>
 
+        <!-- Status -->
+        <div class="table-filter__field">
+            <label class="table-filter__label" for="statusFilter">Status</label>
+            <select class="table-filter__select" id="statusFilter">
+                <option value="">All</option>
+                <option value="draft">Draft</option>
+                <option value="active">Active</option>
+            </select>
+        </div>
+
         <!-- Time -->
         <div class="table-filter__field">
             <label class="table-filter__label" for="timeFilter">Time</label>
@@ -61,9 +71,9 @@
             </div>
 
             <div class="table-filter__amount-custom">
-                <input class="table-filter__input" id="amountMin" placeholder="Min $" />
+                <input class="table-filter__input" id="amountMin" placeholder="Min $"/>
                 <span class="table-filter__amount-separator">—</span>
-                <input class="table-filter__input" id="amountMax" placeholder="Max $" />
+                <input class="table-filter__input" id="amountMax" placeholder="Max $"/>
             </div>
         </div>
 

@@ -185,6 +185,8 @@ async function initPopupFilterEstimation() {
 
         const nameInput = popupMenu.querySelector('#nameFilter');
 
+        const statusFilter = popupMenu.querySelector('#statusFilter');
+
         const timeSelect = popupMenu.querySelector('#timeFilter');
         const timeMin = popupMenu.querySelector('#timeFilterMin');
         const timeMax = popupMenu.querySelector('#timeFilterMax');
@@ -245,6 +247,7 @@ async function initPopupFilterEstimation() {
                 timeMax.value = '';
                 amountMin.value = '';
                 amountMax.value = '';
+                statusFilter.value = '';
 
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
             });
