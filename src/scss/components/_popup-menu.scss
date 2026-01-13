@@ -90,7 +90,7 @@
   &__field {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
   }
 
   &__label {
@@ -99,7 +99,7 @@
     font-weight: 500;
   }
 
-  &__input {
+  &__input, &__select {
     padding: 8px 12px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -164,13 +164,13 @@
   }
 
   &__field--amount {
-    gap: 12px;
+   // gap: 12px;
   }
 
   &__amount-presets {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
   }
 
   &__preset {

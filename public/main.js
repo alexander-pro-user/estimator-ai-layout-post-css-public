@@ -190,9 +190,13 @@ async function initPopupFilterEstimation() {
         const clearBtn = popupMenu.querySelector('#clearFilter');
 
         const nameInput = popupMenu.querySelector('#nameFilter');
-        const timeInput = popupMenu.querySelector('#timeFilter');
         const minInput = popupMenu.querySelector('#amountMin');
         const maxInput = popupMenu.querySelector('#amountMax');
+
+        const timeInput = popupMenu.querySelector('#timeFilter');
+        const timeInputMin = popupMenu.querySelector('#timeFilterMin');
+        const timeInputMax = popupMenu.querySelector('#timeFilterMax');
+
         const presets = popupMenu.querySelectorAll('.table-filter__preset');
 
         [cancelBtn, applyBtn].forEach(btn => {
@@ -211,6 +215,9 @@ async function initPopupFilterEstimation() {
                 if (timeInput) timeInput.value = '';
                 if (minInput) minInput.value = '';
                 if (maxInput) maxInput.value = '';
+                if (timeInput) timeInput.value = '';
+                if (timeInputMin) timeInputMin.value = '';
+                if (timeInputMax) timeInputMax.value = '';
 
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
             });
@@ -247,6 +254,21 @@ async function initPopupFilterEstimation() {
                 if (maxInput) maxInput.value = preset.dataset.max || '';
             });
         });
+
+        timeInput.addEventListener('change', (event) => {
+            const selectedOption = event.target.options[event.target.selectedIndex];
+            const valueMin = selectedOption.dataset.min;
+            const valueMax = selectedOption.dataset.max;
+            timeInputMin.value = valueMin;
+            timeInputMax.value = valueMax;
+        })
+
+        timeInputMin.addEventListener('input', e => {
+            timeInput.value = '';
+        })
+        timeInputMax.addEventListener('input', e => {
+            timeInput.value = '';
+        })
 
         btn.addEventListener('click', e => {
             e.stopPropagation();

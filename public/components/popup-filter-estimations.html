@@ -6,8 +6,28 @@
         </div>
 
         <div class="table-filter__field">
-            <label class="table-filter__label" for="timeFilter">Time</label>
-            <input class="table-filter__input" type="number" id="timeFilter" placeholder="Filter by Time">
+            <label class="table-filter__label">Time</label>
+            <select class="table-filter__select" id="timeFilter">
+                <option value="" data-min="" data-max="">Not selected/Manual input</option>
+                <option value="1" data-min="0" data-max="50">0 - 50 minutes</option>
+                <option value="2" data-min="50" data-max="100">50 - 100 minutes</option>
+                <option value="3" data-min="100" data-max="1000">100 - 1000 minutes</option>
+            </select>
+            <div class="table-filter__amount-custom">
+                <input
+                        class="table-filter__input"
+                        type="number"
+                        id="timeFilterMin"
+                        placeholder="Minimum minutes"
+                >
+                <span class="table-filter__amount-separator">—</span>
+                <input
+                        class="table-filter__input"
+                        type="number"
+                        id="timeFilterMax"
+                        placeholder="Max minutes"
+                >
+            </div>
         </div>
 
         <div class="table-filter__field table-filter__field--amount">
