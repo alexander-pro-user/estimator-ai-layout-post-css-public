@@ -1,35 +1,47 @@
 <div class="table-filter table-filter--popup">
     <form class="table-filter__form" id="filterForm">
+        <!-- Name -->
         <div class="table-filter__field">
             <label class="table-filter__label" for="nameFilter">Name</label>
-            <input class="table-filter__input" type="text" id="nameFilter" placeholder="Filter by Name">
+            <input
+                    class="table-filter__input"
+                    type="text"
+                    id="nameFilter"
+                    placeholder="Filter by Name"
+            >
         </div>
 
+        <!-- Time -->
         <div class="table-filter__field">
-            <label class="table-filter__label">Time</label>
+            <label class="table-filter__label" for="timeFilter">Time</label>
             <select class="table-filter__select" id="timeFilter">
-                <option value="" data-min="" data-max="">Not selected/Manual input</option>
-                <option value="1" data-min="0" data-max="50">0 - 50 minutes</option>
-                <option value="2" data-min="50" data-max="100">50 - 100 minutes</option>
-                <option value="3" data-min="100" data-max="1000">100 - 1000 minutes</option>
+                <option value="">Manual / Not selected</option>
+                <option data-min="0" data-max="30">0 – 30 min</option>
+                <option data-min="30" data-max="60">30 – 60 min</option>
+                <option data-min="60" data-max="120">60 – 120 min</option>
+                <option data-min="120">120+ min</option>
             </select>
+
             <div class="table-filter__amount-custom">
                 <input
                         class="table-filter__input"
                         type="number"
+                        min="0"
                         id="timeFilterMin"
-                        placeholder="Minimum minutes"
+                        placeholder="Min"
                 >
                 <span class="table-filter__amount-separator">—</span>
                 <input
                         class="table-filter__input"
                         type="number"
+                        min="0"
                         id="timeFilterMax"
-                        placeholder="Max minutes"
+                        placeholder="Max"
                 >
             </div>
         </div>
 
+        <!-- Total Amount -->
         <div class="table-filter__field table-filter__field--amount">
             <label class="table-filter__label">Total Amount</label>
 
@@ -49,34 +61,23 @@
             </div>
 
             <div class="table-filter__amount-custom">
-                <input
-                        class="table-filter__input"
-                        type="text"
-                        id="amountMin"
-                        placeholder="Min $"
-                >
+                <input class="table-filter__input" id="amountMin" placeholder="Min $" />
                 <span class="table-filter__amount-separator">—</span>
-                <input
-                        class="table-filter__input"
-                        type="text"
-                        id="amountMax"
-                        placeholder="Max $"
-                >
+                <input class="table-filter__input" id="amountMax" placeholder="Max $" />
             </div>
         </div>
 
+        <!-- Actions -->
         <div class="table-filter__actions table-filter__actions--between">
-            <div class="table-filter__actions-group table-filter__actions-group--left">
-                <button
-                        class="table-filter__btn table-filter__btn--clear"
-                        type="button"
-                        id="clearFilter"
-                >
-                    Clear
-                </button>
-            </div>
+            <button
+                    class="table-filter__btn table-filter__btn--clear"
+                    type="button"
+                    id="clearFilter"
+            >
+                Clear
+            </button>
 
-            <div class="table-filter__actions-group table-filter__actions-group--right">
+            <div class="table-filter__actions-group">
                 <button class="table-filter__btn" type="button" id="applyFilter">
                     Apply
                 </button>

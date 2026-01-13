@@ -176,30 +176,82 @@ async function initPopupFilterEstimation() {
     const popupHtml = await fetch('/components/popup-filter-estimations.html')
         .then(r => r.text());
 
-    const filters = document.querySelectorAll('.popup-filter');
-
-    filters.forEach(filter => {
+    document.querySelectorAll('.popup-filter').forEach(filter => {
         const btn = filter.querySelector('.popup-filter__button');
         const popupMenu = filter.querySelector('.popup-filter__popup');
         if (!btn || !popupMenu) return;
 
         popupMenu.innerHTML = popupHtml;
 
-        const cancelBtn = popupMenu.querySelector('#cancelFilter');
-        const applyBtn = popupMenu.querySelector('#applyFilter');
-        const clearBtn = popupMenu.querySelector('#clearFilter');
-
         const nameInput = popupMenu.querySelector('#nameFilter');
-        const minInput = popupMenu.querySelector('#amountMin');
-        const maxInput = popupMenu.querySelector('#amountMax');
 
-        const timeInput = popupMenu.querySelector('#timeFilter');
-        const timeInputMin = popupMenu.querySelector('#timeFilterMin');
-        const timeInputMax = popupMenu.querySelector('#timeFilterMax');
+        const timeSelect = popupMenu.querySelector('#timeFilter');
+        const timeMin = popupMenu.querySelector('#timeFilterMin');
+        const timeMax = popupMenu.querySelector('#timeFilterMax');
 
+        const amountMin = popupMenu.querySelector('#amountMin');
+        const amountMax = popupMenu.querySelector('#amountMax');
         const presets = popupMenu.querySelectorAll('.table-filter__preset');
 
-        [cancelBtn, applyBtn].forEach(btn => {
+        const applyBtn = popupMenu.querySelector('#applyFilter');
+        const cancelBtn = popupMenu.querySelector('#cancelFilter');
+        const clearBtn = popupMenu.querySelector('#clearFilter');
+
+        /* Time select - inputs */
+        if (timeSelect && timeMin && timeMax) {
+            timeSelect.addEventListener('change', e => {
+                const option = e.target.selectedOptions[0];
+                timeMin.value = option.dataset.min || '';
+                timeMax.value = option.dataset.max || '';
+            });
+        }
+
+        /* Manual time input disables select */
+        [timeMin, timeMax].forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+                if (timeSelect) timeSelect.value = '';
+                if (input.value < 0) input.value = 0;
+            });
+        });
+
+        /* Amount presets */
+        presets.forEach(preset => {
+            preset.addEventListener('click', () => {
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+                preset.classList.add('table-filter__preset--active');
+
+                amountMin.value = preset.dataset.min || '';
+                amountMax.value = preset.dataset.max || '';
+            });
+        });
+
+        /* Manual amount input disables presets */
+        [amountMin, amountMax].forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+            });
+        });
+
+        /* Clear */
+        if (clearBtn) {
+            clearBtn.addEventListener('click', e => {
+                e.stopPropagation();
+
+                nameInput.value = '';
+                timeSelect.value = '';
+                timeMin.value = '';
+                timeMax.value = '';
+                amountMin.value = '';
+                amountMax.value = '';
+
+                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+            });
+        }
+
+        /* Close */
+        [applyBtn, cancelBtn].forEach(btn => {
             if (!btn) return;
             btn.addEventListener('click', e => {
                 e.stopPropagation();
@@ -207,75 +259,11 @@ async function initPopupFilterEstimation() {
             });
         });
 
-        if (clearBtn) {
-            clearBtn.addEventListener('click', e => {
-                e.stopPropagation();
-
-                if (nameInput) nameInput.value = '';
-                if (timeInput) timeInput.value = '';
-                if (minInput) minInput.value = '';
-                if (maxInput) maxInput.value = '';
-                if (timeInput) timeInput.value = '';
-                if (timeInputMin) timeInputMin.value = '';
-                if (timeInputMax) timeInputMax.value = '';
-
-                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
-            });
-        }
-
-        function normalizeAmountInput(input) {
-            input.addEventListener('input', e => {
-                let value = e.target.value;
-
-                value = value.replace(',', '.');
-
-                const parts = value.split('.');
-                if (parts.length > 2) {
-                    value = parts[0] + '.' + parts.slice(1).join('');
-                }
-
-                value = value.replace(/[^0-9.]/g, '');
-
-                e.target.value = value;
-
-                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
-            });
-        }
-
-        if (minInput) normalizeAmountInput(minInput);
-        if (maxInput) normalizeAmountInput(maxInput);
-
-        presets.forEach(preset => {
-            preset.addEventListener('click', () => {
-                presets.forEach(p => p.classList.remove('table-filter__preset--active'));
-                preset.classList.add('table-filter__preset--active');
-
-                if (minInput) minInput.value = preset.dataset.min || '';
-                if (maxInput) maxInput.value = preset.dataset.max || '';
-            });
-        });
-
-        timeInput.addEventListener('change', (event) => {
-            const selectedOption = event.target.options[event.target.selectedIndex];
-            const valueMin = selectedOption.dataset.min;
-            const valueMax = selectedOption.dataset.max;
-            timeInputMin.value = valueMin;
-            timeInputMax.value = valueMax;
-        })
-
-        timeInputMin.addEventListener('input', e => {
-            timeInput.value = '';
-        })
-        timeInputMax.addEventListener('input', e => {
-            timeInput.value = '';
-        })
-
+        /* Toggle popup */
         btn.addEventListener('click', e => {
             e.stopPropagation();
-
-            document.querySelectorAll('.popup-filter__popup').forEach(p => {
-                if (p !== popupMenu) p.classList.add('hidden');
-            });
+            document.querySelectorAll('.popup-filter__popup')
+                .forEach(p => p !== popupMenu && p.classList.add('hidden'));
 
             popupMenu.classList.toggle('hidden');
         });
@@ -284,9 +272,8 @@ async function initPopupFilterEstimation() {
     });
 
     document.addEventListener('click', () => {
-        document.querySelectorAll('.popup-filter__popup').forEach(popup => {
-            popup.classList.add('hidden');
-        });
+        document.querySelectorAll('.popup-filter__popup')
+            .forEach(p => p.classList.add('hidden'));
     });
 }
 
