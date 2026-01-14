@@ -62,16 +62,24 @@
   }
 }
 
+.popup-filter {
+  @media (min-width: 640px) {
+    position: relative;
+  }
+}
+
 .popup-filter__popup {
   margin-top: 3px;
-  width: 280px;
-
-  @media (min-width: 350px) {
-    width: 320px;
-  }
+  width: 95%;
+  left: 50%;
+  top: 72px;
+  transform: translateX(-50%);
 
   @media (min-width: 640px) {
     width: 420px;
+    left: inherit;
+    transform: inherit;
+    top: inherit;
   }
 }
 
@@ -164,7 +172,7 @@
   }
 
   &__field--amount {
-   // gap: 12px;
+    // gap: 12px;
   }
 
   &__amount-presets {
