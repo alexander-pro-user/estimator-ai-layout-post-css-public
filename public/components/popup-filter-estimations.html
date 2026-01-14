@@ -40,6 +40,8 @@
                         min="0"
                         id="timeFilterMin"
                         placeholder="Min"
+                        maxlength="10"
+                        oninput="this.value = this.value.slice(0, 10)"
                 >
                 <span class="table-filter__amount-separator">-</span>
                 <input
@@ -48,6 +50,8 @@
                         min="0"
                         id="timeFilterMax"
                         placeholder="Max"
+                        maxlength="10"
+                        oninput="this.value = this.value.slice(0, 10)"
                 >
             </div>
         </div>
@@ -72,9 +76,9 @@
             </div>
 
             <div class="table-filter__amount-custom">
-                <input class="table-filter__input" id="amountMin" placeholder="Min $"/>
+                <input class="table-filter__input" id="amountMin" placeholder="Min $" maxlength="10"/>
                 <span class="table-filter__amount-separator">-</span>
-                <input class="table-filter__input" id="amountMax" placeholder="Max $"/>
+                <input class="table-filter__input" id="amountMax" placeholder="Max $" maxlength="10"/>
             </div>
         </div>
 
