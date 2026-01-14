@@ -246,12 +246,10 @@ async function initPopupFilterEstimation() {
             input.addEventListener('input', () => {
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
 
-                let value = input.value.replace(/[^0-9.]/g, '');
-
-                const parts = value.split('.');
-                if (parts.length > 2) {
-                    value = parts[0] + '.' + parts.slice(1).join('');
-                }
+                let value = input.value
+                    .replace(/[^0-9.]/g, '')
+                    .replace(/^(\.)/, '')
+                    .replace(/(\..*)\./g, '$1');
 
                 input.value = value;
 
