@@ -244,6 +244,10 @@ async function initPopupFilterEstimation() {
             input.addEventListener('input', () => {
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
 
+                if (parseFloat(input.value) < 0 || input.value === '') {
+                    input.value = '';
+                }
+
                 let min = parseFloat(amountMin.value) || 0;
                 let max = parseFloat(amountMax.value);
 
