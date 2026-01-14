@@ -225,16 +225,18 @@ async function initPopupFilterEstimation() {
             input.addEventListener('input', () => {
                 if (timeSelect) timeSelect.value = '';
 
-                let min = parseFloat(timeMin.value) || 0;
-                let max = parseFloat(timeMax.value);
+                input.value = input.value.replace(/\D/g, '');
 
-                if (input === timeMin && max && min > max) {
+                const min = timeMin.value !== '' ? parseInt(timeMin.value, 10) : null;
+                const max = timeMax.value !== '' ? parseInt(timeMax.value, 10) : null;
+
+                if (input === timeMin && max !== null && min !== null && min > max) {
                     timeMax.value = min;
-                } else if (input === timeMax && max < min) {
-                    timeMin.value = max;
                 }
 
-                if (input.value < 0) input.value = 0;
+                if (input === timeMax && max !== null && min !== null && max < min) {
+                    timeMin.value = max;
+                }
             });
         });
 
@@ -244,16 +246,23 @@ async function initPopupFilterEstimation() {
             input.addEventListener('input', () => {
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
 
-                if (parseFloat(input.value) < 0 || input.value === '') {
-                    input.value = '';
+                let value = input.value.replace(/[^0-9.]/g, '');
+
+                const parts = value.split('.');
+                if (parts.length > 2) {
+                    value = parts[0] + '.' + parts.slice(1).join('');
                 }
 
-                let min = parseFloat(amountMin.value) || 0;
-                let max = parseFloat(amountMax.value);
+                input.value = value;
 
-                if (input === amountMin && max && min > max) {
+                const min = amountMin.value !== '' ? parseFloat(amountMin.value) : null;
+                const max = amountMax.value !== '' ? parseFloat(amountMax.value) : null;
+
+                if (input === amountMin && max !== null && min !== null && min > max) {
                     amountMax.value = min;
-                } else if (input === amountMax && max < min) {
+                }
+
+                if (input === amountMax && max !== null && min !== null && max < min) {
                     amountMin.value = max;
                 }
             });
