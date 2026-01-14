@@ -208,15 +208,6 @@ async function initPopupFilterEstimation() {
             });
         }
 
-        /* Manual time input disables select */
-        [timeMin, timeMax].forEach(input => {
-            if (!input) return;
-            input.addEventListener('input', () => {
-                if (timeSelect) timeSelect.value = '';
-                if (input.value < 0) input.value = 0;
-            });
-        });
-
         /* Amount presets */
         presets.forEach(preset => {
             preset.addEventListener('click', () => {
@@ -228,11 +219,39 @@ async function initPopupFilterEstimation() {
             });
         });
 
-        /* Manual amount input disables presets */
+        /* Manual time input disables select + min ≤ max */
+        [timeMin, timeMax].forEach(input => {
+            if (!input) return;
+            input.addEventListener('input', () => {
+                if (timeSelect) timeSelect.value = '';
+
+                let min = parseFloat(timeMin.value) || 0;
+                let max = parseFloat(timeMax.value);
+
+                if (input === timeMin && max && min > max) {
+                    timeMax.value = min;
+                } else if (input === timeMax && max < min) {
+                    timeMin.value = max;
+                }
+
+                if (input.value < 0) input.value = 0;
+            });
+        });
+
+        /* Manual amount input disables presets + min ≤ max */
         [amountMin, amountMax].forEach(input => {
             if (!input) return;
             input.addEventListener('input', () => {
                 presets.forEach(p => p.classList.remove('table-filter__preset--active'));
+
+                let min = parseFloat(amountMin.value) || 0;
+                let max = parseFloat(amountMax.value);
+
+                if (input === amountMin && max && min > max) {
+                    amountMax.value = min;
+                } else if (input === amountMax && max < min) {
+                    amountMin.value = max;
+                }
             });
         });
 
