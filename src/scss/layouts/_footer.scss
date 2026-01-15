@@ -208,9 +208,15 @@
 
     &-privacy-pages {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
       align-items: center;
+      flex-wrap: wrap;
+
+      @media (min-width: 375px) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
 
       @media (min-width: 768px) {
         justify-content: right;

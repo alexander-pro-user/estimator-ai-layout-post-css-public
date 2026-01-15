@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 99999;
 
   @media (min-width: 1150px) {
   }
@@ -157,7 +157,11 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+
+    @media (min-width: 375px) {
+      gap: 12px;
+    }
 
     &-item {
       padding-top: 8px;
@@ -178,11 +182,23 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        margin-left: 0px;
+        margin-right: 0px;
+
+        @media (min-width: 375px) {
+          margin-left: 12px;
+          margin-right: 12px;
+        }
 
         button, a {
           text-align: center;
-          min-width: 132px;
+          align-content: center;
+          min-width: 100px;
           cursor: pointer;
+
+          @media (min-width: 375px) {
+            min-width: 132px;
+          }
         }
       }
     }

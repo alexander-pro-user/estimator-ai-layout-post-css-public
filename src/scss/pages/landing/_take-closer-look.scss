@@ -26,6 +26,7 @@
 
     display: flex;
     flex-direction: column;
+    //   align-items: stretch;
     align-items: center;
     justify-content: center;
 
@@ -55,7 +56,11 @@
     border-radius: 12px;
     border-width: 1px;
     border: 1px solid #D2DFDB80;
-    width: 335px;
+    width: 290px;
+
+    @media (min-width: 375px) {
+      width: 335px;
+    }
 
     @media (min-width: 1024px) {
       padding-top: 24px;

@@ -72,8 +72,12 @@
   margin-top: 3px;
   width: 95%;
   left: 50%;
-  top: 100px;
+  top: 72px;
   transform: translateX(-50%);
+
+  @media (min-width: 375px) {
+    top: 100px;
+  }
 
   @media (min-width: 640px) {
     width: 420px;
