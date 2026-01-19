@@ -1,7 +1,7 @@
 @use "../utils/variables" as *;
 
 .terms-and-privacy-modal {
-  z-index: 9999 !important;
+  z-index: 9999;
   padding: 0px 20px;
 
   &__container {
