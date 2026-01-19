@@ -76,6 +76,11 @@
   &-block {
 
     &-header {
+      gap: 5px;
+
+      @media (min-width: 375px) {
+        gap: 0px;
+      }
     }
 
     &-subheader {

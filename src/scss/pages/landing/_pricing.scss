@@ -33,13 +33,18 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    padding: 24px;
+    padding: 12px;
+
     gap: 32px;
     border-radius: 16px;
     border-width: 1px;
     border: 1px solid $border-white-soft;
     background: $white;
     justify-content: center;
+
+    @media (min-width: 375px) {
+      padding: 24px;
+    }
 
     @media (min-width: 1024px) {
       padding: 60px;
@@ -187,12 +192,18 @@
       border-radius: 8px;
       border-width: 1px;
       padding-top: 20px;
-      padding-right: 20px;
+      padding-right: 3px;
       padding-bottom: 20px;
-      padding-left: 20px;
+      padding-left: 3px;
       border: 1px solid #D2DFDB80;
       background: $white;
       box-shadow: 0px 16px 28.8px -12px #0DB29D1A;
+
+      @media (min-width: 375px) {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
 
       @media (min-width: 1024px) {
         padding-top: 40px;
@@ -213,9 +224,13 @@
           display: flex;
           width: 20px;
           height: 28px;
-          margin-right: 10px;
+          margin-right: 5px;
           margin-top: 3px;
           flex-shrink: 0;
+
+          @media (min-width: 375px) {
+            margin-right: 10px;
+          }
 
           img {
             width: 100%;

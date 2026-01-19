@@ -271,7 +271,7 @@
 
   .estimations__table-tag {
     display: flex;
-    padding: 4px 10px;
+    padding: 4px 6px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -291,6 +291,10 @@
     letter-spacing: 0.06px;
 
     height: 28px;
+
+    @media (min-width: 375px) {
+      padding: 4px 10px;
+    }
 
     @media (min-width: 640px) {
       display: flex;

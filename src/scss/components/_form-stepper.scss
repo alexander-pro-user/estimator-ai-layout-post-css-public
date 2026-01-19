@@ -3,9 +3,13 @@
 .form-stepper {
   &__container {
     display: flex;
-    padding: 16px;
+    padding: 8px;
     align-items: flex-start;
     align-self: stretch;
+
+    @media (min-width: 375px) {
+      padding: 16px;
+    }
 
     @media (min-width: 1024px) {
       padding: 16px 32px 16px 32px;

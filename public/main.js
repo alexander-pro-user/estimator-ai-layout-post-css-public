@@ -466,8 +466,9 @@ function openModal(show, idModal, event = null, isBodyOverflowReturn = true) {
         resetAllModalBodiesScroll();
     } else {
         modal.classList.remove('open');
+        const openedModals = document.querySelectorAll('.custom-modal-overlay.open');
 
-        if (isBodyOverflowReturn) {
+        if (isBodyOverflowReturn || openedModals.length === 0) {
             setTimeout(() => {
                 if (!document.querySelector('.modal.open')) {
                     body.style.overflow = '';

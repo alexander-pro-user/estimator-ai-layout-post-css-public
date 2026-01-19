@@ -65,6 +65,11 @@
     align-items: center;
     gap: 7px;
     align-self: stretch;
+    flex-wrap: wrap;
+
+    @media (min-width: 375px) {
+      flex-wrap: nowrap;
+    }
 
     @media (min-width: 1024px) {
       gap: 12px;
