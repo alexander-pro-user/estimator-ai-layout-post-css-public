@@ -446,12 +446,13 @@
   &__title {
     color: $black-333-short;
     font-family: Inter;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 38.4px */
 
     @media (min-width: 768px) {
+      font-size: 32px;
     }
   }
 
