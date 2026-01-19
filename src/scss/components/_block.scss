@@ -740,10 +740,10 @@
 .tag-block, .bonus-banner__bonus {
   display: flex;
   align-items: center;
-  padding: 12px 22px;
+  padding: 6px 12px;
   gap: 10px;
   min-width: 128px;
-  height: 43px;
+  height: 40px;
   width: fit-content;
   border-radius: 33px;
   border: 1px solid $border-purple-50;
@@ -755,8 +755,14 @@
   color: $brand-accent;
   font-family: Inter;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 120%;
+
+  @media (min-width: 375px) {
+    padding: 12px 22px;
+    height: 43px;
+    font-size: 15px;
+  }
 
   @media (min-width: 768px) {
     font-size: 16px;
@@ -811,6 +817,6 @@
     background: none;
     box-shadow: none;
 
-    align-items: baseline;
+    align-items: center;
   }
 }
