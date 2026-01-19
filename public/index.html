@@ -202,7 +202,9 @@
                     <div class="take-closer-look__buttons">
                         <button class="btn inline-block btn__primary"><a href="estimations.html">Get Estimate</a>
                         </button>
-                        <button onclick="openModal(true, 'contactUsModal')" class="btn inline-block btn__tertiary">Contact Us</button>
+                        <button onclick="openModal(true, 'contactUsModal')" class="btn inline-block btn__tertiary">
+                            Contact Us
+                        </button>
                         </button>
                     </div>
                 </div>
@@ -253,7 +255,9 @@
 
                             <div class="pricing__items-item__buttons">
                                 <button class="btn inline-block btn__primary">Get Your Billing Plan</button>
-                                <button onclick="openModal(true, 'contactUsModal')" class="btn btn__tertiary">Contact Us</button>
+                                <button onclick="openModal(true, 'contactUsModal')" class="btn btn__tertiary">Contact
+                                    Us
+                                </button>
                             </div>
                         </div>
                         <div class="pricing__items-colored-item">
@@ -802,27 +806,31 @@
             flex items-center justify-center px-5
             opacity-0 pointer-events-none transition-opacity duration-200">
         <div class="custom-modal-container
-                bg-white rounded-2xl shadow-xl
-                max-w-xl w-full max-h-[90vh]
-                p-6 relative
-                transform scale-95 opacity-0
-                transition-all duration-200">
-            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;
+              bg-white rounded-2xl shadow-xl
+              max-w-xl w-full max-h-[90vh]
+              relative
+              transform scale-95 opacity-0
+              transition-all duration-200">
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">
+                &times;
             </button>
 
-            <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <img id="modalAvatar" src="" alt="user avatar" class="w-full h-full object-cover">
+            <!-- scroll area -->
+            <div class="custom-modal-body ps-6 pe-6  pt-6 pb-6 rounded-2xl overflow-y-auto max-h-[calc(90vh-3rem)]">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img id="modalAvatar" src="" alt="user avatar" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div id="modalName" class="font-semibold text-gray-800">Name Here</div>
+                        <div id="modalCompany" class="text-gray-500 text-sm">Company Name</div>
+                    </div>
                 </div>
-                <div>
-                    <div id="modalName" class="font-semibold text-gray-800">Name Here</div>
-                    <div id="modalCompany" class="text-gray-500 text-sm">Company Name</div>
-                </div>
+
+                <div class="flex items-center mb-4" id="modalRating"></div>
+
+                <p id="modalContent" class="text-gray-600 leading-relaxed"></p>
             </div>
-
-            <div class="flex items-center mb-4" id="modalRating"></div>
-
-            <p id="modalContent" class="text-gray-600 leading-relaxed"></p>
         </div>
     </div>
 
