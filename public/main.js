@@ -445,7 +445,7 @@ function getScrollbarWidth() {
 
 const MODAL_ANIMATION_DURATION = 200;
 
-function openModal(show, idModal, event = null, isBodyOverflowReturn = true) {
+function openModal(show, idModal, event = null) {
     if (event) event.preventDefault();
 
     const modal = idModal && document.getElementById(idModal);
@@ -468,7 +468,7 @@ function openModal(show, idModal, event = null, isBodyOverflowReturn = true) {
         modal.classList.remove('open');
         const openedModals = document.querySelectorAll('.custom-modal-overlay.open');
 
-        if (isBodyOverflowReturn || openedModals.length === 0) {
+        if (openedModals.length === 0) {
             setTimeout(() => {
                 if (!document.querySelector('.modal.open')) {
                     body.style.overflow = '';
